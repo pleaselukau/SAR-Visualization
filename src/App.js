@@ -6,12 +6,10 @@ import Blackhat from './Blackhat';
 import BlackHatStats from './BlackHatStats';
 import * as d3 from 'd3';
 
-// Test
-
 function App() {
 
   //state deciding if we are looking at the blackhat or whitehat visualization
-  const [viewToggle, setViewToggle] = useState('blackhat');
+  const [viewToggle, setViewToggle] = useState(0);
 
   //state for the data, since it loads asynchronously
   const [map, setMap] = useState();
@@ -148,13 +146,49 @@ function App() {
     )
   }
 
+  function thirdView(){
+
+    return (
+      <>
+        <div style={{'width':'100%','height':'50%','display':'inline-block'}}>
+          <div 
+            style={{'height': '100%','width':'calc(100% - 15em)','display':'inline-block'}}
+          >
+          
+          </div>
+          <div 
+            className={'shadow'}
+            style={{'height': '100%','width':'14em','display':'inline-block','verticalAlign':'text-bottom'}}
+          >
+            <h1>{'Instructions'}</h1>
+            <p>{'Click on each state to zoom and unzoom'}</p>
+          </div>
+        </div>
+        <div style={{'height': '49%','width':'99%'}}>
+          <div className={'title'} 
+            style={{'height':'2em','width':'100%','fontWeight':'bold','fontFamily':'Georgia'}}
+          >
+            {'Third View'}
+          </div>
+          <div style={{'height': 'calc(100% - 2em)','width': '50%','maxWidth': '60em','marginLeft':'25%'}}>
+            
+          </div>   
+        </div>
+      </>
+    )
+  }
+
   //toggle which visualization we're looking at based on the "viewToggle" state
   const hat = ()=>{
-    if(viewToggle === 'whitehat'){
+    if(viewToggle === 0){
       return makeWhiteHat();
     }
-    else{
+    else if (viewToggle === 1){
       return makeBlackHat();
+    }
+    else{
+      console.log("third view");
+      return thirdView();
     }
   }
 
@@ -164,14 +198,19 @@ function App() {
         style={{'height':'2em','width':'100vw'}}
       >
         <button 
-         onClick={() => setViewToggle('whitehat')}
-         className={viewToggle === 'whitehat'? 'inactiveButton':'activeButton'}
+         onClick={() => setViewToggle(0)}
+         className={viewToggle === 0? 'inactiveButton':'activeButton'}
          >{"White Hat"}
         </button>
         <button 
-         onClick={() => setViewToggle('blackhat')}
-         className={viewToggle === 'blackhat'? 'inactiveButton':'activeButton'}
+         onClick={() => setViewToggle(1)}
+         className={viewToggle === 1? 'inactiveButton':'activeButton'}
          >{"Black Hat"}
+        </button>
+        <button 
+         onClick={() => setViewToggle(2)}
+         className={viewToggle === 2? 'inactiveButton':'activeButton'}
+         >{"Third View"}
         </button>
       </div>
       <div className={'body'} 
