@@ -101,7 +101,7 @@ You can either clone via Git or download the ZIP.
 
 - Clone:
   ```bash
-  git clone <https://github.com/pleaselukau/SAR-Visualization>
+  git clone https://github.com/pleaselukau/SAR-Visualization
   cd SAR-Visualization
   ```
 - Or download the ZIP and extract it, then `cd` into the folder.
