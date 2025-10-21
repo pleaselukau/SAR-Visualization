@@ -117,7 +117,7 @@ npm start
 
 This launches the development server and opens `http://localhost:3000/` in your browser. Hot reload is enabled.
 
-### Project Structure (Simplified)
+### Project Structure
 
 - `src/App.js` — Top-level app; toggles between three views and manages shared state.
 - `src/Whitehat.js` — First view (to replace the prior White Hat).
@@ -137,135 +137,6 @@ Data and assets:
 - `src/Blackhat.js` and `src/BlackHatStats.js` provide a working reference for map and stats implementations.
 - `src/App.js` manages shared state (e.g., `brushedState`, `zoomedState`) and data fetching. Update here if you change layout, add views, or add new data sources.
 
-### Creating a New D3 Visualization
-
-Use `D3Component.js` as a template. To create a new component named `PlotD3`:
-
-1. Copy `src/D3Component.js` to `src/PlotD3.js`.
-2. Change the export signature in the new file:
-
-```javascript
-export default function PlotD3(props) {
-  // ...
-}
-```
-
-3. Add D3 code inside the provided `useEffect` hooks. Example patterns:
-
-```javascript
-// Runs after SVG is ready and on window resize
-useEffect(() => {
-  if (svg !== undefined) {
-    // initial drawing or responsive logic
-  }
-}, [svg]);
-
-// Runs when SVG is ready AND data is loaded/changes
-useEffect(() => {
-  if (svg !== undefined && props.data !== undefined) {
-    // data-driven drawing
-  }
-}, [svg, props.data]);
-```
-
-4. Import and use in `App.js` within a container of the desired size:
-
-```javascript
-import PlotD3 from './PlotD3';
-
-// ... inside render/return
-<div style={{ height: '50px', width: '50px' }}>
-  <PlotD3 data={gunData} />
-  {/* pass ToolTip if you need it: ToolTip={ToolTip} */}
-  {/* pass other shared state as needed */}
- </div>
-```
-
-### Loading New Data
-
-Data is loaded asynchronously from `public/`. For JSON:
-
-```javascript
-async function fetchData() {
-  fetch('data.json').then(r => r.json()).then(newData => {
-    setData(newData);
-  });
-}
-```
-
-For CSV with D3:
-
-```javascript
-import * as d3 from 'd3';
-
-async function fetchCSV() {
-  d3.csv('data.csv').then(rows => {
-    setData(rows);
-  });
-}
-```
-
-Call your loaders inside a one-time hook in `App.js`:
-
-```javascript
-useEffect(() => {
-  fetchData();
-  // fetchCSV();
-}, []);
-```
-
-If a parameter should trigger reloads, list it in the dependency array:
-
-```javascript
-useEffect(() => {
-  fetchDataWithParam(param);
-}, [param]);
-```
-
-### Tooltips Helper
-
-The app ships a `ToolTip` helper class (see `App.js`) and CSS in `App.css` (class `tooltip`). You can use it inside D3 event handlers:
-
-```javascript
-let tTip = d3.select('.tooltip');
-
-selection
-  .on('mouseover', (e, d) => {
-    tTip.html(getToolTipText(d));
-    ToolTip.moveTTipEvent(tTip, e);
-  })
-  .on('mousemove', (e) => ToolTip.moveTTipEvent(tTip, e))
-  .on('mouseout', () => ToolTip.hideTTip(tTip));
-```
-
-Ensure the tooltip CSS includes `position: absolute;` so it can be positioned near the cursor.
-
-### Brushing and Linking Pattern
-
-Shared state (e.g., `brushedState`) lives in `App.js` and is passed to child views. In a map component, you may set it on hover and style selected elements via `useEffect`/`useMemo` hooks that depend on `brushedState`.
-
-Example state in `App.js`:
-
-```javascript
-const [brushedState, setBrushedState] = useState();
-```
-
-Pass to children and update in event handlers. In your drawing hooks, respond to changes in `brushedState` by adjusting opacity/stroke of selected features and rendering linked highlights in stats components.
-
-### Regenerating Processed Data (Optional)
-
-If you need to re-create `processed_gundeaths_data.json`:
-
-1. Install Python 3.9+ and a virtual environment.
-2. Install dependencies (e.g., `pandas`, `jupyter`).
-3. Open and run `python/Preprocessing.ipynb`.
-4. Write the output to `public/processed_gundeaths_data.json` so the React app can fetch it.
-
-### Common Issues
-
-- Blank page or 404 on data fetch: Confirm files exist in `public/` with exact names and paths.
-- Port in use: Stop other apps on 3000 or set a different port: `PORT=3001 npm start`.
-- Install hiccups: Delete `node_modules/` and `package-lock.json`, then `npm install`.
 
 -----
 
@@ -299,7 +170,7 @@ const hat = () => {
 
 ## Data Replacement Note
 
-- The current "Gun Deaths" dataset (`public/processed_gundeaths_data.json`) is a placeholder. In production, this will be replaced by processed output from the backend pipeline. Ensure the backend emits a JSON (or other agreed format) compatible with the fetch paths in `src/App.js`.
+- The current "Gun Deaths" dataset (`public/processed_gundeaths_data.json`) is a placeholder. In production, this will be replaced by processed output from the backend pipeline.The backend emits a JSON (or other agreed format) compatible with the fetch paths in `src/App.js`.
 - When integrating the backend, update the fetch URLs in `App.js` (and any other components) to point to your API endpoint or to a new file name in `public/` if still serving statically.
 
 ## View Naming Update
