@@ -10,7 +10,7 @@
 ## Team
 
   * **Project Manager:** Please Lukau
-  * **Team Members:** *(Harsh Shelke, Hrushikesh Joshi)*
+  * **Team Members:** Harsh Shelke, Hrushikesh Joshi
   * **Clients:** Dr. Kevin A. Kunz and Prof. Paul R. Carlier (UICentre)
 
 -----
@@ -130,12 +130,6 @@ Data and assets:
 - `public/us-states.geojson` — Map geometry.
 - `public/processed_gundeaths_data.json` — Placeholder data; will be replaced by backend pipeline output (see below).
 - `python/Preprocessing.ipynb` and CSVs — Optional preprocessing resources.
-
-### Editing the Files
-
-- You will primarily edit: `src/Whitehat.js` and `src/WhiteHatStats.js` for the "White Hat" solution.
-- `src/Blackhat.js` and `src/BlackHatStats.js` provide a working reference for map and stats implementations.
-- `src/App.js` manages shared state (e.g., `brushedState`, `zoomedState`) and data fetching. Update here if you change layout, add views, or add new data sources.
 
 
 -----
