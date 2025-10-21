@@ -60,6 +60,247 @@ The key data fields are:
 
 -----
 
-## Acknowledgements
+## Instructions
 
-The starter code template for this project was provided by **Andrew Wentzel**.
+Credits: This support code was written by Andrew Wentzel, Electronic Visualization Laboratory (EVL) at UIC, and adapted here for this repository.
+
+### Installing Node and npm
+
+There are several ways to install Node.js (required to run this React app).
+
+- The easiest way is to install from the official site:
+
+  https://nodejs.org/en/download
+
+  During installation, npm will also be installed. You can ignore non-critical warnings during install.
+
+- Verify installations in your terminal:
+
+  ```bash
+  node -v
+  npm -v
+  ```
+
+  If either command is not found, ensure your PATH includes the Node and npm binaries (on Windows check Environment Variables). Some installers also ship a custom shell; you can use your normal terminal as long as PATH is set correctly.
+
+#### Optional: Using Node Version Manager (NVM)
+
+If you are on Ubuntu/Linux or macOS and need multiple Node versions, consider NVM:
+
+https://github.com/nvm-sh/nvm
+
+Install a specific Node version (this project runs on modern Node that supports Create React App; v16+ recommended):
+
+```bash
+nvm install 18
+```
+
+### Getting the Code
+
+You can either clone via Git or download the ZIP.
+
+- Clone:
+  ```bash
+  git clone <https://github.com/pleaselukau/SAR-Visualization>
+  cd SAR-Visualization
+  ```
+- Or download the ZIP and extract it, then `cd` into the folder.
+
+### Install and Run
+
+From the project root:
+
+```bash
+npm install
+npm start
+```
+
+This launches the development server and opens `http://localhost:3000/` in your browser. Hot reload is enabled.
+
+### Project Structure Overview
+
+In `src/` you will see the following key files used in this assignment/demo:
+
+- `App.js` — Top-level React component that manages state, loads data, and lays out views. It toggles between "White Hat" , "Third View" and "Black Hat" visualizations and passes shared state (e.g., brushing/zoom) to children.
+ - `App.js` — Top-level React component that manages state, loads data, and lays out views. It toggles between "White Hat", "Black Hat", and a placeholder "Third View" and passes shared state (e.g., brushing/zoom) to children.
+- `Blackhat.js` — Map visualization used for the Black Hat view.
+- `BlackHatStats.js` — Stats panel for the Black Hat view.
+- `Whitehat.js` — Map visualization for the White Hat view (modify this for your solution).
+- `WhiteHatStats.js` — Histogram/stats panel for the White Hat view (modify this for your solution).
+- `D3Component.js` — Template for building a new D3 visualization within React.
+- `useSVGCanvas.js` — Helper hook that prepares a responsive SVG canvas and tooltip div.
+
+In `public/` (static assets loaded at runtime by the app):
+
+- `us-states.geojson` — State boundaries used by the map.
+- `processed_gundeaths_data.json` — Processed example dataset consumed by the app.
+
+In `python/` (optional preprocessing assets):
+
+- `Preprocessing.ipynb` — Notebook used to process raw data into the JSON used by the app.
+- `SlateGunDeaths.csv`, `state_populations.csv`, `states-10m.json` — Source data and supporting files.
+
+### Editing the Files
+
+- You will primarily edit: `src/Whitehat.js` and `src/WhiteHatStats.js` for the "White Hat" solution.
+- `src/Blackhat.js` and `src/BlackHatStats.js` provide a working reference for map and stats implementations.
+- `src/App.js` manages shared state (e.g., `brushedState`, `zoomedState`) and data fetching. Update here if you change layout, add views, or add new data sources.
+
+### Creating a New D3 Visualization
+
+Use `D3Component.js` as a template. To create a new component named `PlotD3`:
+
+1. Copy `src/D3Component.js` to `src/PlotD3.js`.
+2. Change the export signature in the new file:
+
+```javascript
+export default function PlotD3(props) {
+  // ...
+}
+```
+
+3. Add D3 code inside the provided `useEffect` hooks. Example patterns:
+
+```javascript
+// Runs after SVG is ready and on window resize
+useEffect(() => {
+  if (svg !== undefined) {
+    // initial drawing or responsive logic
+  }
+}, [svg]);
+
+// Runs when SVG is ready AND data is loaded/changes
+useEffect(() => {
+  if (svg !== undefined && props.data !== undefined) {
+    // data-driven drawing
+  }
+}, [svg, props.data]);
+```
+
+4. Import and use in `App.js` within a container of the desired size:
+
+```javascript
+import PlotD3 from './PlotD3';
+
+// ... inside render/return
+<div style={{ height: '50px', width: '50px' }}>
+  <PlotD3 data={gunData} />
+  {/* pass ToolTip if you need it: ToolTip={ToolTip} */}
+  {/* pass other shared state as needed */}
+ </div>
+```
+
+### Loading New Data
+
+Data is loaded asynchronously from `public/`. For JSON:
+
+```javascript
+async function fetchData() {
+  fetch('data.json').then(r => r.json()).then(newData => {
+    setData(newData);
+  });
+}
+```
+
+For CSV with D3:
+
+```javascript
+import * as d3 from 'd3';
+
+async function fetchCSV() {
+  d3.csv('data.csv').then(rows => {
+    setData(rows);
+  });
+}
+```
+
+Call your loaders inside a one-time hook in `App.js`:
+
+```javascript
+useEffect(() => {
+  fetchData();
+  // fetchCSV();
+}, []);
+```
+
+If a parameter should trigger reloads, list it in the dependency array:
+
+```javascript
+useEffect(() => {
+  fetchDataWithParam(param);
+}, [param]);
+```
+
+### Tooltips Helper
+
+The app ships a `ToolTip` helper class (see `App.js`) and CSS in `App.css` (class `tooltip`). You can use it inside D3 event handlers:
+
+```javascript
+let tTip = d3.select('.tooltip');
+
+selection
+  .on('mouseover', (e, d) => {
+    tTip.html(getToolTipText(d));
+    ToolTip.moveTTipEvent(tTip, e);
+  })
+  .on('mousemove', (e) => ToolTip.moveTTipEvent(tTip, e))
+  .on('mouseout', () => ToolTip.hideTTip(tTip));
+```
+
+Ensure the tooltip CSS includes `position: absolute;` so it can be positioned near the cursor.
+
+### Brushing and Linking Pattern
+
+Shared state (e.g., `brushedState`) lives in `App.js` and is passed to child views. In a map component, you may set it on hover and style selected elements via `useEffect`/`useMemo` hooks that depend on `brushedState`.
+
+Example state in `App.js`:
+
+```javascript
+const [brushedState, setBrushedState] = useState();
+```
+
+Pass to children and update in event handlers. In your drawing hooks, respond to changes in `brushedState` by adjusting opacity/stroke of selected features and rendering linked highlights in stats components.
+
+### Regenerating Processed Data (Optional)
+
+If you need to re-create `processed_gundeaths_data.json`:
+
+1. Install Python 3.9+ and a virtual environment.
+2. Install dependencies (e.g., `pandas`, `jupyter`).
+3. Open and run `python/Preprocessing.ipynb`.
+4. Write the output to `public/processed_gundeaths_data.json` so the React app can fetch it.
+
+### Common Issues
+
+- Blank page or 404 on data fetch: Confirm files exist in `public/` with exact names and paths.
+- Port in use: Stop other apps on 3000 or set a different port: `PORT=3001 npm start`.
+- Install hiccups: Delete `node_modules/` and `package-lock.json`, then `npm install`.
+
+-----
+
+## Third View Added
+
+`App.js` includes a placeholder third view (see function `thirdView()` and the toggle buttons in the header). This view is scaffolded so you can quickly prototype an additional visualization or UI panel without affecting the existing White/Black Hat views.
+
+### How it works
+
+- The `viewToggle` state (0 = White Hat, 1 = Black Hat, 2 = Third View) controls which view renders.
+- `thirdView()` returns a two-panel layout consistent with the other views, including an instruction sidebar and a content area sized to fill the remaining width/height.
+- Shared app state (e.g., `zoomedState`, `brushedState`, `selectedStuff`) is available to pass into new components you add to this view, enabling linking/coordination with future panels if desired.
+
+Relevant code in `src/App.js`:
+
+```javascript
+// toggle logic
+const hat = () => {
+  if (viewToggle === 0) return makeWhiteHat();
+  if (viewToggle === 1) return makeBlackHat();
+  return thirdView();
+};
+
+// button group
+<button onClick={() => setViewToggle(2)} className={viewToggle === 2 ? 'inactiveButton' : 'activeButton'}>
+  {"Third View"}
+</button>
+```
+
