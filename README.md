@@ -117,28 +117,19 @@ npm start
 
 This launches the development server and opens `http://localhost:3000/` in your browser. Hot reload is enabled.
 
-### Project Structure Overview
+### Project Structure (Simplified)
 
-In `src/` you will see the following key files used in this assignment/demo:
+- `src/App.js` — Top-level app; toggles between three views and manages shared state.
+- `src/Whitehat.js` — First view (to replace the prior White Hat).
+- `src/Blackhat.js` — Second view (to replace the prior Black Hat).
+- `src/WhiteHatStats.js`, `src/BlackHatStats.js` — Stats panels.
+- `src/D3Component.js`, `src/useSVGCanvas.js` — D3 template and helper hook.
 
-- `App.js` — Top-level React component that manages state, loads data, and lays out views. It toggles between "White Hat" , "Third View" and "Black Hat" visualizations and passes shared state (e.g., brushing/zoom) to children.
- - `App.js` — Top-level React component that manages state, loads data, and lays out views. It toggles between "White Hat", "Black Hat", and a placeholder "Third View" and passes shared state (e.g., brushing/zoom) to children.
-- `Blackhat.js` — Map visualization used for the Black Hat view.
-- `BlackHatStats.js` — Stats panel for the Black Hat view.
-- `Whitehat.js` — Map visualization for the White Hat view (modify this for your solution).
-- `WhiteHatStats.js` — Histogram/stats panel for the White Hat view (modify this for your solution).
-- `D3Component.js` — Template for building a new D3 visualization within React.
-- `useSVGCanvas.js` — Helper hook that prepares a responsive SVG canvas and tooltip div.
+Data and assets:
 
-In `public/` (static assets loaded at runtime by the app):
-
-- `us-states.geojson` — State boundaries used by the map.
-- `processed_gundeaths_data.json` — Processed example dataset consumed by the app.
-
-In `python/` (optional preprocessing assets):
-
-- `Preprocessing.ipynb` — Notebook used to process raw data into the JSON used by the app.
-- `SlateGunDeaths.csv`, `state_populations.csv`, `states-10m.json` — Source data and supporting files.
+- `public/us-states.geojson` — Map geometry.
+- `public/processed_gundeaths_data.json` — Placeholder data; will be replaced by backend pipeline output (see below).
+- `python/Preprocessing.ipynb` and CSVs — Optional preprocessing resources.
 
 ### Editing the Files
 
@@ -303,4 +294,15 @@ const hat = () => {
   {"Third View"}
 </button>
 ```
+
+-----
+
+## Data Replacement Note
+
+- The current "Gun Deaths" dataset (`public/processed_gundeaths_data.json`) is a placeholder. In production, this will be replaced by processed output from the backend pipeline. Ensure the backend emits a JSON (or other agreed format) compatible with the fetch paths in `src/App.js`.
+- When integrating the backend, update the fetch URLs in `App.js` (and any other components) to point to your API endpoint or to a new file name in `public/` if still serving statically.
+
+## View Naming Update
+
+- `Whitehat.js` and `Blackhat.js` represent the first and second views, respectively. As you transition to the final application, refer to them as "First View" and "Second View" in UI and documentation. The third placeholder view in `App.js` can be evolved into any additional view as needed.
 
