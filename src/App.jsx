@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ScatterPlot from "./components/ScatterPlot";
+import ParallelCoordiantePlot from "./components/ParallelCoordiantePlot";
+import RadarChart from "./components/RadarChart";
+import Heatmap from "./components/Heatmap";
+import SelectionMenu from "./components/SelectionMenu";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="h-screen w-screen grid grid-cols-3 grid-rows-2 gap-2 bg-gray-100 p-2 overflow-hidden">
+      
+      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+        <ScatterPlot />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
 
-export default App
+      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+        <ParallelCoordiantePlot />
+      </div>
+
+      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+        <SelectionMenu />
+      </div>
+
+      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+        <RadarChart />
+      </div>
+
+      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+        <Heatmap />
+      </div>
+
+      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+        <p className="text-gray-400">Empty Panel</p>
+      </div>
+
+    </div>
+  );
+}
