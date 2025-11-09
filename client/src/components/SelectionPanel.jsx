@@ -1,6 +1,8 @@
-
-
-export default function SelectionMenu() {
+export default function SelectionPanel({
+  compounds,
+  selectedIds,
+  setSelectedIds,
+}) {
   return (
     <div className="flex flex-col items-center justify-center h-full w-full gap-4">
       <label className="text-lg font-semibold">Select Property:</label>
