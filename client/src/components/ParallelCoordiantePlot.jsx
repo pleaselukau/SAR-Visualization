@@ -12,7 +12,7 @@ export default function ParallelCoordiantePlot() {
     const height = ref.current.clientHeight;
 
     // Sample data: 5 properties, 20 compounds
-    const data = d3.range(20).map(() => ({
+    const data = d3.range(105).map(() => ({
       mw: Math.random() * 500,
       logp: Math.random() * 5,
       tpsa: Math.random() * 150,
