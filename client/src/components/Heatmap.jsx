@@ -1,11 +1,27 @@
 import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
 
-export default function CompoundComparisonHeatmap({ compounds }) {
+export default function Heatmap({ compounds, heatmapAndComparisonCompunds }) {
   const ref = useRef();
 
   useEffect(() => {
-    if (!compounds || compounds.length < 2) return;
+    if (!compounds || compounds.length === 0) return;
+
+    const [comp1 = compounds[0], comp2 = compounds[1]] = (
+      heatmapAndComparisonCompunds?.length
+        ? compounds.filter((c) => heatmapAndComparisonCompunds.includes(c.ID))
+        : []
+    )
+      .concat(compounds)
+      .slice(0, 2);
+
+    const displayNames = {
+      weight: "Weight",
+      log_p: "Log P",
+      log_d: "Log D",
+      pka: "pKa",
+      tpsa: "TPSA",
+    };
 
     const svg = d3.select(ref.current);
     svg.selectAll("*").remove();
@@ -22,8 +38,6 @@ export default function CompoundComparisonHeatmap({ compounds }) {
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
     const properties = ["weight", "log_p", "log_d", "pka", "tpsa"];
-    const comp1 = compounds[0];
-    const comp2 = compounds[1];
 
     // Create 5x5 matrix using absolute difference
     const data = [];
@@ -61,8 +75,7 @@ export default function CompoundComparisonHeatmap({ compounds }) {
       .attr("y", (d) => y(d.rowProp))
       .attr("width", x.bandwidth())
       .attr("height", y.bandwidth())
-      .attr("fill", (d) => color(d.value))
-      .attr("stroke", "#999");
+      .attr("fill", (d) => color(d.value));
 
     // Column labels (compound 1 properties)
     g.append("g")
@@ -73,7 +86,7 @@ export default function CompoundComparisonHeatmap({ compounds }) {
       .attr("y", -10)
       .attr("text-anchor", "middle")
       .style("font-size", "12px")
-      .text((d) => d);
+      .text((d) => displayNames[d]);
 
     // Row labels (compound 2 properties)
     g.append("g")
@@ -85,7 +98,7 @@ export default function CompoundComparisonHeatmap({ compounds }) {
       .attr("text-anchor", "end")
       .attr("dominant-baseline", "middle")
       .style("font-size", "12px")
-      .text((d) => d);
+      .text((d) => displayNames[d]);
 
     // Optional: Add title for compound 1
     g.append("text")
@@ -94,7 +107,7 @@ export default function CompoundComparisonHeatmap({ compounds }) {
       .attr("text-anchor", "middle")
       .style("font-size", "14px")
       .style("font-weight", "bold")
-      .text(`Compound 1`);
+      .text(comp1.name);
 
     // Optional: Add title for compound 2 (row axis)
     g.append("text")
@@ -108,8 +121,19 @@ export default function CompoundComparisonHeatmap({ compounds }) {
       )
       .style("font-size", "14px")
       .style("font-weight", "bold")
-      .text(`Compound 2`);
-  }, [compounds]);
+      .text(comp2.name);
+  }, [compounds, heatmapAndComparisonCompunds]);
 
-  return <svg ref={ref} className="w-full h-64"></svg>;
+  return (
+    <>
+      {/* {heatmapAndComparisonCompunds.length !== 0 && ( */}
+      <svg ref={ref} className="w-full h-full"></svg>
+      {/* )}
+      {heatmapAndComparisonCompunds.length === 0 && (
+        <div className="w-full h-full">
+          Please select Two compounds to compare them
+        </div>
+      )} */}
+    </>
+  );
 }

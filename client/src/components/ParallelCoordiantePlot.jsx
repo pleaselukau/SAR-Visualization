@@ -12,16 +12,27 @@ export default function ParallelCoordiantePlot({
     if (!compounds || compounds.length === 0) return;
 
     const svg = d3.select(ref.current);
+
     svg.selectAll("*").remove();
 
     const width = ref.current.clientWidth;
     const height = ref.current.clientHeight;
 
-    const margin = { top: 40, right: 30, bottom: 40, left: 30 };
+    const margin = { top: 30, right: 30, bottom: 30, left: 30 };
+
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
 
     const dimensions = ["weight", "log_p", "log_d", "pka", "tpsa", "potency"];
+
+    const displayNames = {
+      weight: "Weight",
+      log_p: "Log P",
+      log_d: "Log D",
+      pka: "pKa",
+      tpsa: "TPSA",
+      potency: "Potency",
+    };
 
     const y = {};
 
@@ -38,10 +49,8 @@ export default function ParallelCoordiantePlot({
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // Line generator for parallel coordinates
     const line = (d) => d3.line()(dimensions.map((p) => [x(p), y[p](+d[p])]));
 
-    // Draw lines for each compound
     g.selectAll("path")
       .data(compounds)
       .join("path")
@@ -50,10 +59,9 @@ export default function ParallelCoordiantePlot({
       .attr("stroke", (d) =>
         selectedIds.includes(d.ID) ? "orange" : "steelblue"
       )
-      .attr("stroke-opacity", 0.6)
+      .attr("stroke-opacity", (d) => (selectedIds.includes(d.ID) ? 1 : 0.5)) // .attr("stroke-opacity", 0.3)
       .attr("stroke-width", 1.5)
       .on("click", (event, d) => {
-        // toggle selection
         if (selectedIds.includes(d.ID)) {
           setSelectedIds(selectedIds.filter((id) => id !== d.ID));
         } else {
@@ -61,7 +69,6 @@ export default function ParallelCoordiantePlot({
         }
       });
 
-    // Draw vertical axes
     const axis = d3.axisLeft();
     const axesG = g
       .selectAll(".dimension")
@@ -73,7 +80,6 @@ export default function ParallelCoordiantePlot({
     axesG.each(function (dim) {
       d3.select(this).call(axis.scale(y[dim]));
 
-      // Add axis label at top
       d3.select(this)
         .append("text")
         .attr("y", -10)
@@ -81,7 +87,7 @@ export default function ParallelCoordiantePlot({
         .attr("text-anchor", "middle")
         .attr("fill", "black")
         .style("font-size", "12px")
-        .text(dim);
+        .text(displayNames[dim] || dim);
     });
   }, [compounds, selectedIds]);
 

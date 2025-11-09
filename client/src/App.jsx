@@ -10,6 +10,13 @@ import ComparisonPanel from "./components/ComparisonPanel.jsx";
 export default function App() {
   const [compounds, setCompounds] = useState([]);
   const [selectedIds, setSelectedIds] = useState([]);
+  const [scatterPlotDimensions, setScatterPlotDimensions] = useState(0);
+  const [heatmapAndComparisonCompunds, setHeatmapAndComparisonCompunds] =
+    useState([]);
+
+  useEffect(() => {
+    console.log(heatmapAndComparisonCompunds);
+  }, [heatmapAndComparisonCompunds]);
 
   useEffect(() => {
     fetch("/data.json")
@@ -19,7 +26,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="h-screen w-screen grid grid-cols-3 grid-rows-2 gap-1.5 bg-gray-100 p-2 overflow-hidden">
+    <div className="h-screen w-screen grid grid-cols-3 grid-rows-2 gap-1.5 bg-gray-100 p-1.5 overflow-hidden">
       <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
         <ParallelCoordiantePlot
           compounds={compounds}
@@ -32,6 +39,7 @@ export default function App() {
           compounds={compounds}
           selectedIds={selectedIds}
           setSelectedIds={setSelectedIds}
+          scatterPlotDimensions={scatterPlotDimensions}
         />
       </div>
       <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
@@ -39,6 +47,10 @@ export default function App() {
           compounds={compounds}
           selectedIds={selectedIds}
           setSelectedIds={setSelectedIds}
+          scatterPlotDimensions={scatterPlotDimensions}
+          setScatterPlotDimensions={setScatterPlotDimensions}
+          heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
+          setHeatmapAndComparisonCompunds={setHeatmapAndComparisonCompunds}
         />
       </div>
       <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
@@ -51,15 +63,13 @@ export default function App() {
       <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
         <Heatmap
           compounds={compounds}
-          selectedIds={selectedIds}
-          setSelectedIds={setSelectedIds}
+          heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
         />
       </div>
       <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
         <ComparisonPanel
           compounds={compounds}
-          selectedIds={selectedIds}
-          setSelectedIds={setSelectedIds}
+          heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
         />
       </div>
     </div>

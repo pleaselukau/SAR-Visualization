@@ -5,21 +5,54 @@ export default function ScatterPlot({
   compounds,
   selectedIds,
   setSelectedIds,
-  xProp = "weight",
-  yProp = "log_p",
+  scatterPlotDimensions,
 }) {
   const ref = useRef();
 
   useEffect(() => {
     if (!compounds || compounds.length === 0) return;
 
+    const dimensionMap = {
+      1: ["weight", "log_p"],
+      2: ["weight", "log_d"],
+      3: ["weight", "pka"],
+      4: ["weight", "tpsa"],
+      5: ["weight", "potency"],
+      6: ["log_p", "log_d"],
+      7: ["log_p", "pka"],
+      8: ["log_p", "tpsa"],
+      9: ["log_p", "potency"],
+      10: ["log_d", "pka"],
+      11: ["log_d", "tpsa"],
+      12: ["log_d", "potency"],
+      13: ["pka", "tpsa"],
+      14: ["pka", "potency"],
+      15: ["tpsa", "potency"],
+    };
+
+    const displayNames = {
+      weight: "Weight",
+      log_p: "Log P",
+      log_d: "Log D",
+      pka: "pKa",
+      tpsa: "TPSA",
+      potency: "Potency",
+    };
+
+    const [xProp, yProp] = dimensionMap[scatterPlotDimensions] || [
+      "weight",
+      "log_p",
+    ];
+
     const svg = d3.select(ref.current);
+
     svg.selectAll("*").remove();
 
     const width = ref.current.clientWidth;
     const height = ref.current.clientHeight;
 
     const margin = { top: 20, right: 20, bottom: 50, left: 60 };
+
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
 
@@ -39,7 +72,6 @@ export default function ScatterPlot({
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // Draw points
     g.selectAll("circle")
       .data(compounds)
       .join("circle")
@@ -59,7 +91,6 @@ export default function ScatterPlot({
         }
       });
 
-    // X axis
     g.append("g")
       .attr("transform", `translate(0,${innerHeight})`)
       .call(d3.axisBottom(x))
@@ -68,19 +99,18 @@ export default function ScatterPlot({
       .attr("y", 35)
       .attr("fill", "black")
       .attr("text-anchor", "middle")
-      .text(xProp);
+      .text(displayNames[xProp]);
 
-    // Y axis
     g.append("g")
       .call(d3.axisLeft(y))
       .append("text")
       .attr("x", -innerHeight / 2)
-      .attr("y", -45)
+      .attr("y", -35)
       .attr("transform", "rotate(-90)")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
-      .text(yProp);
-  }, [compounds, selectedIds, xProp, yProp]);
+      .text(displayNames[yProp]);
+  }, [compounds, selectedIds, scatterPlotDimensions]);
 
   return <svg ref={ref} className="w-full h-full"></svg>;
 }
