@@ -1,12 +1,29 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 
 export default function ParallelCoordiantePlot({
   compounds,
   selectedIds,
   setSelectedIds,
+  setTooltip,
 }) {
   const ref = useRef();
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!compounds || compounds.length === 0) return;
@@ -67,6 +84,20 @@ export default function ParallelCoordiantePlot({
         } else {
           setSelectedIds([...selectedIds, d.ID]);
         }
+      })
+      .on("mouseover", (event, d) => {
+        setTooltip({
+          visible: true,
+          x: event.pageX,
+          y: event.pageY,
+          compound: d,
+        });
+      })
+      .on("mousemove", (event) => {
+        setTooltip((prev) => ({ ...prev, x: event.pageX, y: event.pageY }));
+      })
+      .on("mouseout", () => {
+        setTooltip({ visible: false, x: 0, y: 0, compound: null });
       });
 
     const axis = d3.axisLeft();
@@ -89,7 +120,7 @@ export default function ParallelCoordiantePlot({
         .style("font-size", "12px")
         .text(displayNames[dim] || dim);
     });
-  }, [compounds, selectedIds]);
+  }, [compounds, selectedIds, windowSize]);
 
   return <svg ref={ref} className="w-full h-full"></svg>;
 }

@@ -5,9 +5,13 @@ export default function ComparisonPanel({
   if (!compounds || compounds.length === 0 || !heatmapAndComparisonCompunds)
     return null;
 
-  const selectedCompounds = compounds.filter((c) =>
-    heatmapAndComparisonCompunds.includes(c.ID)
-  );
+  const selectedCompounds = (
+    heatmapAndComparisonCompunds?.length
+      ? compounds.filter((c) => heatmapAndComparisonCompunds.includes(c.ID))
+      : []
+  )
+    .concat(compounds)
+    .slice(0, 2);
 
   return (
     <div className="flex flex-col w-full h-full">

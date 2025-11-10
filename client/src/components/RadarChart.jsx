@@ -1,8 +1,25 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 
 export default function RadarChart({ compounds, selectedIds, setSelectedIds }) {
   const ref = useRef();
+
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!compounds || compounds.length === 0) return;
@@ -108,7 +125,7 @@ export default function RadarChart({ compounds, selectedIds, setSelectedIds }) {
         .attr("stroke", "steelblue")
         .attr("stroke-width", 1.5);
     });
-  }, [compounds, selectedIds]);
+  }, [compounds, selectedIds, windowSize]);
 
   return <svg ref={ref} className="w-full h-full"></svg>;
 }

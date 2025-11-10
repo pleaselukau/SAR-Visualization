@@ -62,7 +62,7 @@ export default function SelectionPanel({
     mode === "highlight" ? toggleHighlight : toggleCompare;
 
   return (
-    <div className="flex flex-col items-center justify-start h-full w-full p-2 gap-3 overflow-hidden">
+    <div className="flex flex-col items-center justify-start h-full w-full p-2 gap-1 overflow-hidden">
       <div className="flex items-center justify-between w-full">
         <label className="text-sm font-semibold mr-2 whitespace-nowrap">
           Scatter Plot Dimensions:
@@ -92,7 +92,49 @@ export default function SelectionPanel({
         </select>
       </div>
 
-      <div className="mt-2 flex-1 overflow-y-auto border rounded p-2 bg-white w-full space-y-2">
+      {(selectedIds.length !== 0 ||
+        heatmapAndComparisonCompunds.length !== 0) && (
+        <div className="w-full border rounded p-1">
+          <div
+            className="flex flex-wrap gap-2 overflow-y-auto"
+            style={{
+              maxHeight: `${3 * 26 + 2 * 8}px`,
+              minHeight: `${1 * 26}px`,
+            }}
+          >
+            {(mode === "highlight"
+              ? selectedIds
+              : heatmapAndComparisonCompunds
+            ).map((id) => {
+              const compound = compounds.find((c) => c.ID === id);
+              if (!compound) return null;
+              return (
+                <div
+                  key={id}
+                  className={`flex items-center px-2 py-1 rounded border text-xs font-semibold ${
+                    mode === "highlight"
+                      ? "bg-blue-100 border-blue-400"
+                      : "bg-green-100 border-green-400"
+                  }`}
+                  style={{ height: "26px" }}
+                >
+                  <span className="mr-1">
+                    {compound.name || `Compound ${compound.ID}`}
+                  </span>
+                  <button
+                    className="font-bold hover:text-gray-500 text-xs"
+                    onClick={() => toggleSelection(id)}
+                  >
+                    ×
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      <div className="flex-1 overflow-y-auto border rounded p-2 bg-white w-full space-y-2">
         {compounds.map((compound) => (
           <div
             key={compound.ID}

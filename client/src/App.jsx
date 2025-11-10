@@ -6,6 +6,7 @@ import RadarChart from "./components/RadarChart.jsx";
 import Heatmap from "./components/Heatmap.jsx";
 import SelectionPanel from "./components/SelectionPanel.jsx";
 import ComparisonPanel from "./components/ComparisonPanel.jsx";
+import Tooltip from "./components/Tooltip.jsx";
 
 export default function App() {
   const [compounds, setCompounds] = useState([]);
@@ -14,9 +15,12 @@ export default function App() {
   const [heatmapAndComparisonCompunds, setHeatmapAndComparisonCompunds] =
     useState([]);
 
-  useEffect(() => {
-    console.log(heatmapAndComparisonCompunds);
-  }, [heatmapAndComparisonCompunds]);
+  const [tooltip, setTooltip] = useState({
+    visible: false,
+    x: 0,
+    y: 0,
+    compound: null,
+  });
 
   useEffect(() => {
     fetch("/data.json")
@@ -32,6 +36,7 @@ export default function App() {
           compounds={compounds}
           selectedIds={selectedIds}
           setSelectedIds={setSelectedIds}
+          setTooltip={setTooltip}
         />
       </div>
       <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
@@ -40,6 +45,7 @@ export default function App() {
           selectedIds={selectedIds}
           setSelectedIds={setSelectedIds}
           scatterPlotDimensions={scatterPlotDimensions}
+          setTooltip={setTooltip}
         />
       </div>
       <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
@@ -60,7 +66,7 @@ export default function App() {
           setSelectedIds={setSelectedIds}
         />
       </div>
-      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+      <div className="bg-white rounded-xl shadow p-2 flex flex-col items-center justify-center">
         <Heatmap
           compounds={compounds}
           heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
@@ -72,6 +78,13 @@ export default function App() {
           heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
         />
       </div>
+
+      <Tooltip
+        visible={tooltip.visible}
+        x={tooltip.x}
+        y={tooltip.y}
+        compound={tooltip.compound}
+      />
     </div>
   );
 }

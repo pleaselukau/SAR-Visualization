@@ -1,8 +1,25 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 
 export default function Heatmap({ compounds, heatmapAndComparisonCompunds }) {
   const ref = useRef();
+
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!compounds || compounds.length === 0) return;
@@ -122,18 +139,11 @@ export default function Heatmap({ compounds, heatmapAndComparisonCompunds }) {
       .style("font-size", "14px")
       .style("font-weight", "bold")
       .text(comp2.name);
-  }, [compounds, heatmapAndComparisonCompunds]);
+  }, [compounds, heatmapAndComparisonCompunds, windowSize]);
 
   return (
     <>
-      {/* {heatmapAndComparisonCompunds.length !== 0 && ( */}
       <svg ref={ref} className="w-full h-full"></svg>
-      {/* )}
-      {heatmapAndComparisonCompunds.length === 0 && (
-        <div className="w-full h-full">
-          Please select Two compounds to compare them
-        </div>
-      )} */}
     </>
   );
 }

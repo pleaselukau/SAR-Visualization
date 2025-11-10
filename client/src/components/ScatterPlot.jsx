@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 
 export default function ScatterPlot({
@@ -6,8 +6,25 @@ export default function ScatterPlot({
   selectedIds,
   setSelectedIds,
   scatterPlotDimensions,
+  setTooltip,
 }) {
   const ref = useRef();
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!compounds || compounds.length === 0) return;
@@ -89,6 +106,20 @@ export default function ScatterPlot({
         } else {
           setSelectedIds([...selectedIds, d.ID]);
         }
+      })
+      .on("mouseover", (event, d) => {
+        setTooltip({
+          visible: true,
+          x: event.pageX,
+          y: event.pageY,
+          compound: d,
+        });
+      })
+      .on("mousemove", (event) => {
+        setTooltip((prev) => ({ ...prev, x: event.pageX, y: event.pageY }));
+      })
+      .on("mouseout", () => {
+        setTooltip({ visible: false, x: 0, y: 0, compound: null });
       });
 
     g.append("g")
@@ -110,7 +141,7 @@ export default function ScatterPlot({
       .attr("fill", "black")
       .attr("text-anchor", "middle")
       .text(displayNames[yProp]);
-  }, [compounds, selectedIds, scatterPlotDimensions]);
+  }, [compounds, selectedIds, scatterPlotDimensions, windowSize]);
 
   return <svg ref={ref} className="w-full h-full"></svg>;
 }
