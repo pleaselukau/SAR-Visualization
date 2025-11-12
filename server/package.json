@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "AMACSAR",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test",
+    "build": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pleaselukau/SAR-Visualization.git"
+  },
+  "author": "Hrushikesh Joshi, Please Lukau, Harsh Shelke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pleaselukau/SAR-Visualization/issues"
+  },
+  "homepage": "https://github.com/pleaselukau/SAR-Visualization#readme",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
