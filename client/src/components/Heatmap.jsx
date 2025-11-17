@@ -6,6 +6,7 @@ export default function Heatmap({
   heatmapAndComparisonCompunds,
   similarityMatrix,
   onExpand,
+  onCellClick,
 }) {
   const ref = useRef();
 
@@ -105,14 +106,24 @@ export default function Heatmap({
         d3.select(this).attr("stroke", null);
       })
       .on("click", (event, d) => {
-        // For now, just log; later we can hook this into the comparison panel
-        console.log(
-          "Clicked pair:",
-          d.compRow.name,
-          d.compCol.name,
-          "similarity",
-          d.value.toFixed(3)
-        );
+        const info = {
+          compRow: d.compRow,
+          compCol: d.compCol,
+          similarity: d.value,
+          rowIndex: d.row,
+          colIndex: d.col,
+        };
+        if (onCellClick) {
+          onCellClick(info);
+        } else {
+          console.log(
+            "Clicked pair:",
+            d.compRow?.name,
+            d.compCol?.name,
+            "similarity",
+            d.value.toFixed(3)
+          );
+        }
 
       });
 
