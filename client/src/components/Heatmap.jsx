@@ -5,6 +5,7 @@ export default function Heatmap({
   compounds,
   heatmapAndComparisonCompunds,
   similarityMatrix,
+  onExpand,
 }) {
   const ref = useRef();
 
@@ -174,8 +175,16 @@ export default function Heatmap({
   }, [compounds, similarityMatrix, heatmapAndComparisonCompunds, windowSize]);
 
   return (
-    <>
+    <div className="relative w-full h-full">
+      {onExpand && (
+        <button
+          onClick={onExpand}
+          className="absolute top-2 right-2 z-10 px-2 py-1 text-xs rounded bg-white/80 border hover:bg-white"
+        >
+          Expand
+        </button>
+      )}
       <svg ref={ref} className="w-full h-full"></svg>
-    </>
+    </div>
   );
 }

@@ -17,6 +17,8 @@ export default function App() {
 
   // New: structural similarity matrix (NxN, aligned with compounds order)
   const [similarityMatrix, setSimilarityMatrix] = useState([]);
+  //New : bigger version of heatmap
+  const [isHeatmapExpanded, setIsHeatmapExpanded] = useState(false);
 
   const [tooltip, setTooltip] = useState({
     visible: false,
@@ -89,62 +91,88 @@ export default function App() {
   }, []);
 
   return (
-    <div className="h-screen w-screen grid grid-cols-3 grid-rows-2 gap-1.5 bg-gray-100 p-1.5 overflow-hidden">
-      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
-        <ParallelCoordiantePlot
-          compounds={compounds}
-          selectedIds={selectedIds}
-          setSelectedIds={setSelectedIds}
-          setTooltip={setTooltip}
-        />
-      </div>
-      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
-        <ScatterPlot
-          compounds={compounds}
-          selectedIds={selectedIds}
-          setSelectedIds={setSelectedIds}
-          scatterPlotDimensions={scatterPlotDimensions}
-          setTooltip={setTooltip}
-        />
-      </div>
-      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
-        <SelectionPanel
-          compounds={compounds}
-          selectedIds={selectedIds}
-          setSelectedIds={setSelectedIds}
-          scatterPlotDimensions={scatterPlotDimensions}
-          setScatterPlotDimensions={setScatterPlotDimensions}
-          heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
-          setHeatmapAndComparisonCompunds={setHeatmapAndComparisonCompunds}
-        />
-      </div>
-      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
-        <RadarChart
-          compounds={compounds}
-          selectedIds={selectedIds}
-          setSelectedIds={setSelectedIds}
-        />
-      </div>
-      <div className="bg-white rounded-xl shadow p-2 flex flex-col items-center justify-center">
-        <Heatmap
-          compounds={compounds}
-          heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
-          similarityMatrix={similarityMatrix} // New prop for structural similarity
-        />
-      </div>
-      <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
-        <ComparisonPanel
-          compounds={compounds}
-          heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
-        />
-      </div>
+    <>
+      <div className="h-screen w-screen grid grid-cols-3 grid-rows-2 gap-1.5 bg-gray-100 p-1.5 overflow-hidden">
+        <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+          <ParallelCoordiantePlot
+            compounds={compounds}
+            selectedIds={selectedIds}
+            setSelectedIds={setSelectedIds}
+            setTooltip={setTooltip}
+          />
+        </div>
+        <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+          <ScatterPlot
+            compounds={compounds}
+            selectedIds={selectedIds}
+            setSelectedIds={setSelectedIds}
+            scatterPlotDimensions={scatterPlotDimensions}
+            setTooltip={setTooltip}
+          />
+        </div>
+        <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+          <SelectionPanel
+            compounds={compounds}
+            selectedIds={selectedIds}
+            setSelectedIds={setSelectedIds}
+            scatterPlotDimensions={scatterPlotDimensions}
+            setScatterPlotDimensions={setScatterPlotDimensions}
+            heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
+            setHeatmapAndComparisonCompunds={setHeatmapAndComparisonCompunds}
+          />
+        </div>
+        <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+          <RadarChart
+            compounds={compounds}
+            selectedIds={selectedIds}
+            setSelectedIds={setSelectedIds}
+          />
+        </div>
+        <div className="bg-white rounded-xl shadow p-2 flex flex-col items-center justify-center">
+          <Heatmap
+            compounds={compounds}
+            heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
+            similarityMatrix={similarityMatrix} //  for structural similarity
+            onExpand={() => setIsHeatmapExpanded(true)}   //for the bigger heatmap
+          />
+        </div>
+        <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
+          <ComparisonPanel
+            compounds={compounds}
+            heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
+          />
+        </div>
 
-      <Tooltip
-        visible={tooltip.visible}
-        x={tooltip.x}
-        y={tooltip.y}
-        compound={tooltip.compound}
-      />
-    </div>
+        <Tooltip
+          visible={tooltip.visible}
+          x={tooltip.x}
+          y={tooltip.y}
+          compound={tooltip.compound}
+        />
+      </div> 
+      
+      {isHeatmapExpanded && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+          <div className="bg-white rounded-xl shadow-lg w-[90vw] h-[90vh] p-4 flex flex-col">
+            <div className="flex justify-between items-center mb-2">
+              <h2 className="text-lg font-semibold">Structural Similarity Heatmap</h2>
+              <button
+                onClick={() => setIsHeatmapExpanded(false)}
+                className="px-3 py-1 text-sm rounded bg-gray-200 hover:bg-gray-300"
+              >
+                Close
+              </button>
+            </div>
+            <div className="flex-1 border rounded overflow-hidden">
+              <Heatmap
+                compounds={compounds}
+                heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
+                similarityMatrix={similarityMatrix}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
