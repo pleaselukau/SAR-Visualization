@@ -172,7 +172,7 @@ export default function App() {
             </div>
 
             {/* Main content: big heatmap + side panel */}
-            <div className="flex-1 flex gap-4">
+            <div className="flex-1 flex gap-4 min-h-0">
               {/* Big heatmap */}
               <div className="flex-1 border rounded overflow-hidden">
                 <Heatmap
@@ -184,7 +184,7 @@ export default function App() {
               </div>
 
               {/* Side panel */}
-              <div className="w-80 border rounded p-3 text-xs bg-gray-50 flex flex-col">
+              <div className="w-80 h-full border rounded p-3 text-xs bg-gray-50 flex flex-col overflow-y-auto">
                 <h3 className="font-semibold mb-2">Selected Pair</h3>
 
                 {!selectedSimilarityPair && (
