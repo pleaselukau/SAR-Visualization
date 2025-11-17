@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import XLSX from "xlsx";
+import { execSync } from "child_process";
 
 const __dirname = path.resolve();
 
