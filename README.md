@@ -1,7 +1,9 @@
 
 # Interactive Visualization of Structure-Activity Relationships in Antimalarial Compounds
 
-### Project URL : https://github.com/pleaselukau/SAR-Visualization
+### Project Repository: https://github.com/pleaselukau/SAR-Visualization
+
+### Deployed Application: https://sar-visualization.onrender.com/
 
 ## CS 529: Visual Data Science (VDS) - Fall 2025
 
@@ -19,27 +21,41 @@
 
 ## Project Overview
 
-This project aims to design and build an interactive, browser-based visualization system to help medicinal chemists explore **Structure-Activity Relationships (SAR)** in a real-world drug discovery dataset. The goal is to understand how small changes in a chemical's structure influence its effectiveness as a potential antimalarial drug.
+This project is an interactive, browser-based visualization system designed to help medicinal chemists explore **Structure-Activity Relationships (SAR)** in a real-world drug discovery dataset. The system visualizes antimalarial compounds sharing a common **ß-carboline** molecular backbone, allowing researchers to detect patterns, clusters, and outliers by linking a compound's measured antimalarial potency with its calculated physicochemical properties and 2D chemical structure.
 
-The system will visualize a dataset of antimalarial compounds, all sharing a common **ẞ-carboline** molecular backbone. It will allow researchers to visually detect patterns, clusters, and outliers by linking a compound's measured antimalarial potency with its calculated physicochemical properties (like size, polarity, and lipophilicity) and its 2D chemical structure. Unlike standard tools like Excel or Tableau, this system will integrate chemical structure rendering and similarity computations directly into the visual analysis. This visual analysis helps guide decisions on which compounds are most promising for future synthesis.
+The visualization integrates chemical structure rendering and similarity computations directly into the visual analysis, helping guide decisions on which compounds are most promising for future synthesis.
 
 -----
 
 ## Key Features
 
-  * **Interactive, Multi-dimensional Plots:** Will include scatterplots and parallel-coordinates views to explore correlations between chemical properties (e.g., `logP`, `TPSA`) and antimalarial potency (`pEC50`).
-  * **Coordinated & Linked Views:** Selecting a compound in one plot (e.g., a property scatterplot) will instantly highlight its corresponding 2D molecular structure and its position in all other linked views.
-  * **On-the-Fly Structure Rendering:** Will render 2D molecular structures directly from their SMILES text notation.
-  * **Chemical Space Visualization:** Will use dimensionality reduction (PCA or t-SNE) to map the high-dimensional "chemical space" of all compounds, helping to identify clusters of structurally similar molecules.
-  * **Dynamic Filtering & Brushing:** Users will be able to interactively filter and select (e.g., with a lasso tool) subsets of compounds based on potency, properties, or structural similarity.
+  * **Interactive Scatter Plot:** Explore correlations between any two chemical properties (Weight, Log P, Log D, pKa, TPSA, Potency) with 15 different dimension combinations. Click compounds to select/highlight them across all views.
+  
+  * **Parallel Coordinates Plot:** View all compounds across multiple dimensions simultaneously. Interactive brushing allows filtering compounds by property ranges. Selected compounds are highlighted in orange.
+  
+  * **Radar Chart (Spider Plot):** Compare selected compounds across all six properties in a radial visualization, showing how multiple compounds overlap in chemical space.
+  
+  * **Structural Similarity Heatmap:** Visualize pairwise structural similarities between all compounds using Tanimoto similarity computed from Morgan fingerprints. Click cells to view detailed comparison of compound pairs. Expand to full-screen view for detailed exploration.
+  
+  * **Selection Panel:** Browse all compounds with their 2D molecular structures, properties, and select compounds for highlighting or comparison. Switch between "Highlight" mode (multiple selections) and "Compare" mode (max 2 compounds).
+  
+  * **Comparison Panel:** Side-by-side view of up to 2 selected compounds for detailed comparison.
+  
+  * **Coordinated & Linked Views:** Selecting a compound in any view instantly highlights it across all other visualizations with coordinated colors (orange for selected, steelblue for unselected).
+  
+  * **Interactive Tooltips:** Hover over compounds in scatter plots and parallel coordinates to see detailed property information.
+  
+  * **Dynamic Filtering & Brushing:** Use interactive brushes in the parallel coordinates plot to filter compounds by property ranges, with automatic visual feedback across all views.
 
 -----
 
 ## Technology Stack
 
-  * **Data Processing & Backend:** **Python**, Pandas, and Flask.
-  * **Cheminformatics:** **RDKit** (used for processing SMILES, computing molecular fingerprints/properties, and rendering 2D structures as SVGs).
-  * **Frontend Visualization:** **D3.js** (for all interactive graphics and plots).
+  * **Frontend Framework:** **React** with **Vite** for fast development and building
+  * **Visualization Library:** **D3.js** (for all interactive graphics and plots)
+  * **Styling:** **Tailwind CSS** for responsive UI design
+  * **Data Processing & Backend:** **Python** with **RDKit** for cheminformatics computations
+  * **Cheminformatics:** **RDKit** (used for processing SMILES, computing molecular fingerprints/properties, and rendering 2D structures as SVGs)
 
 -----
 
@@ -47,129 +63,271 @@ The system will visualize a dataset of antimalarial compounds, all sharing a com
 
 The dataset, originally provided by the Carlier laboratory at UIC as an Excel file, contained 105 compounds. After data cleaning (which removed 10 rows with invalid potency values), the final dataset used for visualization contains **95 compounds**.
 
-The key data fields are:
+The key data fields in `data.json` are:
 
-  * **`Compound_ID`**: The unique identifier (e.g., `CAR-0000058`).
-  * **`SMILES`**: The chemical structure in SMILES notation (a text format).
-  * **`pEC50`**: The measured antimalarial potency (the target variable for visualization).
+  * **`name`**: The unique compound identifier (e.g., `CAR-0000058`).
+  * **`ID`**: The compound ID used for selection and filtering.
+  * **`smiles`**: The chemical structure in SMILES notation (a text format).
+  * **`potency`**: The measured antimalarial potency (pEC50, the target variable for visualization).
   * **Five computed physicochemical properties**:
-      * `MW` (Molecular Weight)
-      * `logP` (Log P, a measure of lipophilicity)
-      * `logD` (Log D)
-      * `pKa` (Acid dissociation constant)
-      * `TPSA` (Topological Polar Surface Area)
-  * **`Synonyms`**: Other known identifiers for the compound (e.g., `MMV1919292`).
+      * `weight` (Molecular Weight)
+      * `log_p` (Log P, a measure of lipophilicity)
+      * `log_d` (Log D)
+      * `pka` (Acid dissociation constant)
+      * `tpsa` (Topological Polar Surface Area)
+
+The `similarities.json` file contains pairwise structural similarity scores computed using Tanimoto similarity on Morgan fingerprints (radius 2), stored as a dictionary mapping each compound name to a list of similar compounds with their similarity scores.
 
 -----
 
-## Instructions
+## Installation & Setup
 
-Credits: This support code was written by Andrew Wentzel, Electronic Visualization Laboratory (EVL) at UIC, and adapted here for this repository.
+### Prerequisites
 
-### Installing Node and npm
+- **Node.js** (v16 or higher recommended) and **npm**
+- **Python 3.7+** (for computing structural similarities)
+- **RDKit** Python package (for cheminformatics computations)
 
-There are several ways to install Node.js (required to run this React app).
+### Installing Node.js and npm
 
-- The easiest way is to install from the official site:
+Install Node.js from the official site: https://nodejs.org/en/download
 
-  https://nodejs.org/en/download
+During installation, npm will also be installed. Verify installations:
 
-  During installation, npm will also be installed. You can ignore non-critical warnings during install.
-
-- Verify installations in your terminal:
-
-  ```bash
-  node -v
-  npm -v
-  ```
-
-  If either command is not found, ensure your PATH includes the Node and npm binaries (on Windows check Environment Variables). Some installers also ship a custom shell; you can use your normal terminal as long as PATH is set correctly.
+```bash
+node -v
+npm -v
+```
 
 #### Optional: Using Node Version Manager (NVM)
 
-If you are on Ubuntu/Linux or macOS and need multiple Node versions, consider NVM:
-
-https://github.com/nvm-sh/nvm
-
-Install a specific Node version (this project runs on modern Node that supports Create React App; v16+ recommended):
+For Ubuntu/Linux or macOS, consider using NVM: https://github.com/nvm-sh/nvm
 
 ```bash
 nvm install 18
+nvm use 18
 ```
 
 ### Getting the Code
 
-You can either clone via Git or download the ZIP.
-
-- Clone:
-  ```bash
-  git clone https://github.com/pleaselukau/SAR-Visualization
-  cd SAR-Visualization
-  ```
-- Or download the ZIP and extract it, then `cd` into the folder.
-
-### Install and Run
-
-From the project root:
+Clone the repository:
 
 ```bash
-npm install
-npm start
+git clone https://github.com/pleaselukau/SAR-Visualization
+cd SAR-Visualization
 ```
 
-This launches the development server and opens `http://localhost:3000/` in your browser. Hot reload is enabled.
+### Installing Dependencies
+
+#### Frontend (Client)
+
+```bash
+cd client
+npm install
+```
+
+#### Backend (Server - Optional, for computing similarities)
+
+```bash
+cd server
+# Install RDKit (requires conda or pip)
+# Using conda (recommended):
+conda create -n rdkit-env python=3.9
+conda activate rdkit-env
+conda install -c conda-forge rdkit
+
+# Or using pip (if RDKit wheels are available for your platform):
+pip install rdkit
+```
+
+### Running the Application
+
+#### Development Mode
+
+From the `client` directory:
+
+```bash
+npm run dev
+```
+
+This launches the Vite development server (typically at `http://localhost:5173/`). Hot reload is enabled.
+
+#### Computing Structural Similarities (Optional)
+
+There are two scripts available for computing structural similarities:
+
+**Option 1: Using `compute_similarities.py` (Recommended for production)**
+
+```bash
+cd server
+python compute_similarities.py
+```
+
+This reads `client/public/data.json` and generates `client/public/similarities.json`.
+
+**Option 2: Using `Generated_SVGS_Script/automate_svgs.py` (All-in-one script)**
+
+This script both generates SVG files and computes similarity matrices:
+
+```bash
+cd server/Generated_SVGS_Script
+# Ensure RDKit is installed in your environment
+python automate_svgs.py
+```
+
+This script:
+- Generates 2D molecular structure SVGs from SMILES strings (saved to `generated_svgs/`)
+- Computes pairwise structural similarities using Tanimoto similarity on Morgan fingerprints
+- Saves similarity data to `similarities.json`
+- Uses `compounds.json` as input (which should contain compounds with `SMILES` and `name` fields)
+
+**Note:** The `Generated_SVGS_Script` folder contains pre-generated SVGs and similarity data that can be copied to the `client/public/` directory if needed.
 
 ### Project Structure
 
-- `src/App.js` — Top-level app; toggles between three views and manages shared state.
-- `src/Whitehat.js` — First view (to replace the prior White Hat).
-- `src/Blackhat.js` — Second view (to replace the prior Black Hat).
-- `src/WhiteHatStats.js`, `src/BlackHatStats.js` — Stats panels.
-- `src/D3Component.js`, `src/useSVGCanvas.js` — D3 template and helper hook.
-
-Data and assets:
-
-- `public/us-states.geojson` — Map geometry.
-- `public/processed_gundeaths_data.json` — Placeholder data; will be replaced by backend pipeline output (see below).
-- `python/Preprocessing.ipynb` and CSVs — Optional preprocessing resources.
-
-
------
-
-## Third View Added
-
-`App.js` includes a placeholder third view (see function `thirdView()` and the toggle buttons in the header). This view is scaffolded so you can quickly prototype an additional visualization or UI panel without affecting the existing White/Black Hat views.
-
-### How it works
-
-- The `viewToggle` state (0 = White Hat, 1 = Black Hat, 2 = Third View) controls which view renders.
-- `thirdView()` returns a two-panel layout consistent with the other views, including an instruction sidebar and a content area sized to fill the remaining width/height.
-- Shared app state (e.g., `zoomedState`, `brushedState`, `selectedStuff`) is available to pass into new components you add to this view, enabling linking/coordination with future panels if desired.
-
-Relevant code in `src/App.js`:
-
-```javascript
-// toggle logic
-const hat = () => {
-  if (viewToggle === 0) return makeWhiteHat();
-  if (viewToggle === 1) return makeBlackHat();
-  return thirdView();
-};
-
-// button group
-<button onClick={() => setViewToggle(2)} className={viewToggle === 2 ? 'inactiveButton' : 'activeButton'}>
-  {"Third View"}
-</button>
+```
+SAR-Visualization/
+├── client/                    # React frontend application
+│   ├── src/
+│   │   ├── App.jsx           # Main application component
+│   │   ├── components/       # React visualization components
+│   │   │   ├── ScatterPlot.jsx
+│   │   │   ├── ParallelCoordiantePlot.jsx
+│   │   │   ├── RadarChart.jsx
+│   │   │   ├── Heatmap.jsx
+│   │   │   ├── SelectionPanel.jsx
+│   │   │   ├── ComparisonPanel.jsx
+│   │   │   └── Tooltip.jsx
+│   │   ├── index.jsx         # React entry point
+│   │   └── index.css         # Global styles
+│   ├── public/
+│   │   ├── data.json         # Compound data
+│   │   ├── similarities.json # Structural similarity matrix
+│   │   └── svgs/             # Pre-rendered 2D molecular structures
+│   ├── package.json
+│   └── vite.config.js        # Vite configuration
+│
+└── server/                    # Python backend scripts
+    ├── compute_similarities.py  # Generate similarity matrix from SMILES
+    ├── generate_svgs.py         # Generate SVG structures (if needed)
+    ├── data.xlsx                # Original Excel data file
+    └── Generated_SVGS_Script/  # Automated SVG generation and similarity computation
+        ├── automate_svgs.py     # Main script: generates SVGs and computes similarities
+        ├── compounds.json       # Compound data in JSON format
+        ├── compound_similarities.json  # Pre-computed similarity matrix
+        ├── generated_svgs/      # Generated 2D molecular structure SVGs
+        └── rdkit-env/           # Python virtual environment (conda/venv)
 ```
 
+
 -----
 
-## Data Replacement Note
+## Server Scripts
 
-- The current "Gun Deaths" dataset (`public/processed_gundeaths_data.json`) is a placeholder. In production, this will be replaced by processed output from the backend pipeline.The backend emits a JSON (or other agreed format) compatible with the fetch paths in `src/App.js`.
-- When integrating the backend, update the fetch URLs in `App.js` (and any other components) to point to your API endpoint or to a new file name in `public/` if still serving statically.
+### Generated_SVGS_Script
 
-## View Naming Update
+The `server/Generated_SVGS_Script/` folder contains an automated pipeline for generating molecular structure visualizations and computing structural similarities. This is a comprehensive script that handles both SVG generation and similarity computation in one workflow.
 
-- `Whitehat.js` and `Blackhat.js` represent the first and second views, respectively. As you transition to the final application, refer to them as "First View" and "Second View" in UI and documentation. The third placeholder view in `App.js` can be evolved into any additional view as needed.
+#### Purpose
 
+The `automate_svgs.py` script performs two main tasks:
+
+1. **SVG Generation**: Converts SMILES strings to 2D molecular structure SVGs using RDKit
+   - Generates high-quality SVG files (400x400px) for each compound
+   - Saves SVGs to the `generated_svgs/` directory
+   - Files are named using the compound name (e.g., `CAR-0000058.svg`)
+
+2. **Similarity Computation**: Calculates pairwise structural similarities
+   - Uses Morgan fingerprints (radius 2) for molecular representation
+   - Computes Tanimoto similarity between all compound pairs
+   - Sorts similarities in descending order for each compound
+   - Saves results to `similarities.json`
+
+#### Usage
+
+```bash
+cd server/Generated_SVGS_Script
+
+# Activate your RDKit environment (if using conda)
+conda activate rdkit-env
+
+# Run the script
+python automate_svgs.py
+```
+
+#### Input Format
+
+The script expects `compounds.json` with the following structure:
+
+```json
+[
+  {
+    "name": "CAR-0000058",
+    "SMILES": "CCOc1cc2c(cc1OC)nc(n2)Nc3ccc(cc3)Cl"
+  },
+  ...
+]
+```
+
+#### Output
+
+- **SVG Files**: Generated in `generated_svgs/` directory
+- **Similarity Data**: Saved as `similarities.json` with format:
+  ```json
+  {
+    "CAR-0000058": [
+      {"compound": "CAR-0000059", "similarity": 0.85},
+      ...
+    ],
+    ...
+  }
+  ```
+
+#### Integration
+
+The generated SVGs can be copied to `client/public/svgs/` for use in the frontend application. The similarity data can be used to update `client/public/similarities.json`.
+
+-----
+
+## Usage Guide
+
+### Selecting Compounds
+
+- **Click** on any compound in the Scatter Plot, Parallel Coordinates Plot, or Selection Panel to select it
+- Selected compounds are highlighted in **orange** across all views
+- Use the **Selection Panel** to browse and select compounds by name or properties
+
+### Changing Scatter Plot Dimensions
+
+Use the dropdown in the **Selection Panel** to choose which two properties to plot on the X and Y axes. Available combinations include:
+- Weight vs Log P, Log D, pKa, TPSA, or Potency
+- Log P vs Log D, pKa, TPSA, or Potency
+- Log D vs pKa, TPSA, or Potency
+- pKa vs TPSA or Potency
+- TPSA vs Potency
+
+### Filtering in Parallel Coordinates
+
+- **Drag** vertically on any axis in the Parallel Coordinates Plot to create a brush filter
+- Compounds outside the selected range are faded out
+- Multiple filters can be active simultaneously
+- **Click** outside the brush area to clear a filter
+
+### Exploring Structural Similarity
+
+- The **Heatmap** shows pairwise structural similarities (Tanimoto similarity from Morgan fingerprints)
+- **Click** the "Expand" button to view the full-size heatmap
+- **Click** any cell in the expanded heatmap to see detailed comparison of the two compounds
+- The side panel shows molecular structures, properties, and similarity score
+
+### Comparison Mode
+
+- Switch to **"Compare"** mode in the Selection Panel
+- Select up to 2 compounds to compare side-by-side in the Comparison Panel
+- The Comparison Panel displays large molecular structure views for easy visual comparison
+
+-----
+
+## Credits
+
+This project was developed for CS 529: Visual Data Science at the University of Illinois Chicago. Support code was written by Andrew Wentzel, Electronic Visualization Laboratory (EVL) at UIC, and adapted for this repository.
