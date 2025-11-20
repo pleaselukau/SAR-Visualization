@@ -20,5 +20,8 @@
   "homepage": "https://github.com/pleaselukau/SAR-Visualization#readme",
   "dependencies": {
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1"
   }
 }

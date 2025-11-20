@@ -5,22 +5,23 @@ import XLSX from "xlsx";
 const __dirname = path.resolve();
 
 function generateData() {
-  const inputPath = path.join(__dirname, "data.xlsx");
-  const outputPath = path.join(__dirname, "../client/public/data.json");
+  const inputPath = path.join(__dirname, "compounds.xlsx");
+  const outputPath = path.join(__dirname, "../client/public/smiles.json");
 
   const workbook = XLSX.readFile(inputPath);
   const sheetName = workbook.SheetNames[0];
   const sheet = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
 
   const columnMap = {
-    "Molecule Name": "name",
-    "Molecular weight (g/mol)": "weight",
-    "log P": "log_p",
-    "log D": "log_d",
-    pKa: "pka",
-    "Topological polar surface area (Å²)": "tpsa",
-    Synonyms: "synonyms",
-    "Mean Dd2 Strain Growth Inhibition (72 h): pEC50": "potency",
+    name: "name",
+    // "Molecular weight (g/mol)": "weight",
+    // "log P": "log_p",
+    // "log D": "log_d",
+    // "pKa": "pka",
+    // "Topological polar surface area (Å²)": "tpsa",
+    // "Synonyms": "synonyms",
+    // "Mean Dd2 Strain Growth Inhibition (72 h): pEC50": "potency",
+    SMILES: "smiles",
   };
 
   const selectedColumns = Object.keys(columnMap);

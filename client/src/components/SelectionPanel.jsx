@@ -53,6 +53,13 @@ export default function SelectionPanel({
     });
   };
 
+  // const toggleCompare = (id) => {
+  //   setHeatmapAndComparisonCompunds((prev) => {
+  //     if (prev[0] === id) return []; // deselect if already selected
+  //     return [id]; // always select only this one
+  //   });
+  // };
+
   const isSelected = (id) =>
     mode === "highlight"
       ? selectedIds.includes(id)
@@ -175,7 +182,7 @@ export default function SelectionPanel({
             </div>
 
             <img
-              src={`/svgs/${compound.name}.svg`}
+              src={`/automation_svgs/${compound.name}.svg`}
               alt={compound.name || `Compound ${compound.ID}`}
               className="w-[70px] h-[70px] object-contain"
             />
