@@ -7,6 +7,7 @@ export default function Heatmap({
   similarityMatrix,
   onExpand,
   onCellClick,
+  showAxes = true,
 }) {
   const ref = useRef();
 
@@ -126,7 +127,7 @@ export default function Heatmap({
         }
 
       });
-
+    if (showAxes) { //only show axes for big heatmap
     // X-axis labels (columns) – compound IDs
     g.append("g")
       .selectAll("text")
@@ -138,30 +139,14 @@ export default function Heatmap({
       .attr("dominant-baseline", "middle")
       .attr("transform", (i) => {
         const xPos = x(i) + x.bandwidth() / 2;
-        //return `translate(${xPos}, -10) rotate(-60)`;
         const yPos = -50;
         return `rotate(-90, ${xPos}, ${yPos})`;
       })
       .style("font-size", "8px")
       .text((i) => compounds[i]?.name || `C${i + 1}`);
-    // X-axis labels (columns) – vertical CAR IDs
-    // g.append("g")
-    //   .selectAll("text")
-    //   .data(indices)
-    //   .join("text")
-    //   .attr("x", (i) => x(i) + x.bandwidth() / 2)
-    //   .attr("y", -5) // slightly above the heatmap
-    //   .attr("text-anchor", "end")
-    //   .attr("dominant-baseline", "middle")
-    //   // rotate each label -90° around its own (x,y) position
-    //   .attr("transform", (i) => {
-    //     const xPos = x(i) + x.bandwidth() / 2;
-    //     
-    //     return `rotate(-90, ${xPos}, ${yPos})`;
-    //   })
-    //   .style("font-size", "8px")
-    //   .text((i) => activeCompounds[i]?.name || `C${i + 1}`);
+    }
 
+    if (showAxes) {
     // Y-axis labels (rows) – compound IDs
     g.append("g")
       .selectAll("text")
@@ -173,7 +158,7 @@ export default function Heatmap({
       .attr("dominant-baseline", "middle")
       .style("font-size", "8px")
       .text((i) => compounds[i]?.name || `C${i + 1}`);
-
+    }
 
     // Title for the panel
     g.append("text")

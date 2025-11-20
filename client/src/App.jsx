@@ -136,6 +136,7 @@ export default function App() {
             heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
             similarityMatrix={similarityMatrix} //  for structural similarity
             onExpand={() => setIsHeatmapExpanded(true)}   //for the bigger heatmap
+            showAxes={false}    // HIDE axes in thumbnail
           />
         </div>
         <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
