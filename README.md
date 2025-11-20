@@ -1,6 +1,8 @@
 
 # Interactive Visualization of Structure-Activity Relationships in Antimalarial Compounds
 
+### Project URL : https://github.com/pleaselukau/SAR-Visualization
+
 ## CS 529: Visual Data Science (VDS) - Fall 2025
 
 **University of Illinois Chicago (UIC)**
