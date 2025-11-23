@@ -6,8 +6,8 @@ export default function SelectionPanel({
   setSelectedIds,
   scatterPlotDimensions,
   setScatterPlotDimensions,
-  heatmapAndComparisonCompunds,
-  setHeatmapAndComparisonCompunds,
+  comparisonCompounds,
+  setComparisonCompounds,
 }) {
   const [mode, setMode] = useState("highlight");
 
@@ -45,7 +45,7 @@ export default function SelectionPanel({
   };
 
   const toggleCompare = (id) => {
-    setHeatmapAndComparisonCompunds((prev) => {
+    setComparisonCompounds((prev) => {
       if (prev.includes(id)) return prev.filter((x) => x !== id);
       if (prev.length < 2) return [...prev, id];
       alert("You can select a maximum of 2 compounds.");
@@ -54,7 +54,7 @@ export default function SelectionPanel({
   };
 
   // const toggleCompare = (id) => {
-  //   setHeatmapAndComparisonCompunds((prev) => {
+  //   setComparisonCompounds((prev) => {
   //     if (prev[0] === id) return []; // deselect if already selected
   //     return [id]; // always select only this one
   //   });
@@ -63,7 +63,7 @@ export default function SelectionPanel({
   const isSelected = (id) =>
     mode === "highlight"
       ? selectedIds.includes(id)
-      : heatmapAndComparisonCompunds.includes(id);
+      : comparisonCompounds.includes(id);
 
   const toggleSelection =
     mode === "highlight" ? toggleHighlight : toggleCompare;
@@ -99,8 +99,7 @@ export default function SelectionPanel({
         </select>
       </div>
 
-      {(selectedIds.length !== 0 ||
-        heatmapAndComparisonCompunds.length !== 0) && (
+      {(selectedIds.length !== 0 || comparisonCompounds.length !== 0) && (
         <div className="w-full border rounded p-1">
           <div
             className="flex flex-wrap gap-2 overflow-y-auto"
@@ -109,34 +108,33 @@ export default function SelectionPanel({
               minHeight: `${1 * 26}px`,
             }}
           >
-            {(mode === "highlight"
-              ? selectedIds
-              : heatmapAndComparisonCompunds
-            ).map((id) => {
-              const compound = compounds.find((c) => c.ID === id);
-              if (!compound) return null;
-              return (
-                <div
-                  key={id}
-                  className={`flex items-center px-2 py-1 rounded border text-xs font-semibold ${
-                    mode === "highlight"
-                      ? "bg-blue-100 border-blue-400"
-                      : "bg-green-100 border-green-400"
-                  }`}
-                  style={{ height: "26px" }}
-                >
-                  <span className="mr-1">
-                    {compound.name || `Compound ${compound.ID}`}
-                  </span>
-                  <button
-                    className="font-bold hover:text-gray-500 text-xs"
-                    onClick={() => toggleSelection(id)}
+            {(mode === "highlight" ? selectedIds : comparisonCompounds).map(
+              (id) => {
+                const compound = compounds.find((c) => c.ID === id);
+                if (!compound) return null;
+                return (
+                  <div
+                    key={id}
+                    className={`flex items-center px-2 py-1 rounded border text-xs font-semibold ${
+                      mode === "highlight"
+                        ? "bg-blue-100 border-blue-400"
+                        : "bg-green-100 border-green-400"
+                    }`}
+                    style={{ height: "26px" }}
                   >
-                    ×
-                  </button>
-                </div>
-              );
-            })}
+                    <span className="mr-1">
+                      {compound.name || `Compound ${compound.ID}`}
+                    </span>
+                    <button
+                      className="font-bold hover:text-gray-500 text-xs"
+                      onClick={() => toggleSelection(id)}
+                    >
+                      ×
+                    </button>
+                  </div>
+                );
+              }
+            )}
           </div>
         </div>
       )}
@@ -182,15 +180,15 @@ export default function SelectionPanel({
             </div>
 
             <img
-              src={`/automation_svgs/${compound.name}.svg`}
+              src={`/svgs/${compound.name}.svg`}
               alt={compound.name || `Compound ${compound.ID}`}
               className="w-[70px] h-[70px] object-contain"
             />
 
             {mode === "compare" &&
-              heatmapAndComparisonCompunds.includes(compound.ID) && (
+              comparisonCompounds.includes(compound.ID) && (
                 <div className="absolute top-2 right-2 bg-green-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                  {heatmapAndComparisonCompunds.indexOf(compound.ID) + 1}
+                  {comparisonCompounds.indexOf(compound.ID) + 1}
                 </div>
               )}
           </div>
