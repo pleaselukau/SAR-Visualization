@@ -53,7 +53,7 @@ export default function ParallelCoordiantePlot({
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // --- Y scales for each dimension ---
+    //Y scales for each dimension
     const y = {};
     dimensions.forEach((dim) => {
       y[dim] = d3
@@ -63,13 +63,13 @@ export default function ParallelCoordiantePlot({
         .range([innerHeight, 0]);
     });
 
-    // --- X scale for dimensions ---
+    //X scale for dimensions
     const x = d3.scalePoint().domain(dimensions).range([0, innerWidth]);
 
-    // --- Brush state: active filters per dimension (data-space ranges) ---
+    // Brush state: active filters per dimension (data-space ranges)
     const activeFilters = {};
 
-    // --- Helper: check if a compound passes all active filters ---
+    // check if a compound passes all active filters
     const passesFilters = (d) => {
       return Object.entries(activeFilters).every(([dim, [min, max]]) => {
         const value = +d[dim];
@@ -77,13 +77,13 @@ export default function ParallelCoordiantePlot({
       });
     };
 
-    // --- Line generator for a compound across all dimensions ---
+    // Line generator for a compound across all dimensions
     const line = (d) =>
       d3.line()(
         dimensions.map((p) => [x(p), y[p](+d[p])])
       );
 
-    // --- Draw all polylines ---
+    // Draw all polylines
     const paths = g
       .append("g")
       .attr("class", "paths")
@@ -122,7 +122,7 @@ export default function ParallelCoordiantePlot({
         setTooltip({ visible: false, x: 0, y: 0, compound: null });
       });
 
-    // --- Function to update visual opacity based on filters + selection ---
+    // Function to update visual opacity based on filters + selection ---
     function updatePathStyles() {
       paths
         .attr("stroke-opacity", (d) => {
@@ -150,7 +150,7 @@ export default function ParallelCoordiantePlot({
       .attr("class", "dimension")
       .attr("transform", (d) => `translate(${x(d)},0)`);
 
-    // --- Add axes, labels, and brushes ---
+    //Add axes, labels, and brushes ---
     axesG.each(function (dim) {
       const axisG = d3.select(this);
 
