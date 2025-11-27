@@ -1,3 +1,5 @@
+// Tooltip component to show compound details on hover
+
 export default function Tooltip({ visible, x, y, compound }) {
   if (!visible || !compound) return null;
 
@@ -37,18 +39,17 @@ export default function Tooltip({ visible, x, y, compound }) {
                 return null;
 
               return (
-                <>
-                  <li key={key} className="flex gap-1">
-                    <span className="font-semibold">
-                      {displayNames[key] || key}:
-                    </span>
+                <li key={key} className="flex gap-1">
+                  <span className="font-semibold">
+                    {displayNames[key] || key}:
+                  </span>
 
-                    <span className="ml-2">{value}</span>
-                  </li>
-                </>
+                  <span className="ml-2">{value}</span>
+                </li>
               );
             })}
 
+            {/* Synonyms removed for cleaner tooltip */}
             {/* <li className="flex flex-col gap-1">
               <span className="font-semibold">Synonyms:</span>
               <div className="ml-2 block">

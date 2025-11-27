@@ -1,6 +1,28 @@
 import { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 
+function fisheyeScale(scale, focusX, distortion = 2) {
+  const domain = scale.domain();
+  const range = scale.range();
+
+  // total width of the axis
+  const [r0, r1] = range;
+  const axisLength = r1 - r0;
+
+  // map original positions to distorted positions
+  const newPos = domain.map((d) => {
+    const x = scale(d);
+    const left = x < focusX;
+    const dist = Math.abs(x - focusX);
+    const factor = (distortion + 1) / (distortion + dist / axisLength);
+    return left ? focusX - dist * factor : focusX + dist * factor;
+  });
+
+  const newScale = {};
+  domain.forEach((d, i) => (newScale[d] = newPos[i]));
+  return newScale;
+}
+
 export default function ParallelCoordiantePlot({
   compounds,
   selectedIds,
@@ -78,10 +100,7 @@ export default function ParallelCoordiantePlot({
     };
 
     // Line generator for a compound across all dimensions
-    const line = (d) =>
-      d3.line()(
-        dimensions.map((p) => [x(p), y[p](+d[p])])
-      );
+    const line = (d) => d3.line()(dimensions.map((p) => [x(p), y[p](+d[p])]));
 
     // Draw all polylines
     const paths = g
@@ -95,9 +114,7 @@ export default function ParallelCoordiantePlot({
       .attr("stroke", (d) =>
         selectedIds.includes(d.ID) ? "orange" : "steelblue"
       )
-      .attr("stroke-opacity", (d) =>
-        selectedIds.includes(d.ID) ? 1 : 0.4
-      )
+      .attr("stroke-opacity", (d) => (selectedIds.includes(d.ID) ? 1 : 0.4))
       .attr("stroke-width", 1.5)
       .on("click", (event, d) => {
         event.stopPropagation();
@@ -189,11 +206,22 @@ export default function ParallelCoordiantePlot({
           updatePathStyles();
         });
 
-      axisG
-        .append("g")
-        .attr("class", "brush")
-        .call(brush);
+      axisG.append("g").attr("class", "brush").call(brush);
     });
+
+    // svg.on("mousemove", (event) => {
+    //   const [mouseX] = d3.pointer(event, svg.node());
+
+    //   const xFisheye = fisheyeScale(x, mouseX, 2); // distortion factor 2
+
+    //   // Update positions of axes
+    //   axesG.attr("transform", (d) => `translate(${xFisheye[d]},0)`);
+
+    //   // Update lines
+    //   paths.attr("d", (d) =>
+    //     d3.line()(dimensions.map((p) => [xFisheye[p], y[p](+d[p])]))
+    //   );
+    // });
 
     // When selectedIds change, refresh styles (so filter + selection both apply)
     updatePathStyles();

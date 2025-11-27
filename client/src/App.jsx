@@ -134,6 +134,7 @@ export default function App() {
             compounds={compounds}
             selectedIds={selectedIds}
             setSelectedIds={setSelectedIds}
+            setTooltip={setTooltip}
           />
         </div>
         <div className="bg-white rounded-xl shadow p-2 flex flex-col items-center justify-center">

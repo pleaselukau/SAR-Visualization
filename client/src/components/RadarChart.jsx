@@ -1,16 +1,13 @@
-
-// Imported React hooks for managing state and lifecycle
+// RadarChart component to visualize selected compounds in a radar chart
 import { useRef, useEffect, useState } from "react";
-// Imported D3.js for data visualization
 import * as d3 from "d3";
 
-
-// RadarChart component renders a radar (spider) chart for selected compounds using D3.js
-// Props:
-// - compounds: contains compound objects
-// - selectedIds: contains selected compound IDs
-// - setSelectedIds: function to update selected IDs
-export default function RadarChart({ compounds, selectedIds, setSelectedIds }) {
+export default function RadarChart({
+  compounds,
+  selectedIds,
+  setSelectedIds,
+  setTooltip,
+}) {
   // Ref to the SVG element for D3 rendering
   const ref = useRef();
 
@@ -19,7 +16,6 @@ export default function RadarChart({ compounds, selectedIds, setSelectedIds }) {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-
 
   // Effect: Update window size state on resize for responsive chart
   useEffect(() => {
@@ -33,7 +29,6 @@ export default function RadarChart({ compounds, selectedIds, setSelectedIds }) {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
 
   // Effect: Rendered the radar chart whenever data, selection, or window size changes
   useEffect(() => {
@@ -138,22 +133,6 @@ export default function RadarChart({ compounds, selectedIds, setSelectedIds }) {
         value: rScale[axis](+c[axis]),
       }));
 
-      // g.append("path")
-      //   .datum(radarData)
-      //   .attr("d", radarLine)
-      //   .attr("fill", selectedIds.includes(c.ID) ? "orange" : "steelblue")
-      //   .attr("fill-opacity", 0.0095)
-      //   .attr("stroke", selectedIds.includes(c.ID) ? "orange" : "steelblue")
-      //   .attr("stroke-width", 1.5)
-      //   .style("cursor", "pointer")
-      //   .on("click", () => {
-      //     if (selectedIds.includes(c.ID)) {
-      //       setSelectedIds(selectedIds.filter((id) => id !== c.ID));
-      //     } else {
-      //       setSelectedIds([...selectedIds, c.ID]);
-      //     }
-      //   });
-
       // Draw radar polygon for this compound
       g.append("path")
         .datum(radarData)
@@ -161,7 +140,19 @@ export default function RadarChart({ compounds, selectedIds, setSelectedIds }) {
         .attr("fill", "steelblue")
         .attr("fill-opacity", opacity)
         .attr("stroke", "steelblue")
-        .attr("stroke-width", 1.5);
+        .attr("stroke-width", 1.5)
+        .on("mousemove", (event) => {
+          const [x, y] = d3.pointer(event, svg.node());
+          setTooltip({
+            visible: true,
+            x: x + svg.node().getBoundingClientRect().left,
+            y: y + svg.node().getBoundingClientRect().top,
+            compound: c,
+          });
+        })
+        .on("mouseout", () => {
+          setTooltip((prev) => ({ ...prev, visible: false }));
+        });
     });
   }, [compounds, selectedIds, windowSize]);
 
