@@ -16,7 +16,7 @@ export default function Tooltip({ visible, x, y, compound }) {
     <div
       className="
         absolute bg-white border border-gray-300 rounded-lg p-3 shadow-lg
-        pointer-events-none min-w-[400px] z-[1000]
+        pointer-events-none min-w-[400px] max-w-[400px] z-[1000]
       "
       style={{
         left: x + 10,
@@ -48,20 +48,6 @@ export default function Tooltip({ visible, x, y, compound }) {
                 </li>
               );
             })}
-
-            {/* Synonyms removed for cleaner tooltip */}
-            {/* <li className="flex flex-col gap-1">
-              <span className="font-semibold">Synonyms:</span>
-              <div className="ml-2 block">
-                {String(compound.synonyms)
-                  .split(",")
-                  .map((syn, idx) => (
-                    <div key={idx} className="break-words">
-                      {syn.trim()}
-                    </div>
-                  ))}
-              </div>
-            </li> */}
           </ul>
         </div>
 
@@ -73,6 +59,17 @@ export default function Tooltip({ visible, x, y, compound }) {
           />
         </div>
       </div>
+
+      <ul className="mt-2 space-y-1 text-sm">
+        <li className="flex gap-1">
+          <span className="font-semibold">Synonyms:</span>
+          <div className="ml-2 block w-full break-all">{compound.synonyms}</div>
+        </li>
+        <li className="flex gap-1">
+          <span className="font-semibold">SMILES:</span>
+          <div className="ml-2 block w-full break-all">{compound.smiles}</div>
+        </li>
+      </ul>
     </div>
   );
 }

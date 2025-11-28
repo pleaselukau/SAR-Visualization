@@ -94,13 +94,10 @@ export default function App() {
     loadData();
   }, []);
 
-  useEffect(() => {
-    console.log("Comparison Compounds updated:", comparisonCompounds);
-  }, [comparisonCompounds]);
-
   return (
     <>
       <div className="h-screen w-screen grid grid-cols-3 grid-rows-2 gap-1.5 bg-gray-100 p-1.5 overflow-hidden">
+        {/* <div className="h-screen w-screen grid bg-gray-100 p-1.5 overflow-hidden"> */}
         <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
           <ParallelCoordiantePlot
             compounds={compounds}
