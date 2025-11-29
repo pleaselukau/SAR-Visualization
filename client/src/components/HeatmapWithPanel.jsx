@@ -75,25 +75,7 @@ export default function HeatmapWithPanel({ compounds, similarityMatrix }) {
       .attr("y", (d) => y(d.row))
       .attr("width", x.bandwidth())
       .attr("height", y.bandwidth())
-      .attr("fill", (d) => color(d.value))
-      .attr("stroke", null)
-      //   .attr("stroke-width", expanded ? 0.5 : 0)
-      //   .attr("stroke", "white")
-      .on("mouseover", function (event, d) {
-        d3.select(this).attr("stroke", "white").attr("stroke-width", 2.5);
-        setActiveXAxisCompound(d.col);
-        setActiveYAxisCompound(d.row);
-      })
-      .on("mouseout", function () {
-        d3.select(this).attr("stroke", null);
-      })
-      .on("click", (event, d) => {
-        setSelectedSimilarityPair({
-          compRow: d.compRow,
-          compCol: d.compCol,
-          similarity: d.value,
-        });
-      });
+      .attr("fill", (d) => color(d.value));
 
     // Axis only in expanded mode
     if (expanded) {
@@ -151,22 +133,74 @@ export default function HeatmapWithPanel({ compounds, similarityMatrix }) {
         .text((i) => "");
 
       g.selectAll("rect")
+        .data(data)
+        .join("rect")
+        .attr("x", (d) => x(d.col))
+        .attr("y", (d) => y(d.row))
+        .attr("width", x.bandwidth())
+        .attr("height", y.bandwidth())
+        .attr("fill", (d) => color(d.value))
+        .attr("stroke", (d) =>
+          selectedSimilarityPair &&
+          selectedSimilarityPair.compRow === d.compRow &&
+          selectedSimilarityPair.compCol === d.compCol
+            ? "white"
+            : null
+        )
+        .attr("stroke-width", (d) =>
+          selectedSimilarityPair &&
+          selectedSimilarityPair.compRow === d.compRow &&
+          selectedSimilarityPair.compCol === d.compCol
+            ? 2.5
+            : 0
+        )
         .on("mouseover", function (event, d) {
           d3.select(this).attr("stroke", "white").attr("stroke-width", 2.5);
-          xLabels.text((i) => (i === d.col ? compounds[i].name.slice(-3) : ""));
-          yLabels.text((i) => (i === d.row ? compounds[i].name.slice(-3) : ""));
-          xLabelTicks.text((i) => (i === d.col ? "---" : "\u00A0-\u00A0"));
-          yLabelTicks.text((i) => (i === d.row ? "---" : "\u00A0-\u00A0"));
+          if (expanded) {
+            xLabels.text((i) =>
+              i === d.col ? compounds[i].name.slice(-3) : ""
+            );
+            yLabels.text((i) =>
+              i === d.row ? compounds[i].name.slice(-3) : ""
+            );
+            xLabelTicks.text((i) => (i === d.col ? "---" : "\u00A0-\u00A0"));
+            yLabelTicks.text((i) => (i === d.row ? "---" : "\u00A0-\u00A0"));
+          }
         })
-        .on("mouseout", function () {
-          d3.select(this).attr("stroke", null);
-          xLabels.text((i) => "");
-          yLabels.text((i) => "");
-          xLabelTicks.text((i) => `\u00A0-\u00A0`);
-          yLabelTicks.text((i) => `\u00A0-\u00A0`);
+        .on("mouseout", function (event, d) {
+          // Only remove stroke if it's NOT the selected rectangle
+          if (
+            !selectedSimilarityPair ||
+            selectedSimilarityPair.compRow !== d.compRow ||
+            selectedSimilarityPair.compCol !== d.compCol
+          ) {
+            d3.select(this).attr("stroke", null).attr("stroke-width", 0);
+          } else {
+            // Keep the selected rectangle stroke
+            d3.select(this).attr("stroke", "white").attr("stroke-width", 2.5);
+          }
+          if (expanded) {
+            xLabels.text((i) => "");
+            yLabels.text((i) => "");
+            xLabelTicks.text((i) => `\u00A0-\u00A0`);
+            yLabelTicks.text((i) => `\u00A0-\u00A0`);
+          }
+        })
+        .on("click", (event, d) => {
+          setSelectedSimilarityPair({
+            compRow: d.compRow,
+            compCol: d.compCol,
+            similarity: d.value,
+          });
         });
     }
-  }, [compounds, similarityMatrix, expanded, windowSize]);
+  }, [
+    compounds,
+    similarityMatrix,
+    selectedSimilarityPair,
+    expanded,
+    windowSize,
+  ]);
 
   // Helpers
   const formatVal = (v) =>
@@ -243,8 +277,8 @@ export default function HeatmapWithPanel({ compounds, similarityMatrix }) {
 
                 {/* Compound A */}
                 <div>
-                  <h4 className="mb-2 text-center font-medium">
-                    Compound A (Y-Axis): {a.name || "N/A"}
+                  <h4 className="mb-2 text-center text-[15px]">
+                    <b>Compound A (Y-Axis):</b> {a.name || "N/A"}
                   </h4>
                   {getSvgFor(a) && (
                     <img
@@ -287,8 +321,8 @@ export default function HeatmapWithPanel({ compounds, similarityMatrix }) {
 
                 {/* Compound B */}
                 <div>
-                  <h4 className="text-center font-medium mb-2">
-                    Compound B (X-Axis): {b.name || "N/A"}
+                  <h4 className="text-center mb-2 text-[15px]">
+                    <b>Compound B (X-Axis):</b> {b.name || "N/A"}
                   </h4>
                   {getSvgFor(b) && (
                     <img
