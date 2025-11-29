@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function SelectionPanel({
   compounds,
@@ -38,6 +38,8 @@ export default function SelectionPanel({
     potency: "Potency",
   };
 
+  const alertShownRef = useRef(false);
+
   const toggleHighlight = (id) => {
     setSelectedIds((prev) =>
       prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
@@ -45,20 +47,20 @@ export default function SelectionPanel({
   };
 
   const toggleCompare = (id) => {
+    console.log("Toggling compare for ID:", id);
     setComparisonCompounds((prev) => {
       if (prev.includes(id)) return prev.filter((x) => x !== id);
       if (prev.length < 2) return [...prev, id];
-      alert("You can select a maximum of 2 compounds.");
+      if (!alertShownRef.current) {
+        alertShownRef.current = true;
+        alert("You can select a maximum of 2 compounds.");
+        setTimeout(() => {
+          alertShownRef.current = false;
+        }, 100);
+      }
       return prev;
     });
   };
-
-  // const toggleCompare = (id) => {
-  //   setComparisonCompounds((prev) => {
-  //     if (prev[0] === id) return []; // deselect if already selected
-  //     return [id]; // always select only this one
-  //   });
-  // };
 
   const isSelected = (id) =>
     mode === "highlight"
@@ -89,14 +91,24 @@ export default function SelectionPanel({
 
       <div className="flex w-full justify-between items-center mt-2">
         <label className="text-sm font-semibold">Selection Mode:</label>
-        <select
-          value={mode}
-          onChange={(e) => setMode(e.target.value)}
-          className="border rounded p-2 text-sm"
-        >
-          <option value="highlight">Highlight (Multiple)</option>
-          <option value="compare">Compare (Max 2)</option>
-        </select>
+
+        <div className="flex gap-2">
+          <button
+            onClick={() => setMode("highlight")}
+            className={`px-3 py-2 text-sm rounded border 
+        ${mode === "highlight" ? "bg-blue-500 text-white" : "bg-white"}`}
+          >
+            Highlight
+          </button>
+
+          <button
+            onClick={() => setMode("compare")}
+            className={`px-3 py-2 text-sm rounded border 
+        ${mode === "compare" ? "bg-blue-500 text-white" : "bg-white"}`}
+          >
+            Compare
+          </button>
+        </div>
       </div>
 
       {(selectedIds.length !== 0 || comparisonCompounds.length !== 0) && (
@@ -182,7 +194,7 @@ export default function SelectionPanel({
             <img
               src={`/svgs/${compound.name}.svg`}
               alt={compound.name || `Compound ${compound.ID}`}
-              className="w-[70px] h-[70px] object-contain"
+              className="w-[70px] h-[70px] object-contain mr-8"
             />
 
             {mode === "compare" &&
@@ -191,6 +203,12 @@ export default function SelectionPanel({
                   {comparisonCompounds.indexOf(compound.ID) + 1}
                 </div>
               )}
+
+            {mode === "highlight" && selectedIds.includes(compound.ID) && (
+              <div className="absolute top-2 right-2 bg-blue-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                ✓
+              </div>
+            )}
           </div>
         ))}
       </div>

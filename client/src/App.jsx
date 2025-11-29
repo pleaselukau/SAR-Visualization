@@ -76,6 +76,8 @@ export default function App() {
         const compoundsData = await dataRes.json();
         const similaritiesData = await simRes.json();
 
+        compoundsData.sort((a, b) => a.name.localeCompare(b.name));
+
         setCompounds(compoundsData);
 
         // Build and store similarity matrix for the heatmap
