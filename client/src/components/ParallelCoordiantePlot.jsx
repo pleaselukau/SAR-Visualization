@@ -1,28 +1,6 @@
 // ParallelCoordinatePlot component to visualize compounds across multiple dimensions
-
 import { useRef, useEffect, useState, act } from "react";
 import * as d3 from "d3";
-
-// Fisheye scaling function for interactive distortion effect
-function fisheyeScale(scale, focusX, distortion = 2) {
-  const domain = scale.domain();
-  const range = scale.range();
-
-  const [r0, r1] = range;
-  const axisLength = r1 - r0;
-
-  const newPos = domain.map((d) => {
-    const x = scale(d);
-    const left = x < focusX;
-    const dist = Math.abs(x - focusX);
-    const factor = (distortion + 1) / (distortion + dist / axisLength);
-    return left ? focusX - dist * factor : focusX + dist * factor;
-  });
-
-  const newScale = {};
-  domain.forEach((d, i) => (newScale[d] = newPos[i]));
-  return newScale;
-}
 
 export default function ParallelCoordiantePlot({
   compounds,
@@ -118,7 +96,7 @@ export default function ParallelCoordiantePlot({
       .attr("stroke", (d) =>
         selectedIds.includes(d.ID) ? "orange" : "steelblue"
       )
-      .attr("stroke-width", 1.5)
+      .attr("stroke-width", 1)
       .attr("stroke-linejoin", "round")
       .attr("stroke-linecap", "round")
       .on("click", (event, d) => {
@@ -158,7 +136,7 @@ export default function ParallelCoordiantePlot({
         .attr("stroke", (d) =>
           selectedIds.includes(d.ID) ? "orange" : "steelblue"
         )
-        .attr("stroke-width", 1.5)
+        .attr("stroke-width", 1)
         .attr("stroke-linejoin", "round")
         .attr("stroke-linecap", "round");
     };
@@ -266,20 +244,6 @@ export default function ParallelCoordiantePlot({
         );
       });
     };
-
-    // svg.on("mousemove", (event) => {
-    //   const [mouseX] = d3.pointer(event, svg.node());
-
-    //   const xFisheye = fisheyeScale(x, mouseX, 2); // distortion factor 2
-
-    //   // Update positions of axes
-    //   axesG.attr("transform", (d) => `translate(${xFisheye[d]},0)`);
-
-    //   // Update lines
-    //   paths.attr("d", (d) =>
-    //     d3.line()(dimensions.map((p) => [xFisheye[p], y[p](+d[p])]))
-    //   );
-    // });
 
     updatePathStyles();
     updateFilterBoxes();
