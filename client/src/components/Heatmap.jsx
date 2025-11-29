@@ -37,9 +37,8 @@ export default function Heatmap({
       similarityMatrix.length === 0
     )
       return;
-    console.log("sample row", similarityMatrix[0]);
-    console.log("unique values", Array.from(new Set(similarityMatrix.flat())));
-
+    // console.log("sample row", similarityMatrix[0]);
+    // console.log("unique values", Array.from(new Set(similarityMatrix.flat())));
 
     // We assume similarityMatrix is aligned with compounds order
     const n = Math.min(compounds.length, similarityMatrix.length);
@@ -61,17 +60,9 @@ export default function Heatmap({
     // Indices 0..n-1 for compounds
     const indices = d3.range(n);
 
-    const x = d3
-      .scaleBand()
-      .domain(indices)
-      .range([0, innerWidth])
-      .padding(0);
+    const x = d3.scaleBand().domain(indices).range([0, innerWidth]).padding(0);
 
-    const y = d3
-      .scaleBand()
-      .domain(indices)
-      .range([0, innerHeight])
-      .padding(0);
+    const y = d3.scaleBand().domain(indices).range([0, innerHeight]).padding(0);
 
     // Flatten matrix into array of cells
     const data = [];
@@ -87,9 +78,7 @@ export default function Heatmap({
       }
     }
 
-    const color = d3
-      .scaleSequential(d3.interpolateViridis)
-      .domain([0, 1]); // similarity in [0,1]
+    const color = d3.scaleSequential(d3.interpolateViridis).domain([0, 1]); // similarity in [0,1]
 
     // Draw heatmap cells
     g.selectAll("rect")
@@ -125,39 +114,39 @@ export default function Heatmap({
             d.value.toFixed(3)
           );
         }
-
       });
-    if (showAxes) { //only show axes for big heatmap
-    // X-axis labels (columns) – compound IDs
-    g.append("g")
-      .selectAll("text")
-      .data(indices)
-      .join("text")
-      .attr("x", (i) => x(i) + x.bandwidth() / 2)
-      .attr("y", -50)
-      .attr("text-anchor", "end")
-      .attr("dominant-baseline", "middle")
-      .attr("transform", (i) => {
-        const xPos = x(i) + x.bandwidth() / 2;
-        const yPos = -50;
-        return `rotate(-90, ${xPos}, ${yPos})`;
-      })
-      .style("font-size", "8px")
-      .text((i) => compounds[i]?.name || `C${i + 1}`);
+    if (showAxes) {
+      //only show axes for big heatmap
+      // X-axis labels (columns) – compound IDs
+      g.append("g")
+        .selectAll("text")
+        .data(indices)
+        .join("text")
+        .attr("x", (i) => x(i) + x.bandwidth() / 2)
+        .attr("y", -50)
+        .attr("text-anchor", "end")
+        .attr("dominant-baseline", "middle")
+        .attr("transform", (i) => {
+          const xPos = x(i) + x.bandwidth() / 2;
+          const yPos = -50;
+          return `rotate(-90, ${xPos}, ${yPos})`;
+        })
+        .style("font-size", "8px")
+        .text((i) => compounds[i]?.name || `C${i + 1}`);
     }
 
     if (showAxes) {
-    // Y-axis labels (rows) – compound IDs
-    g.append("g")
-      .selectAll("text")
-      .data(indices)
-      .join("text")
-      .attr("x", -10)
-      .attr("y", (i) => y(i) + y.bandwidth() / 2)
-      .attr("text-anchor", "end")
-      .attr("dominant-baseline", "middle")
-      .style("font-size", "8px")
-      .text((i) => compounds[i]?.name || `C${i + 1}`);
+      // Y-axis labels (rows) – compound IDs
+      g.append("g")
+        .selectAll("text")
+        .data(indices)
+        .join("text")
+        .attr("x", -10)
+        .attr("y", (i) => y(i) + y.bandwidth() / 2)
+        .attr("text-anchor", "end")
+        .attr("dominant-baseline", "middle")
+        .style("font-size", "8px")
+        .text((i) => compounds[i]?.name || `C${i + 1}`);
     }
 
     // Title for the panel

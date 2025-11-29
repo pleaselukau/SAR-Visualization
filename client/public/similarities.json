@@ -9,6 +9,10 @@
       "similarity": 0.8392857142857143
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.8363636363636363
+    },
+    {
       "compound": "CAR-0000073",
       "similarity": 0.8070175438596491
     },
@@ -22,6 +26,10 @@
     },
     {
       "compound": "CAR-0000090",
+      "similarity": 0.7966101694915254
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.7966101694915254
     },
     {
@@ -54,10 +62,6 @@
     },
     {
       "compound": "CAR-0000088",
-      "similarity": 0.7666666666666667
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.7666666666666667
     },
     {
@@ -135,10 +139,6 @@
     {
       "compound": "CAR-0000078",
       "similarity": 0.6666666666666666
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.6612903225806451
     },
     {
       "compound": "CAR-0000071",
@@ -225,10 +225,6 @@
       "similarity": 0.6
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5970149253731343
-    },
-    {
       "compound": "CAR-0000187",
       "similarity": 0.5942028985507246
     },
@@ -267,6 +263,10 @@
     {
       "compound": "CAR-0000100",
       "similarity": 0.578125
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5735294117647058
     },
     {
       "compound": "CAR-0000049",
@@ -459,6 +459,10 @@
       "similarity": 0.6774193548387096
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6721311475409836
+    },
+    {
       "compound": "CAR-0000039",
       "similarity": 0.6612903225806451
     },
@@ -468,6 +472,10 @@
     },
     {
       "compound": "CAR-0000090",
+      "similarity": 0.6461538461538462
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.6461538461538462
     },
     {
@@ -516,10 +524,6 @@
     },
     {
       "compound": "CAR-0000044",
-      "similarity": 0.6212121212121212
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.6212121212121212
     },
     {
@@ -707,10 +711,6 @@
       "similarity": 0.5352112676056338
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5294117647058824
-    },
-    {
       "compound": "CAR-0000230",
       "similarity": 0.5285714285714286
     },
@@ -767,10 +767,6 @@
       "similarity": 0.5068493150684932
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5
-    },
-    {
       "compound": "CAR-0000253",
       "similarity": 0.4931506849315068
     },
@@ -789,6 +785,10 @@
     {
       "compound": "CAR-0000082",
       "similarity": 0.4852941176470588
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.4794520547945205
     },
     {
       "compound": "CAR-0000023",
@@ -1005,6 +1005,10 @@
       "similarity": 0.5757575757575758
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5757575757575758
+    },
+    {
       "compound": "CAR-0000083",
       "similarity": 0.5735294117647058
     },
@@ -1201,20 +1205,12 @@
       "similarity": 0.4583333333333333
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4520547945205479
-    },
-    {
       "compound": "CAR-0000041",
       "similarity": 0.4430379746835443
     },
     {
       "compound": "CAR-0000008",
       "similarity": 0.44
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.42857142857142855
     },
     {
       "compound": "CAR-0000081",
@@ -1227,6 +1223,10 @@
     {
       "compound": "CAR-0000120",
       "similarity": 0.4146341463414634
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.41025641025641024
     },
     {
       "compound": "CAR-0000023",
@@ -1275,10 +1275,6 @@
       "similarity": 0.7704918032786885
     },
     {
-      "compound": "CAR-0000263",
-      "similarity": 0.7704918032786885
-    },
-    {
       "compound": "CAR-0000199",
       "similarity": 0.7580645161290323
     },
@@ -1288,6 +1284,10 @@
     },
     {
       "compound": "CAR-0000070",
+      "similarity": 0.7419354838709677
+    },
+    {
+      "compound": "CAR-0000263",
       "similarity": 0.7419354838709677
     },
     {
@@ -1383,10 +1383,6 @@
       "similarity": 0.6417910447761194
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.6417910447761194
-    },
-    {
       "compound": "CAR-0000147",
       "similarity": 0.6363636363636364
     },
@@ -1412,6 +1408,10 @@
     },
     {
       "compound": "CAR-0000177",
+      "similarity": 0.6176470588235294
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.6176470588235294
     },
     {
@@ -1531,6 +1531,10 @@
       "similarity": 0.5441176470588235
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5441176470588235
+    },
+    {
       "compound": "CAR-0000050",
       "similarity": 0.5416666666666666
     },
@@ -1611,14 +1615,6 @@
       "similarity": 0.463768115942029
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4605263157894737
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.44594594594594594
-    },
-    {
       "compound": "CAR-0000082",
       "similarity": 0.4444444444444444
     },
@@ -1636,6 +1632,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4230769230769231
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4230769230769231
     },
     {
@@ -1797,7 +1797,15 @@
       "similarity": 0.6666666666666666
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6666666666666666
+    },
+    {
       "compound": "CAR-0000218",
+      "similarity": 0.6666666666666666
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.6666666666666666
     },
     {
@@ -1854,10 +1862,6 @@
     },
     {
       "compound": "CAR-0000044",
-      "similarity": 0.640625
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.640625
     },
     {
@@ -2001,10 +2005,6 @@
       "similarity": 0.5285714285714286
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5223880597014925
-    },
-    {
       "compound": "CAR-0000064",
       "similarity": 0.5211267605633803
     },
@@ -2015,10 +2015,6 @@
     {
       "compound": "CAR-0000067",
       "similarity": 0.5147058823529411
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.5142857142857142
     },
     {
       "compound": "CAR-0000008",
@@ -2038,6 +2034,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.49295774647887325
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.49295774647887325
     },
     {
@@ -2101,6 +2101,10 @@
     {
       "compound": "CAR-0000034",
       "similarity": 0.8032786885245902
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.7777777777777778
     },
     {
       "compound": "CAR-0000023",
@@ -2181,10 +2185,6 @@
     {
       "compound": "CAR-0000074",
       "similarity": 0.5714285714285714
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.5555555555555556
     },
     {
       "compound": "CAR-0000146",
@@ -2271,6 +2271,10 @@
       "similarity": 0.49295774647887325
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.49295774647887325
+    },
+    {
       "compound": "CAR-0000447",
       "similarity": 0.4868421052631579
     },
@@ -2313,10 +2317,6 @@
     {
       "compound": "CAR-0000200",
       "similarity": 0.4605263157894737
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4594594594594595
     },
     {
       "compound": "CAR-0000078",
@@ -2693,6 +2693,10 @@
       "similarity": 0.5671641791044776
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5671641791044776
+    },
+    {
       "compound": "CAR-0000083",
       "similarity": 0.5652173913043478
     },
@@ -2881,14 +2885,6 @@
       "similarity": 0.4520547945205479
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.44594594594594594
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.44155844155844154
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.4342105263157895
     },
@@ -2902,6 +2898,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4230769230769231
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4230769230769231
     },
     {
@@ -3171,6 +3171,10 @@
       "similarity": 0.5692307692307692
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5692307692307692
+    },
+    {
       "compound": "CAR-0000076",
       "similarity": 0.5671641791044776
     },
@@ -3295,19 +3299,15 @@
       "similarity": 0.4507042253521127
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4444444444444444
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.44
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.43243243243243246
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.42105263157894735
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.42105263157894735
     },
     {
@@ -3373,12 +3373,12 @@
       "similarity": 0.8135593220338984
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.8032786885245902
-    },
-    {
       "compound": "CAR-0000039",
       "similarity": 0.7796610169491526
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.7741935483870968
     },
     {
       "compound": "CAR-0000038",
@@ -3427,6 +3427,10 @@
     {
       "compound": "CAR-0000049",
       "similarity": 0.7058823529411765
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.7049180327868853
     },
     {
       "compound": "CAR-0000020",
@@ -3649,10 +3653,6 @@
       "similarity": 0.5588235294117647
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5588235294117647
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.5588235294117647
     },
@@ -3831,6 +3831,10 @@
       "similarity": 0.6307692307692307
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.625
+    },
+    {
       "compound": "CAR-0000070",
       "similarity": 0.6212121212121212
     },
@@ -3844,6 +3848,10 @@
     },
     {
       "compound": "CAR-0000090",
+      "similarity": 0.6029411764705882
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.6029411764705882
     },
     {
@@ -3896,10 +3904,6 @@
     },
     {
       "compound": "CAR-0000088",
-      "similarity": 0.5797101449275363
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.5797101449275363
     },
     {
@@ -3963,10 +3967,6 @@
       "similarity": 0.5507246376811594
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5492957746478874
-    },
-    {
       "compound": "CAR-0000255",
       "similarity": 0.5441176470588235
     },
@@ -4025,6 +4025,10 @@
     {
       "compound": "CAR-0000263",
       "similarity": 0.5285714285714286
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5277777777777778
     },
     {
       "compound": "CAR-0000061",
@@ -4101,10 +4105,6 @@
     {
       "compound": "CAR-0000064",
       "similarity": 0.49333333333333335
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.49295774647887325
     },
     {
       "compound": "CAR-0000067",
@@ -4191,6 +4191,10 @@
     {
       "compound": "CAR-0000020",
       "similarity": 0.8113207547169812
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.7857142857142857
     },
     {
       "compound": "CAR-0000098",
@@ -4334,10 +4338,6 @@
     },
     {
       "compound": "CAR-0000073",
-      "similarity": 0.6190476190476191
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.6190476190476191
     },
     {
@@ -4529,10 +4529,6 @@
       "similarity": 0.5285714285714286
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5142857142857142
-    },
-    {
       "compound": "CAR-0000187",
       "similarity": 0.5138888888888888
     },
@@ -4563,6 +4559,10 @@
     {
       "compound": "CAR-0000254",
       "similarity": 0.4931506849315068
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.49295774647887325
     },
     {
       "compound": "CAR-0000075",
@@ -4599,12 +4599,12 @@
   ],
   "CAR-0000066": [
     {
-      "compound": "CAR-0000086",
-      "similarity": 1.0
-    },
-    {
       "compound": "CAR-0000084",
       "similarity": 0.8983050847457628
+    },
+    {
+      "compound": "CAR-0000086",
+      "similarity": 0.864406779661017
     },
     {
       "compound": "CAR-0000042",
@@ -4653,6 +4653,10 @@
     {
       "compound": "CAR-0000030",
       "similarity": 0.7540983606557377
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.75
     },
     {
       "compound": "CAR-0000045",
@@ -4747,10 +4751,6 @@
       "similarity": 0.6615384615384615
     },
     {
-      "compound": "CAR-0000263",
-      "similarity": 0.6615384615384615
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.6515151515151515
     },
@@ -4779,8 +4779,8 @@
       "similarity": 0.640625
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.6323529411764706
+      "compound": "CAR-0000263",
+      "similarity": 0.6363636363636364
     },
     {
       "compound": "CAR-0000256",
@@ -4804,10 +4804,6 @@
     },
     {
       "compound": "CAR-0000073",
-      "similarity": 0.6212121212121212
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.6212121212121212
     },
     {
@@ -4873,6 +4869,10 @@
     {
       "compound": "CAR-0000081",
       "similarity": 0.5882352941176471
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5857142857142857
     },
     {
       "compound": "CAR-0000258",
@@ -5025,6 +5025,10 @@
       "similarity": 0.8448275862068966
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.8032786885245902
+    },
+    {
       "compound": "CAR-0000058",
       "similarity": 0.7966101694915254
     },
@@ -5041,10 +5045,6 @@
       "similarity": 0.7741935483870968
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.7741935483870968
-    },
-    {
       "compound": "CAR-0000043",
       "similarity": 0.7580645161290323
     },
@@ -5054,6 +5054,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.75
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.75
     },
     {
@@ -5153,10 +5157,6 @@
       "similarity": 0.6615384615384615
     },
     {
-      "compound": "CAR-0000263",
-      "similarity": 0.6615384615384615
-    },
-    {
       "compound": "CAR-0000067",
       "similarity": 0.6615384615384615
     },
@@ -5189,6 +5189,10 @@
       "similarity": 0.6363636363636364
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.6363636363636364
+    },
+    {
       "compound": "CAR-0000447",
       "similarity": 0.6231884057971014
     },
@@ -5203,10 +5207,6 @@
     {
       "compound": "CAR-0000065",
       "similarity": 0.6142857142857143
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.6086956521739131
     },
     {
       "compound": "CAR-0000079",
@@ -5241,10 +5241,6 @@
       "similarity": 0.5972222222222222
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5970149253731343
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.5970149253731343
     },
@@ -5255,6 +5251,10 @@
     {
       "compound": "CAR-0000081",
       "similarity": 0.5882352941176471
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5857142857142857
     },
     {
       "compound": "CAR-0000027",
@@ -5435,6 +5435,10 @@
   ],
   "CAR-0000008": [
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.896551724137931
+    },
+    {
       "compound": "CAR-0000075",
       "similarity": 0.8333333333333334
     },
@@ -5507,10 +5511,6 @@
       "similarity": 0.6515151515151515
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.6417910447761194
-    },
-    {
       "compound": "CAR-0000058",
       "similarity": 0.640625
     },
@@ -5541,6 +5541,10 @@
     {
       "compound": "CAR-0000044",
       "similarity": 0.6029411764705882
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.6
     },
     {
       "compound": "CAR-0000109",
@@ -5585,10 +5589,6 @@
     {
       "compound": "CAR-0000052",
       "similarity": 0.5652173913043478
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.5588235294117647
     },
     {
       "compound": "CAR-0000087",
@@ -5929,6 +5929,10 @@
       "similarity": 0.6666666666666666
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6612903225806451
+    },
+    {
       "compound": "CAR-0000023",
       "similarity": 0.6515151515151515
     },
@@ -5946,6 +5950,10 @@
     },
     {
       "compound": "CAR-0000090",
+      "similarity": 0.6363636363636364
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.6363636363636364
     },
     {
@@ -6002,10 +6010,6 @@
     },
     {
       "compound": "CAR-0000088",
-      "similarity": 0.6119402985074627
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.6119402985074627
     },
     {
@@ -6169,10 +6173,6 @@
       "similarity": 0.5277777777777778
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5217391304347826
-    },
-    {
       "compound": "CAR-0000230",
       "similarity": 0.5211267605633803
     },
@@ -6197,10 +6197,6 @@
       "similarity": 0.5142857142857142
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5138888888888888
-    },
-    {
       "compound": "CAR-0000215",
       "similarity": 0.5138888888888888
     },
@@ -6222,6 +6218,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4931506849315068
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4931506849315068
     },
     {
@@ -6271,420 +6271,420 @@
   ],
   "CAR-0000077": [
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.7142857142857143
-    },
-    {
       "compound": "CAR-0000087",
-      "similarity": 0.6984126984126984
-    },
-    {
-      "compound": "CAR-0000026",
-      "similarity": 0.6833333333333333
+      "similarity": 0.875
     },
     {
       "compound": "CAR-0000030",
-      "similarity": 0.6774193548387096
+      "similarity": 0.8545454545454545
     },
     {
       "compound": "CAR-0000080",
-      "similarity": 0.6721311475409836
+      "similarity": 0.8518518518518519
     },
     {
       "compound": "CAR-0000058",
-      "similarity": 0.6612903225806451
-    },
-    {
-      "compound": "CAR-0000079",
-      "similarity": 0.6349206349206349
+      "similarity": 0.8363636363636363
     },
     {
       "compound": "CAR-0000020",
-      "similarity": 0.6333333333333333
+      "similarity": 0.8113207547169812
+    },
+    {
+      "compound": "CAR-0000079",
+      "similarity": 0.8035714285714286
     },
     {
       "compound": "CAR-0000078",
-      "similarity": 0.6290322580645161
+      "similarity": 0.8
     },
     {
       "compound": "CAR-0000042",
-      "similarity": 0.625
-    },
-    {
-      "compound": "CAR-0000101",
-      "similarity": 0.625
-    },
-    {
-      "compound": "CAR-0000066",
-      "similarity": 0.6212121212121212
-    },
-    {
-      "compound": "CAR-0000086",
-      "similarity": 0.6212121212121212
+      "similarity": 0.7894736842105263
     },
     {
       "compound": "CAR-0000089",
-      "similarity": 0.6190476190476191
-    },
-    {
-      "compound": "CAR-0000045",
-      "similarity": 0.6190476190476191
+      "similarity": 0.7857142857142857
     },
     {
       "compound": "CAR-0000098",
-      "similarity": 0.6190476190476191
+      "similarity": 0.7857142857142857
     },
     {
-      "compound": "CAR-0000081",
-      "similarity": 0.6153846153846154
+      "compound": "CAR-0000086",
+      "similarity": 0.7796610169491526
     },
     {
-      "compound": "CAR-0000009",
-      "similarity": 0.6
+      "compound": "CAR-0000026",
+      "similarity": 0.7678571428571429
     },
     {
-      "compound": "CAR-0000090",
-      "similarity": 0.5970149253731343
+      "compound": "CAR-0000101",
+      "similarity": 0.7586206896551724
     },
     {
-      "compound": "CAR-0000088",
-      "similarity": 0.5970149253731343
+      "compound": "CAR-0000045",
+      "similarity": 0.7543859649122807
     },
     {
       "compound": "CAR-0000037",
-      "similarity": 0.59375
+      "similarity": 0.7543859649122807
+    },
+    {
+      "compound": "CAR-0000066",
+      "similarity": 0.75
+    },
+    {
+      "compound": "CAR-0000090",
+      "similarity": 0.75
+    },
+    {
+      "compound": "CAR-0000088",
+      "similarity": 0.75
     },
     {
       "compound": "CAR-0000060",
-      "similarity": 0.5909090909090909
+      "similarity": 0.7457627118644068
     },
     {
       "compound": "CAR-0000147",
-      "similarity": 0.5671641791044776
+      "similarity": 0.7166666666666667
     },
     {
       "compound": "CAR-0000249",
-      "similarity": 0.5671641791044776
+      "similarity": 0.7166666666666667
     },
     {
       "compound": "CAR-0000043",
-      "similarity": 0.5588235294117647
-    },
-    {
-      "compound": "CAR-0000008",
-      "similarity": 0.5588235294117647
+      "similarity": 0.7049180327868853
     },
     {
       "compound": "CAR-0000053",
-      "similarity": 0.5588235294117647
+      "similarity": 0.7049180327868853
     },
     {
       "compound": "CAR-0000260",
-      "similarity": 0.5588235294117647
+      "similarity": 0.7049180327868853
     },
     {
       "compound": "CAR-0000052",
-      "similarity": 0.5588235294117647
-    },
-    {
-      "compound": "CAR-0000084",
-      "similarity": 0.5571428571428572
+      "similarity": 0.7049180327868853
     },
     {
       "compound": "CAR-0000069",
-      "similarity": 0.5571428571428572
-    },
-    {
-      "compound": "CAR-0000082",
-      "similarity": 0.5538461538461539
-    },
-    {
-      "compound": "CAR-0000071",
-      "similarity": 0.5522388059701493
+      "similarity": 0.6984126984126984
     },
     {
       "compound": "CAR-0000200",
-      "similarity": 0.5507246376811594
-    },
-    {
-      "compound": "CAR-0000063",
-      "similarity": 0.5428571428571428
+      "similarity": 0.6935483870967742
     },
     {
       "compound": "CAR-0000256",
-      "similarity": 0.5373134328358209
+      "similarity": 0.6833333333333333
     },
     {
-      "compound": "CAR-0000027",
-      "similarity": 0.5373134328358209
+      "compound": "CAR-0000063",
+      "similarity": 0.6825396825396826
     },
     {
       "compound": "CAR-0000073",
-      "similarity": 0.5294117647058824
+      "similarity": 0.6721311475409836
     },
     {
-      "compound": "CAR-0000016",
-      "similarity": 0.5285714285714286
+      "compound": "CAR-0000071",
+      "similarity": 0.6721311475409836
+    },
+    {
+      "compound": "CAR-0000084",
+      "similarity": 0.671875
     },
     {
       "compound": "CAR-0000057",
-      "similarity": 0.5223880597014925
+      "similarity": 0.6666666666666666
     },
     {
       "compound": "CAR-0000059",
-      "similarity": 0.5217391304347826
+      "similarity": 0.6612903225806451
+    },
+    {
+      "compound": "CAR-0000081",
+      "similarity": 0.6612903225806451
     },
     {
       "compound": "CAR-0000067",
-      "similarity": 0.5217391304347826
+      "similarity": 0.6612903225806451
     },
     {
       "compound": "CAR-0000048",
-      "similarity": 0.5076923076923077
+      "similarity": 0.6551724137931034
     },
     {
-      "compound": "CAR-0000083",
-      "similarity": 0.5
+      "compound": "CAR-0000009",
+      "similarity": 0.6451612903225806
     },
     {
       "compound": "CAR-0000076",
-      "similarity": 0.5
+      "similarity": 0.6349206349206349
     },
     {
       "compound": "CAR-0000070",
-      "similarity": 0.5
-    },
-    {
-      "compound": "CAR-0000100",
-      "similarity": 0.5
-    },
-    {
-      "compound": "CAR-0000056",
-      "similarity": 0.4931506849315068
-    },
-    {
-      "compound": "CAR-0000085",
-      "similarity": 0.4931506849315068
-    },
-    {
-      "compound": "CAR-0000253",
-      "similarity": 0.4931506849315068
-    },
-    {
-      "compound": "CAR-0000074",
-      "similarity": 0.49295774647887325
-    },
-    {
-      "compound": "CAR-0000061",
-      "similarity": 0.49295774647887325
-    },
-    {
-      "compound": "CAR-0000038",
-      "similarity": 0.49295774647887325
+      "similarity": 0.6349206349206349
     },
     {
       "compound": "CAR-0000039",
-      "similarity": 0.4927536231884058
+      "similarity": 0.6290322580645161
     },
     {
-      "compound": "CAR-0000065",
-      "similarity": 0.4864864864864865
+      "compound": "CAR-0000074",
+      "similarity": 0.625
     },
     {
-      "compound": "CAR-0000044",
-      "similarity": 0.4861111111111111
-    },
-    {
-      "compound": "CAR-0000046",
-      "similarity": 0.4857142857142857
-    },
-    {
-      "compound": "CAR-0000099",
-      "similarity": 0.4857142857142857
+      "compound": "CAR-0000038",
+      "similarity": 0.625
     },
     {
       "compound": "CAR-0000097",
-      "similarity": 0.4852941176470588
+      "similarity": 0.6229508196721312
+    },
+    {
+      "compound": "CAR-0000082",
+      "similarity": 0.6229508196721312
+    },
+    {
+      "compound": "CAR-0000085",
+      "similarity": 0.6212121212121212
+    },
+    {
+      "compound": "CAR-0000253",
+      "similarity": 0.6212121212121212
+    },
+    {
+      "compound": "CAR-0000099",
+      "similarity": 0.6190476190476191
+    },
+    {
+      "compound": "CAR-0000044",
+      "similarity": 0.6153846153846154
+    },
+    {
+      "compound": "CAR-0000100",
+      "similarity": 0.6129032258064516
+    },
+    {
+      "compound": "CAR-0000065",
+      "similarity": 0.6119402985074627
+    },
+    {
+      "compound": "CAR-0000083",
+      "similarity": 0.609375
     },
     {
       "compound": "CAR-0000109",
-      "similarity": 0.4788732394366197
+      "similarity": 0.609375
+    },
+    {
+      "compound": "CAR-0000027",
+      "similarity": 0.6031746031746031
     },
     {
       "compound": "CAR-0000047",
-      "similarity": 0.4714285714285714
+      "similarity": 0.6031746031746031
     },
     {
-      "compound": "CAR-0000055",
-      "similarity": 0.4657534246575342
+      "compound": "CAR-0000008",
+      "similarity": 0.6
+    },
+    {
+      "compound": "CAR-0000061",
+      "similarity": 0.6
+    },
+    {
+      "compound": "CAR-0000056",
+      "similarity": 0.5970149253731343
+    },
+    {
+      "compound": "CAR-0000046",
+      "similarity": 0.59375
     },
     {
       "compound": "CAR-0000261",
-      "similarity": 0.4647887323943662
+      "similarity": 0.59375
     },
     {
       "compound": "CAR-0000259",
-      "similarity": 0.4647887323943662
+      "similarity": 0.59375
     },
     {
-      "compound": "CAR-0000075",
-      "similarity": 0.4594594594594595
-    },
-    {
-      "compound": "CAR-0000262",
-      "similarity": 0.4583333333333333
+      "compound": "CAR-0000055",
+      "similarity": 0.5909090909090909
     },
     {
       "compound": "CAR-0000263",
-      "similarity": 0.4583333333333333
-    },
-    {
-      "compound": "CAR-0000447",
-      "similarity": 0.4533333333333333
-    },
-    {
-      "compound": "CAR-0000146",
-      "similarity": 0.4520547945205479
-    },
-    {
-      "compound": "CAR-0000034",
-      "similarity": 0.4520547945205479
-    },
-    {
-      "compound": "CAR-0000264",
-      "similarity": 0.4520547945205479
-    },
-    {
-      "compound": "CAR-0000051",
-      "similarity": 0.4520547945205479
+      "similarity": 0.5846153846153846
     },
     {
       "compound": "CAR-0000255",
-      "similarity": 0.4507042253521127
+      "similarity": 0.578125
     },
     {
       "compound": "CAR-0000258",
-      "similarity": 0.4507042253521127
+      "similarity": 0.578125
     },
     {
       "compound": "CAR-0000266",
-      "similarity": 0.4507042253521127
+      "similarity": 0.578125
     },
     {
-      "compound": "CAR-0000230",
-      "similarity": 0.44594594594594594
+      "compound": "CAR-0000146",
+      "similarity": 0.5757575757575758
     },
     {
-      "compound": "CAR-0000177",
-      "similarity": 0.44594594594594594
+      "compound": "CAR-0000264",
+      "similarity": 0.5757575757575758
     },
     {
-      "compound": "CAR-0000250",
-      "similarity": 0.44594594594594594
+      "compound": "CAR-0000051",
+      "similarity": 0.5757575757575758
+    },
+    {
+      "compound": "CAR-0000447",
+      "similarity": 0.5735294117647058
     },
     {
       "compound": "CAR-0000148",
-      "similarity": 0.4444444444444444
+      "similarity": 0.5692307692307692
     },
     {
       "compound": "CAR-0000248",
-      "similarity": 0.4444444444444444
+      "similarity": 0.5692307692307692
     },
     {
-      "compound": "CAR-0000187",
-      "similarity": 0.44155844155844154
+      "compound": "CAR-0000177",
+      "similarity": 0.5671641791044776
     },
     {
-      "compound": "CAR-0000023",
-      "similarity": 0.44
+      "compound": "CAR-0000016",
+      "similarity": 0.5671641791044776
     },
     {
-      "compound": "CAR-0000035",
-      "similarity": 0.44
+      "compound": "CAR-0000250",
+      "similarity": 0.5671641791044776
     },
     {
-      "compound": "CAR-0000050",
-      "similarity": 0.44
+      "compound": "CAR-0000262",
+      "similarity": 0.5606060606060606
     },
     {
       "compound": "CAR-0000068",
-      "similarity": 0.4383561643835616
+      "similarity": 0.5606060606060606
     },
     {
-      "compound": "CAR-0000054",
-      "similarity": 0.4358974358974359
+      "compound": "CAR-0000050",
+      "similarity": 0.5588235294117647
     },
     {
-      "compound": "CAR-0000041",
-      "similarity": 0.4358974358974359
-    },
-    {
-      "compound": "CAR-0000018",
-      "similarity": 0.4342105263157895
-    },
-    {
-      "compound": "CAR-0000265",
-      "similarity": 0.4342105263157895
-    },
-    {
-      "compound": "CAR-0000201",
-      "similarity": 0.4342105263157895
+      "compound": "CAR-0000187",
+      "similarity": 0.5571428571428572
     },
     {
       "compound": "CAR-0000199",
-      "similarity": 0.43243243243243246
+      "similarity": 0.5522388059701493
     },
     {
-      "compound": "CAR-0000064",
-      "similarity": 0.42857142857142855
+      "compound": "CAR-0000265",
+      "similarity": 0.5507246376811594
+    },
+    {
+      "compound": "CAR-0000201",
+      "similarity": 0.5507246376811594
+    },
+    {
+      "compound": "CAR-0000054",
+      "similarity": 0.5492957746478874
+    },
+    {
+      "compound": "CAR-0000230",
+      "similarity": 0.5441176470588235
     },
     {
       "compound": "CAR-0000218",
-      "similarity": 0.4266666666666667
+      "similarity": 0.5441176470588235
     },
     {
       "compound": "CAR-0000214",
-      "similarity": 0.4266666666666667
+      "similarity": 0.5441176470588235
     },
     {
       "compound": "CAR-0000062",
-      "similarity": 0.4266666666666667
+      "similarity": 0.5441176470588235
     },
     {
-      "compound": "CAR-0000049",
-      "similarity": 0.425
+      "compound": "CAR-0000064",
+      "similarity": 0.5428571428571428
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5362318840579711
     },
     {
       "compound": "CAR-0000215",
-      "similarity": 0.42105263157894735
+      "similarity": 0.5362318840579711
     },
     {
-      "compound": "CAR-0000036",
-      "similarity": 0.4177215189873418
+      "compound": "CAR-0000049",
+      "similarity": 0.5342465753424658
     },
     {
       "compound": "CAR-0000257",
-      "similarity": 0.4155844155844156
-    },
-    {
-      "compound": "CAR-0000040",
-      "similarity": 0.4125
+      "similarity": 0.5285714285714286
     },
     {
       "compound": "CAR-0000120",
-      "similarity": 0.4074074074074074
+      "similarity": 0.5135135135135135
     },
     {
       "compound": "CAR-0000252",
-      "similarity": 0.38961038961038963
+      "similarity": 0.5
     },
     {
       "compound": "CAR-0000227",
-      "similarity": 0.3875
+      "similarity": 0.4931506849315068
     },
     {
       "compound": "CAR-0000254",
-      "similarity": 0.3875
+      "similarity": 0.4931506849315068
+    },
+    {
+      "compound": "CAR-0000075",
+      "similarity": 0.49295774647887325
+    },
+    {
+      "compound": "CAR-0000034",
+      "similarity": 0.4857142857142857
+    },
+    {
+      "compound": "CAR-0000023",
+      "similarity": 0.4722222222222222
+    },
+    {
+      "compound": "CAR-0000035",
+      "similarity": 0.4722222222222222
+    },
+    {
+      "compound": "CAR-0000041",
+      "similarity": 0.4666666666666667
+    },
+    {
+      "compound": "CAR-0000018",
+      "similarity": 0.4657534246575342
+    },
+    {
+      "compound": "CAR-0000036",
+      "similarity": 0.4473684210526316
+    },
+    {
+      "compound": "CAR-0000040",
+      "similarity": 0.44155844155844154
     }
   ],
   "CAR-0000060": [
@@ -6729,11 +6729,19 @@
       "similarity": 0.75
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.7457627118644068
+    },
+    {
       "compound": "CAR-0000080",
       "similarity": 0.7166666666666667
     },
     {
       "compound": "CAR-0000090",
+      "similarity": 0.7142857142857143
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.7142857142857143
     },
     {
@@ -6773,20 +6781,12 @@
       "similarity": 0.6875
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.6875
-    },
-    {
       "compound": "CAR-0000109",
       "similarity": 0.6825396825396826
     },
     {
       "compound": "CAR-0000065",
       "similarity": 0.6818181818181818
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.676923076923077
     },
     {
       "compound": "CAR-0000026",
@@ -6803,6 +6803,10 @@
     {
       "compound": "CAR-0000249",
       "similarity": 0.65625
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.6515151515151515
     },
     {
       "compound": "CAR-0000039",
@@ -6883,10 +6887,6 @@
     {
       "compound": "CAR-0000097",
       "similarity": 0.59375
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.5909090909090909
     },
     {
       "compound": "CAR-0000099",
@@ -7111,6 +7111,10 @@
       "similarity": 0.875
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.875
+    },
+    {
       "compound": "CAR-0000030",
       "similarity": 0.7833333333333333
     },
@@ -7147,6 +7151,10 @@
       "similarity": 0.7213114754098361
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.71875
+    },
+    {
       "compound": "CAR-0000079",
       "similarity": 0.7096774193548387
     },
@@ -7163,10 +7171,6 @@
       "similarity": 0.703125
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.6984126984126984
-    },
-    {
       "compound": "CAR-0000071",
       "similarity": 0.6984126984126984
     },
@@ -7180,10 +7184,6 @@
     },
     {
       "compound": "CAR-0000066",
-      "similarity": 0.6923076923076923
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.6923076923076923
     },
     {
@@ -7283,6 +7283,10 @@
       "similarity": 0.5882352941176471
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.5882352941176471
+    },
+    {
       "compound": "CAR-0000039",
       "similarity": 0.582089552238806
     },
@@ -7344,10 +7348,6 @@
     },
     {
       "compound": "CAR-0000068",
-      "similarity": 0.5652173913043478
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.5652173913043478
     },
     {
@@ -7419,10 +7419,6 @@
       "similarity": 0.5277777777777778
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5205479452054794
-    },
-    {
       "compound": "CAR-0000050",
       "similarity": 0.5205479452054794
     },
@@ -7461,6 +7457,10 @@
     {
       "compound": "CAR-0000064",
       "similarity": 0.5066666666666667
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5
     },
     {
       "compound": "CAR-0000049",
@@ -7601,10 +7601,6 @@
       "similarity": 0.6615384615384615
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.6567164179104478
-    },
-    {
       "compound": "CAR-0000146",
       "similarity": 0.6515151515151515
     },
@@ -7627,6 +7623,10 @@
     {
       "compound": "CAR-0000057",
       "similarity": 0.640625
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.6323529411764706
     },
     {
       "compound": "CAR-0000058",
@@ -7679,6 +7679,10 @@
     {
       "compound": "CAR-0000065",
       "similarity": 0.5915492957746479
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.5909090909090909
     },
     {
       "compound": "CAR-0000100",
@@ -7895,10 +7899,6 @@
     {
       "compound": "CAR-0000252",
       "similarity": 0.4666666666666667
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4657534246575342
     },
     {
       "compound": "CAR-0000009",
@@ -8127,6 +8127,10 @@
       "similarity": 0.6060606060606061
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6
+    },
+    {
       "compound": "CAR-0000147",
       "similarity": 0.5970149253731343
     },
@@ -8299,16 +8303,8 @@
       "similarity": 0.4935064935064935
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.49295774647887325
-    },
-    {
       "compound": "CAR-0000048",
       "similarity": 0.4925373134328358
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.4864864864864865
     },
     {
       "compound": "CAR-0000034",
@@ -8343,6 +8339,10 @@
       "similarity": 0.4473684210526316
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.4473684210526316
+    },
+    {
       "compound": "CAR-0000036",
       "similarity": 0.425
     },
@@ -8370,6 +8370,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.7313432835820896
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.7313432835820896
     },
     {
@@ -8453,10 +8457,6 @@
       "similarity": 0.5333333333333333
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5263157894736842
-    },
-    {
       "compound": "CAR-0000066",
       "similarity": 0.4935064935064935
     },
@@ -8535,6 +8535,10 @@
     {
       "compound": "CAR-0000026",
       "similarity": 0.4533333333333333
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.4473684210526316
     },
     {
       "compound": "CAR-0000074",
@@ -8627,10 +8631,6 @@
     {
       "compound": "CAR-0000062",
       "similarity": 0.41975308641975306
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4177215189873418
     },
     {
       "compound": "CAR-0000046",
@@ -8863,10 +8863,6 @@
       "similarity": 0.640625
     },
     {
-      "compound": "CAR-0000263",
-      "similarity": 0.640625
-    },
-    {
       "compound": "CAR-0000258",
       "similarity": 0.6349206349206349
     },
@@ -8911,6 +8907,10 @@
       "similarity": 0.6153846153846154
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.6153846153846154
+    },
+    {
       "compound": "CAR-0000249",
       "similarity": 0.6153846153846154
     },
@@ -8939,8 +8939,8 @@
       "similarity": 0.5970149253731343
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.5970149253731343
+      "compound": "CAR-0000077",
+      "similarity": 0.59375
     },
     {
       "compound": "CAR-0000098",
@@ -9008,6 +9008,10 @@
     },
     {
       "compound": "CAR-0000218",
+      "similarity": 0.5735294117647058
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.5735294117647058
     },
     {
@@ -9143,16 +9147,8 @@
       "similarity": 0.4861111111111111
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4857142857142857
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.4857142857142857
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.4794520547945205
     },
     {
       "compound": "CAR-0000047",
@@ -9168,6 +9164,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.44
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.44
     },
     {
@@ -9357,8 +9357,8 @@
       "similarity": 0.6307692307692307
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.6176470588235294
+      "compound": "CAR-0000077",
+      "similarity": 0.625
     },
     {
       "compound": "CAR-0000256",
@@ -9418,6 +9418,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.5942028985507246
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.5942028985507246
     },
     {
@@ -9573,10 +9577,6 @@
       "similarity": 0.5
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.49295774647887325
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.49295774647887325
     },
@@ -9672,6 +9672,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.7166666666666667
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.7166666666666667
     },
     {
@@ -9907,10 +9911,6 @@
       "similarity": 0.5671641791044776
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5671641791044776
-    },
-    {
       "compound": "CAR-0000044",
       "similarity": 0.5652173913043478
     },
@@ -9975,10 +9975,6 @@
       "similarity": 0.5285714285714286
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5138888888888888
-    },
-    {
       "compound": "CAR-0000187",
       "similarity": 0.5135135135135135
     },
@@ -9997,6 +9993,10 @@
     {
       "compound": "CAR-0000049",
       "similarity": 0.4935064935064935
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.4931506849315068
     },
     {
       "compound": "CAR-0000075",
@@ -10125,6 +10125,10 @@
       "similarity": 0.6764705882352942
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.6716417910447762
+    },
+    {
       "compound": "CAR-0000258",
       "similarity": 0.6615384615384615
     },
@@ -10154,10 +10158,6 @@
     },
     {
       "compound": "CAR-0000218",
-      "similarity": 0.6470588235294118
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.6470588235294118
     },
     {
@@ -10281,6 +10281,10 @@
       "similarity": 0.5797101449275363
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5735294117647058
+    },
+    {
       "compound": "CAR-0000037",
       "similarity": 0.5735294117647058
     },
@@ -10373,10 +10377,6 @@
       "similarity": 0.5131578947368421
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5066666666666667
-    },
-    {
       "compound": "CAR-0000227",
       "similarity": 0.5064935064935064
     },
@@ -10390,6 +10390,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4868421052631579
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4868421052631579
     },
     {
@@ -10415,10 +10419,6 @@
     {
       "compound": "CAR-0000041",
       "similarity": 0.4625
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4533333333333333
     },
     {
       "compound": "CAR-0000009",
@@ -10463,16 +10463,16 @@
       "similarity": 0.8032786885245902
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.8032786885245902
-    },
-    {
       "compound": "CAR-0000045",
       "similarity": 0.7796610169491526
     },
     {
       "compound": "CAR-0000080",
       "similarity": 0.7796610169491526
+    },
+    {
+      "compound": "CAR-0000086",
+      "similarity": 0.7741935483870968
     },
     {
       "compound": "CAR-0000058",
@@ -10488,6 +10488,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.75
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.75
     },
     {
@@ -10583,6 +10587,10 @@
       "similarity": 0.6615384615384615
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.6615384615384615
+    },
+    {
       "compound": "CAR-0000067",
       "similarity": 0.6615384615384615
     },
@@ -10604,10 +10612,6 @@
     },
     {
       "compound": "CAR-0000070",
-      "similarity": 0.6363636363636364
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.6363636363636364
     },
     {
@@ -10633,10 +10637,6 @@
     {
       "compound": "CAR-0000059",
       "similarity": 0.6119402985074627
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.6086956521739131
     },
     {
       "compound": "CAR-0000079",
@@ -10671,10 +10671,6 @@
       "similarity": 0.5972222222222222
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5970149253731343
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.5970149253731343
     },
@@ -10685,6 +10681,10 @@
     {
       "compound": "CAR-0000081",
       "similarity": 0.5882352941176471
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5857142857142857
     },
     {
       "compound": "CAR-0000027",
@@ -10885,10 +10885,6 @@
       "similarity": 0.8305084745762712
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.8305084745762712
-    },
-    {
       "compound": "CAR-0000084",
       "similarity": 0.8032786885245902
     },
@@ -10898,10 +10894,6 @@
     },
     {
       "compound": "CAR-0000262",
-      "similarity": 0.7966101694915254
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.7966101694915254
     },
     {
@@ -10918,6 +10910,10 @@
     },
     {
       "compound": "CAR-0000109",
+      "similarity": 0.7666666666666667
+    },
+    {
+      "compound": "CAR-0000263",
       "similarity": 0.7666666666666667
     },
     {
@@ -10951,6 +10947,10 @@
     {
       "compound": "CAR-0000248",
       "similarity": 0.7213114754098361
+    },
+    {
+      "compound": "CAR-0000086",
+      "similarity": 0.7142857142857143
     },
     {
       "compound": "CAR-0000258",
@@ -11089,6 +11089,10 @@
       "similarity": 0.6142857142857143
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.609375
+    },
+    {
       "compound": "CAR-0000045",
       "similarity": 0.609375
     },
@@ -11181,10 +11185,6 @@
       "similarity": 0.5606060606060606
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5571428571428572
-    },
-    {
       "compound": "CAR-0000050",
       "similarity": 0.5571428571428572
     },
@@ -11221,6 +11221,10 @@
       "similarity": 0.5138888888888888
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.5138888888888888
+    },
+    {
       "compound": "CAR-0000023",
       "similarity": 0.5138888888888888
     },
@@ -11231,10 +11235,6 @@
     {
       "compound": "CAR-0000018",
       "similarity": 0.5068493150684932
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.5
     },
     {
       "compound": "CAR-0000067",
@@ -11291,6 +11291,10 @@
       "similarity": 0.8392857142857143
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.8035714285714286
+    },
+    {
       "compound": "CAR-0000076",
       "similarity": 0.7931034482758621
     },
@@ -11343,12 +11347,12 @@
       "similarity": 0.6440677966101694
     },
     {
-      "compound": "CAR-0000077",
+      "compound": "CAR-0000042",
       "similarity": 0.6349206349206349
     },
     {
-      "compound": "CAR-0000042",
-      "similarity": 0.6349206349206349
+      "compound": "CAR-0000086",
+      "similarity": 0.6307692307692307
     },
     {
       "compound": "CAR-0000089",
@@ -11396,10 +11400,6 @@
     },
     {
       "compound": "CAR-0000088",
-      "similarity": 0.6060606060606061
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.6060606060606061
     },
     {
@@ -11456,6 +11456,10 @@
     },
     {
       "compound": "CAR-0000147",
+      "similarity": 0.5757575757575758
+    },
+    {
+      "compound": "CAR-0000263",
       "similarity": 0.5757575757575758
     },
     {
@@ -11540,10 +11544,6 @@
     },
     {
       "compound": "CAR-0000068",
-      "similarity": 0.5522388059701493
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.5522388059701493
     },
     {
@@ -11667,16 +11667,16 @@
       "similarity": 0.4666666666666667
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4657534246575342
-    },
-    {
       "compound": "CAR-0000034",
       "similarity": 0.4583333333333333
     },
     {
       "compound": "CAR-0000016",
       "similarity": 0.4520547945205479
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.44594594594594594
     },
     {
       "compound": "CAR-0000023",
@@ -11833,12 +11833,12 @@
       "similarity": 0.5633802816901409
     },
     {
-      "compound": "CAR-0000100",
+      "compound": "CAR-0000077",
       "similarity": 0.5571428571428572
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5540540540540541
+      "compound": "CAR-0000100",
+      "similarity": 0.5571428571428572
     },
     {
       "compound": "CAR-0000079",
@@ -11898,6 +11898,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.5333333333333333
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.5333333333333333
     },
     {
@@ -12077,10 +12081,6 @@
       "similarity": 0.4430379746835443
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.44155844155844154
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.44155844155844154
     },
@@ -12183,15 +12183,15 @@
       "similarity": 0.7586206896551724
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.7543859649122807
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.7543859649122807
     },
     {
       "compound": "CAR-0000066",
-      "similarity": 0.75
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.75
     },
     {
@@ -12205,6 +12205,10 @@
     {
       "compound": "CAR-0000030",
       "similarity": 0.7288135593220338
+    },
+    {
+      "compound": "CAR-0000086",
+      "similarity": 0.7213114754098361
     },
     {
       "compound": "CAR-0000067",
@@ -12232,10 +12236,6 @@
     },
     {
       "compound": "CAR-0000262",
-      "similarity": 0.6612903225806451
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.6612903225806451
     },
     {
@@ -12275,6 +12275,10 @@
       "similarity": 0.6363636363636364
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.6349206349206349
+    },
+    {
       "compound": "CAR-0000146",
       "similarity": 0.625
     },
@@ -12292,10 +12296,6 @@
     },
     {
       "compound": "CAR-0000148",
-      "similarity": 0.6190476190476191
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.6190476190476191
     },
     {
@@ -12443,10 +12443,6 @@
       "similarity": 0.5606060606060606
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5588235294117647
-    },
-    {
       "compound": "CAR-0000215",
       "similarity": 0.5588235294117647
     },
@@ -12481,6 +12477,10 @@
     {
       "compound": "CAR-0000054",
       "similarity": 0.5277777777777778
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5142857142857142
     },
     {
       "compound": "CAR-0000049",
@@ -12673,10 +12673,6 @@
       "similarity": 0.65625
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.6515151515151515
-    },
-    {
       "compound": "CAR-0000058",
       "similarity": 0.6507936507936508
     },
@@ -12729,6 +12725,10 @@
       "similarity": 0.6307692307692307
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.6268656716417911
+    },
+    {
       "compound": "CAR-0000199",
       "similarity": 0.6212121212121212
     },
@@ -12759,6 +12759,10 @@
     {
       "compound": "CAR-0000214",
       "similarity": 0.6119402985074627
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.609375
     },
     {
       "compound": "CAR-0000068",
@@ -12917,10 +12921,6 @@
       "similarity": 0.4864864864864865
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4788732394366197
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.4788732394366197
     },
@@ -12963,10 +12963,6 @@
       "similarity": 0.8983050847457628
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.8983050847457628
-    },
-    {
       "compound": "CAR-0000069",
       "similarity": 0.8688524590163934
     },
@@ -12981,6 +12977,10 @@
     {
       "compound": "CAR-0000056",
       "similarity": 0.78125
+    },
+    {
+      "compound": "CAR-0000086",
+      "similarity": 0.7777777777777778
     },
     {
       "compound": "CAR-0000060",
@@ -13005,10 +13005,6 @@
     {
       "compound": "CAR-0000109",
       "similarity": 0.71875
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.7121212121212122
     },
     {
       "compound": "CAR-0000080",
@@ -13055,6 +13051,10 @@
       "similarity": 0.6764705882352942
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.671875
+    },
+    {
       "compound": "CAR-0000045",
       "similarity": 0.671875
     },
@@ -13065,6 +13065,10 @@
     {
       "compound": "CAR-0000100",
       "similarity": 0.671875
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.6617647058823529
     },
     {
       "compound": "CAR-0000020",
@@ -13092,10 +13096,6 @@
     },
     {
       "compound": "CAR-0000076",
-      "similarity": 0.6417910447761194
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.6417910447761194
     },
     {
@@ -13133,6 +13133,10 @@
     {
       "compound": "CAR-0000089",
       "similarity": 0.6212121212121212
+    },
+    {
+      "compound": "CAR-0000263",
+      "similarity": 0.6176470588235294
     },
     {
       "compound": "CAR-0000063",
@@ -13241,10 +13245,6 @@
     {
       "compound": "CAR-0000199",
       "similarity": 0.5633802816901409
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.5571428571428572
     },
     {
       "compound": "CAR-0000261",
@@ -13377,231 +13377,203 @@
   ],
   "CAR-0000015": [
     {
-      "compound": "CAR-0000043",
-      "similarity": 0.8032786885245902
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.7142857142857143
-    },
-    {
-      "compound": "CAR-0000042",
-      "similarity": 0.7142857142857143
-    },
-    {
-      "compound": "CAR-0000084",
-      "similarity": 0.7121212121212122
-    },
-    {
-      "compound": "CAR-0000069",
-      "similarity": 0.6865671641791045
-    },
-    {
-      "compound": "CAR-0000060",
-      "similarity": 0.676923076923077
-    },
-    {
-      "compound": "CAR-0000055",
-      "similarity": 0.6567164179104478
-    },
-    {
-      "compound": "CAR-0000044",
-      "similarity": 0.6567164179104478
-    },
-    {
-      "compound": "CAR-0000109",
-      "similarity": 0.6515151515151515
-    },
-    {
       "compound": "CAR-0000008",
-      "similarity": 0.6417910447761194
-    },
-    {
-      "compound": "CAR-0000071",
-      "similarity": 0.6363636363636364
-    },
-    {
-      "compound": "CAR-0000066",
-      "similarity": 0.6323529411764706
-    },
-    {
-      "compound": "CAR-0000086",
-      "similarity": 0.6323529411764706
-    },
-    {
-      "compound": "CAR-0000039",
-      "similarity": 0.6212121212121212
-    },
-    {
-      "compound": "CAR-0000038",
-      "similarity": 0.6176470588235294
-    },
-    {
-      "compound": "CAR-0000026",
-      "similarity": 0.6153846153846154
-    },
-    {
-      "compound": "CAR-0000090",
-      "similarity": 0.6086956521739131
-    },
-    {
-      "compound": "CAR-0000088",
-      "similarity": 0.6086956521739131
-    },
-    {
-      "compound": "CAR-0000076",
-      "similarity": 0.6029411764705882
+      "similarity": 0.896551724137931
     },
     {
       "compound": "CAR-0000035",
-      "similarity": 0.6
-    },
-    {
-      "compound": "CAR-0000058",
-      "similarity": 0.5970149253731343
+      "similarity": 0.8360655737704918
     },
     {
       "compound": "CAR-0000018",
-      "similarity": 0.5915492957746479
-    },
-    {
-      "compound": "CAR-0000065",
-      "similarity": 0.5833333333333334
-    },
-    {
-      "compound": "CAR-0000080",
-      "similarity": 0.582089552238806
-    },
-    {
-      "compound": "CAR-0000049",
-      "similarity": 0.5733333333333334
+      "similarity": 0.8225806451612904
     },
     {
       "compound": "CAR-0000034",
-      "similarity": 0.5714285714285714
+      "similarity": 0.8032786885245902
     },
     {
-      "compound": "CAR-0000101",
-      "similarity": 0.5652173913043478
+      "compound": "CAR-0000075",
+      "similarity": 0.7777777777777778
+    },
+    {
+      "compound": "CAR-0000023",
+      "similarity": 0.7777777777777778
+    },
+    {
+      "compound": "CAR-0000043",
+      "similarity": 0.7741935483870968
+    },
+    {
+      "compound": "CAR-0000009",
+      "similarity": 0.7419354838709677
+    },
+    {
+      "compound": "CAR-0000036",
+      "similarity": 0.7313432835820896
+    },
+    {
+      "compound": "CAR-0000041",
+      "similarity": 0.7313432835820896
+    },
+    {
+      "compound": "CAR-0000081",
+      "similarity": 0.7301587301587301
+    },
+    {
+      "compound": "CAR-0000040",
+      "similarity": 0.7205882352941176
+    },
+    {
+      "compound": "CAR-0000082",
+      "similarity": 0.6935483870967742
+    },
+    {
+      "compound": "CAR-0000042",
+      "similarity": 0.6875
+    },
+    {
+      "compound": "CAR-0000084",
+      "similarity": 0.6617647058823529
+    },
+    {
+      "compound": "CAR-0000069",
+      "similarity": 0.6617647058823529
+    },
+    {
+      "compound": "CAR-0000016",
+      "similarity": 0.6567164179104478
+    },
+    {
+      "compound": "CAR-0000060",
+      "similarity": 0.6515151515151515
+    },
+    {
+      "compound": "CAR-0000055",
+      "similarity": 0.6323529411764706
+    },
+    {
+      "compound": "CAR-0000044",
+      "similarity": 0.6323529411764706
+    },
+    {
+      "compound": "CAR-0000109",
+      "similarity": 0.6268656716417911
+    },
+    {
+      "compound": "CAR-0000039",
+      "similarity": 0.5970149253731343
+    },
+    {
+      "compound": "CAR-0000038",
+      "similarity": 0.5942028985507246
+    },
+    {
+      "compound": "CAR-0000071",
+      "similarity": 0.5882352941176471
+    },
+    {
+      "compound": "CAR-0000066",
+      "similarity": 0.5857142857142857
+    },
+    {
+      "compound": "CAR-0000090",
+      "similarity": 0.5857142857142857
+    },
+    {
+      "compound": "CAR-0000088",
+      "similarity": 0.5857142857142857
+    },
+    {
+      "compound": "CAR-0000086",
+      "similarity": 0.5857142857142857
+    },
+    {
+      "compound": "CAR-0000076",
+      "similarity": 0.5797101449275363
+    },
+    {
+      "compound": "CAR-0000058",
+      "similarity": 0.5735294117647058
     },
     {
       "compound": "CAR-0000030",
       "similarity": 0.5652173913043478
     },
     {
-      "compound": "CAR-0000045",
+      "compound": "CAR-0000065",
+      "similarity": 0.5616438356164384
+    },
+    {
+      "compound": "CAR-0000080",
       "similarity": 0.5588235294117647
     },
     {
-      "compound": "CAR-0000083",
-      "similarity": 0.5571428571428572
+      "compound": "CAR-0000049",
+      "similarity": 0.5526315789473685
     },
     {
-      "compound": "CAR-0000075",
-      "similarity": 0.5555555555555556
+      "compound": "CAR-0000026",
+      "similarity": 0.5441176470588235
     },
     {
-      "compound": "CAR-0000023",
-      "similarity": 0.5555555555555556
-    },
-    {
-      "compound": "CAR-0000187",
-      "similarity": 0.5540540540540541
-    },
-    {
-      "compound": "CAR-0000074",
-      "similarity": 0.5492957746478874
-    },
-    {
-      "compound": "CAR-0000056",
-      "similarity": 0.547945205479452
-    },
-    {
-      "compound": "CAR-0000054",
-      "similarity": 0.5466666666666666
-    },
-    {
-      "compound": "CAR-0000020",
-      "similarity": 0.5454545454545454
-    },
-    {
-      "compound": "CAR-0000037",
+      "compound": "CAR-0000077",
       "similarity": 0.5362318840579711
     },
     {
-      "compound": "CAR-0000070",
-      "similarity": 0.5352112676056338
+      "compound": "CAR-0000187",
+      "similarity": 0.5333333333333333
     },
     {
-      "compound": "CAR-0000249",
-      "similarity": 0.5352112676056338
-    },
-    {
-      "compound": "CAR-0000027",
-      "similarity": 0.5285714285714286
-    },
-    {
-      "compound": "CAR-0000052",
+      "compound": "CAR-0000074",
       "similarity": 0.5277777777777778
     },
     {
-      "compound": "CAR-0000085",
-      "similarity": 0.527027027027027
-    },
-    {
-      "compound": "CAR-0000036",
+      "compound": "CAR-0000054",
       "similarity": 0.5263157894736842
     },
     {
-      "compound": "CAR-0000041",
-      "similarity": 0.5263157894736842
+      "compound": "CAR-0000020",
+      "similarity": 0.5223880597014925
     },
     {
-      "compound": "CAR-0000009",
+      "compound": "CAR-0000101",
       "similarity": 0.5211267605633803
     },
     {
-      "compound": "CAR-0000087",
-      "similarity": 0.5205479452054794
-    },
-    {
-      "compound": "CAR-0000040",
-      "similarity": 0.5194805194805194
-    },
-    {
-      "compound": "CAR-0000057",
+      "compound": "CAR-0000045",
       "similarity": 0.5142857142857142
     },
     {
-      "compound": "CAR-0000089",
+      "compound": "CAR-0000037",
       "similarity": 0.5142857142857142
     },
     {
-      "compound": "CAR-0000098",
-      "similarity": 0.5142857142857142
-    },
-    {
-      "compound": "CAR-0000059",
+      "compound": "CAR-0000083",
       "similarity": 0.5138888888888888
     },
     {
-      "compound": "CAR-0000147",
+      "compound": "CAR-0000070",
       "similarity": 0.5138888888888888
     },
     {
-      "compound": "CAR-0000081",
+      "compound": "CAR-0000249",
       "similarity": 0.5138888888888888
     },
     {
-      "compound": "CAR-0000063",
-      "similarity": 0.5135135135135135
+      "compound": "CAR-0000052",
+      "similarity": 0.5068493150684932
     },
     {
-      "compound": "CAR-0000447",
+      "compound": "CAR-0000056",
       "similarity": 0.5066666666666667
     },
     {
-      "compound": "CAR-0000073",
+      "compound": "CAR-0000085",
+      "similarity": 0.5066666666666667
+    },
+    {
+      "compound": "CAR-0000087",
       "similarity": 0.5
     },
     {
@@ -13609,84 +13581,68 @@
       "similarity": 0.5
     },
     {
-      "compound": "CAR-0000100",
+      "compound": "CAR-0000063",
+      "similarity": 0.49333333333333335
+    },
+    {
+      "compound": "CAR-0000059",
+      "similarity": 0.4931506849315068
+    },
+    {
+      "compound": "CAR-0000147",
+      "similarity": 0.4931506849315068
+    },
+    {
+      "compound": "CAR-0000057",
       "similarity": 0.49295774647887325
     },
     {
-      "compound": "CAR-0000061",
-      "similarity": 0.4864864864864865
+      "compound": "CAR-0000089",
+      "similarity": 0.49295774647887325
     },
     {
-      "compound": "CAR-0000053",
-      "similarity": 0.4864864864864865
+      "compound": "CAR-0000098",
+      "similarity": 0.49295774647887325
+    },
+    {
+      "compound": "CAR-0000447",
+      "similarity": 0.4868421052631579
     },
     {
       "compound": "CAR-0000256",
       "similarity": 0.4861111111111111
     },
     {
-      "compound": "CAR-0000046",
+      "compound": "CAR-0000073",
       "similarity": 0.4794520547945205
     },
     {
-      "compound": "CAR-0000078",
-      "similarity": 0.4788732394366197
-    },
-    {
-      "compound": "CAR-0000082",
-      "similarity": 0.4788732394366197
-    },
-    {
-      "compound": "CAR-0000262",
-      "similarity": 0.47297297297297297
-    },
-    {
-      "compound": "CAR-0000263",
-      "similarity": 0.47297297297297297
-    },
-    {
-      "compound": "CAR-0000051",
+      "compound": "CAR-0000053",
       "similarity": 0.4666666666666667
     },
     {
-      "compound": "CAR-0000079",
+      "compound": "CAR-0000027",
       "similarity": 0.4657534246575342
     },
     {
-      "compound": "CAR-0000266",
-      "similarity": 0.4657534246575342
+      "compound": "CAR-0000078",
+      "similarity": 0.4583333333333333
     },
     {
-      "compound": "CAR-0000230",
-      "similarity": 0.4605263157894737
+      "compound": "CAR-0000100",
+      "similarity": 0.4520547945205479
     },
     {
-      "compound": "CAR-0000016",
-      "similarity": 0.4605263157894737
-    },
-    {
-      "compound": "CAR-0000250",
-      "similarity": 0.4605263157894737
-    },
-    {
-      "compound": "CAR-0000248",
-      "similarity": 0.4594594594594595
-    },
-    {
-      "compound": "CAR-0000259",
-      "similarity": 0.4594594594594595
-    },
-    {
-      "compound": "CAR-0000050",
-      "similarity": 0.45454545454545453
-    },
-    {
-      "compound": "CAR-0000067",
-      "similarity": 0.4533333333333333
-    },
-    {
-      "compound": "CAR-0000260",
+      "compound": "CAR-0000061",
       "similarity": 0.4473684210526316
+    },
+    {
+      "compound": "CAR-0000051",
+      "similarity": 0.4473684210526316
+    },
+    {
+      "compound": "CAR-0000079",
+      "similarity": 0.44594594594594594
     },
     {
       "compound": "CAR-0000255",
@@ -13697,43 +13653,47 @@
       "similarity": 0.44594594594594594
     },
     {
-      "compound": "CAR-0000064",
-      "similarity": 0.4430379746835443
+      "compound": "CAR-0000266",
+      "similarity": 0.44594594594594594
     },
     {
-      "compound": "CAR-0000177",
+      "compound": "CAR-0000250",
       "similarity": 0.44155844155844154
     },
     {
-      "compound": "CAR-0000062",
-      "similarity": 0.44155844155844154
-    },
-    {
-      "compound": "CAR-0000148",
+      "compound": "CAR-0000046",
       "similarity": 0.44
     },
     {
-      "compound": "CAR-0000099",
+      "compound": "CAR-0000248",
       "similarity": 0.44
     },
     {
-      "compound": "CAR-0000097",
-      "similarity": 0.4383561643835616
+      "compound": "CAR-0000259",
+      "similarity": 0.44
     },
     {
-      "compound": "CAR-0000048",
-      "similarity": 0.43661971830985913
+      "compound": "CAR-0000050",
+      "similarity": 0.4358974358974359
     },
     {
-      "compound": "CAR-0000253",
-      "similarity": 0.43037974683544306
+      "compound": "CAR-0000262",
+      "similarity": 0.4342105263157895
+    },
+    {
+      "compound": "CAR-0000263",
+      "similarity": 0.4342105263157895
+    },
+    {
+      "compound": "CAR-0000067",
+      "similarity": 0.4342105263157895
     },
     {
       "compound": "CAR-0000201",
       "similarity": 0.43037974683544306
     },
     {
-      "compound": "CAR-0000146",
+      "compound": "CAR-0000260",
       "similarity": 0.42857142857142855
     },
     {
@@ -13741,62 +13701,102 @@
       "similarity": 0.42857142857142855
     },
     {
-      "compound": "CAR-0000218",
+      "compound": "CAR-0000064",
+      "similarity": 0.425
+    },
+    {
+      "compound": "CAR-0000230",
       "similarity": 0.4230769230769231
     },
     {
-      "compound": "CAR-0000214",
+      "compound": "CAR-0000177",
       "similarity": 0.4230769230769231
     },
     {
-      "compound": "CAR-0000261",
+      "compound": "CAR-0000062",
+      "similarity": 0.4230769230769231
+    },
+    {
+      "compound": "CAR-0000148",
       "similarity": 0.42105263157894735
     },
     {
-      "compound": "CAR-0000215",
-      "similarity": 0.4177215189873418
+      "compound": "CAR-0000099",
+      "similarity": 0.42105263157894735
     },
     {
-      "compound": "CAR-0000068",
-      "similarity": 0.4155844155844156
+      "compound": "CAR-0000097",
+      "similarity": 0.4189189189189189
+    },
+    {
+      "compound": "CAR-0000048",
+      "similarity": 0.4166666666666667
+    },
+    {
+      "compound": "CAR-0000253",
+      "similarity": 0.4125
     },
     {
       "compound": "CAR-0000257",
       "similarity": 0.4125
     },
     {
-      "compound": "CAR-0000264",
+      "compound": "CAR-0000146",
       "similarity": 0.41025641025641024
     },
     {
+      "compound": "CAR-0000218",
+      "similarity": 0.4050632911392405
+    },
+    {
+      "compound": "CAR-0000214",
+      "similarity": 0.4050632911392405
+    },
+    {
+      "compound": "CAR-0000261",
+      "similarity": 0.4025974025974026
+    },
+    {
+      "compound": "CAR-0000215",
+      "similarity": 0.4
+    },
+    {
+      "compound": "CAR-0000068",
+      "similarity": 0.3974358974358974
+    },
+    {
+      "compound": "CAR-0000264",
+      "similarity": 0.3924050632911392
+    },
+    {
       "compound": "CAR-0000047",
-      "similarity": 0.40789473684210525
+      "similarity": 0.38961038961038963
     },
     {
       "compound": "CAR-0000265",
-      "similarity": 0.3950617283950617
+      "similarity": 0.3780487804878049
     },
     {
       "compound": "CAR-0000252",
-      "similarity": 0.37037037037037035
+      "similarity": 0.35365853658536583
     },
     {
       "compound": "CAR-0000227",
-      "similarity": 0.36904761904761907
+      "similarity": 0.35294117647058826
     },
     {
       "compound": "CAR-0000254",
-      "similarity": 0.36904761904761907
+      "similarity": 0.35294117647058826
     },
     {
       "compound": "CAR-0000120",
-      "similarity": 0.3563218390804598
+      "similarity": 0.3409090909090909
     }
   ],
   "CAR-0000262": [
     {
       "compound": "CAR-0000263",
-      "similarity": 1.0
+      "similarity": 0.8596491228070176
     },
     {
       "compound": "CAR-0000266",
@@ -13927,10 +13927,6 @@
       "similarity": 0.6615384615384615
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.6615384615384615
-    },
-    {
       "compound": "CAR-0000045",
       "similarity": 0.6612903225806451
     },
@@ -13956,6 +13952,10 @@
     },
     {
       "compound": "CAR-0000088",
+      "similarity": 0.6363636363636364
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.6363636363636364
     },
     {
@@ -14067,6 +14067,10 @@
       "similarity": 0.5652173913043478
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5606060606060606
+    },
+    {
       "compound": "CAR-0000050",
       "similarity": 0.5571428571428572
     },
@@ -14151,14 +14155,6 @@
       "similarity": 0.47368421052631576
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.47297297297297297
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4583333333333333
-    },
-    {
       "compound": "CAR-0000082",
       "similarity": 0.45714285714285713
     },
@@ -14176,6 +14172,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4342105263157895
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4342105263157895
     },
     {
@@ -14257,6 +14257,10 @@
       "similarity": 0.7931034482758621
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.7894736842105263
+    },
+    {
       "compound": "CAR-0000044",
       "similarity": 0.7833333333333333
     },
@@ -14329,10 +14333,6 @@
       "similarity": 0.7213114754098361
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.7142857142857143
-    },
-    {
       "compound": "CAR-0000063",
       "similarity": 0.7142857142857143
     },
@@ -14355,6 +14355,10 @@
     {
       "compound": "CAR-0000070",
       "similarity": 0.6935483870967742
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.6875
     },
     {
       "compound": "CAR-0000053",
@@ -14427,10 +14431,6 @@
     {
       "compound": "CAR-0000078",
       "similarity": 0.6290322580645161
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.625
     },
     {
       "compound": "CAR-0000009",
@@ -14859,8 +14859,8 @@
       "similarity": 0.6349206349206349
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.6212121212121212
+      "compound": "CAR-0000077",
+      "similarity": 0.6290322580645161
     },
     {
       "compound": "CAR-0000079",
@@ -14900,6 +14900,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.5970149253731343
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.5970149253731343
     },
     {
@@ -15007,10 +15011,6 @@
       "similarity": 0.5
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4927536231884058
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.4927536231884058
     },
@@ -15061,6 +15061,10 @@
       "similarity": 0.8333333333333334
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.8
+    },
+    {
       "compound": "CAR-0000070",
       "similarity": 0.7894736842105263
     },
@@ -15087,6 +15091,10 @@
     {
       "compound": "CAR-0000261",
       "similarity": 0.7413793103448276
+    },
+    {
+      "compound": "CAR-0000263",
+      "similarity": 0.7288135593220338
     },
     {
       "compound": "CAR-0000255",
@@ -15134,10 +15142,6 @@
     },
     {
       "compound": "CAR-0000068",
-      "similarity": 0.7
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.7
     },
     {
@@ -15193,6 +15197,10 @@
       "similarity": 0.6557377049180327
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.6507936507936508
+    },
+    {
       "compound": "CAR-0000059",
       "similarity": 0.6451612903225806
     },
@@ -15217,10 +15225,6 @@
       "similarity": 0.6307692307692307
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.6290322580645161
-    },
-    {
       "compound": "CAR-0000042",
       "similarity": 0.6290322580645161
     },
@@ -15230,10 +15234,6 @@
     },
     {
       "compound": "CAR-0000066",
-      "similarity": 0.625
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.625
     },
     {
@@ -15421,10 +15421,6 @@
       "similarity": 0.4794520547945205
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4788732394366197
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.4714285714285714
     },
@@ -15434,6 +15430,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4583333333333333
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4583333333333333
     },
     {
@@ -15469,6 +15469,10 @@
     {
       "compound": "CAR-0000023",
       "similarity": 0.9152542372881356
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.8225806451612904
     },
     {
       "compound": "CAR-0000035",
@@ -15545,10 +15549,6 @@
     {
       "compound": "CAR-0000059",
       "similarity": 0.5942028985507246
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.5915492957746479
     },
     {
       "compound": "CAR-0000039",
@@ -15687,6 +15687,10 @@
       "similarity": 0.4722222222222222
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.4657534246575342
+    },
+    {
       "compound": "CAR-0000065",
       "similarity": 0.45569620253164556
     },
@@ -15749,10 +15753,6 @@
     {
       "compound": "CAR-0000200",
       "similarity": 0.4358974358974359
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4342105263157895
     },
     {
       "compound": "CAR-0000248",
@@ -15901,10 +15901,6 @@
       "similarity": 0.8064516129032258
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.8064516129032258
-    },
-    {
       "compound": "CAR-0000083",
       "similarity": 0.8032786885245902
     },
@@ -15947,6 +15943,10 @@
     {
       "compound": "CAR-0000201",
       "similarity": 0.7014925373134329
+    },
+    {
+      "compound": "CAR-0000086",
+      "similarity": 0.696969696969697
     },
     {
       "compound": "CAR-0000070",
@@ -16005,10 +16005,6 @@
       "similarity": 0.6417910447761194
     },
     {
-      "compound": "CAR-0000263",
-      "similarity": 0.6417910447761194
-    },
-    {
       "compound": "CAR-0000447",
       "similarity": 0.6285714285714286
     },
@@ -16035,6 +16031,10 @@
     {
       "compound": "CAR-0000037",
       "similarity": 0.6212121212121212
+    },
+    {
+      "compound": "CAR-0000263",
+      "similarity": 0.6176470588235294
     },
     {
       "compound": "CAR-0000058",
@@ -16071,6 +16071,10 @@
     {
       "compound": "CAR-0000030",
       "similarity": 0.6029411764705882
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.5970149253731343
     },
     {
       "compound": "CAR-0000045",
@@ -16197,10 +16201,6 @@
       "similarity": 0.5507246376811594
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.547945205479452
-    },
-    {
       "compound": "CAR-0000215",
       "similarity": 0.547945205479452
     },
@@ -16257,8 +16257,8 @@
       "similarity": 0.5066666666666667
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4931506849315068
+      "compound": "CAR-0000015",
+      "similarity": 0.5066666666666667
     },
     {
       "compound": "CAR-0000067",
@@ -16303,6 +16303,10 @@
   ],
   "CAR-0000069": [
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.8983050847457628
+    },
+    {
       "compound": "CAR-0000084",
       "similarity": 0.8688524590163934
     },
@@ -16324,10 +16328,6 @@
     },
     {
       "compound": "CAR-0000066",
-      "similarity": 0.7777777777777778
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.7777777777777778
     },
     {
@@ -16363,6 +16363,10 @@
       "similarity": 0.703125
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6984126984126984
+    },
+    {
       "compound": "CAR-0000037",
       "similarity": 0.6984126984126984
     },
@@ -16391,10 +16395,6 @@
       "similarity": 0.6875
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.6865671641791045
-    },
-    {
       "compound": "CAR-0000056",
       "similarity": 0.6764705882352942
     },
@@ -16409,6 +16409,10 @@
     {
       "compound": "CAR-0000249",
       "similarity": 0.6666666666666666
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.6617647058823529
     },
     {
       "compound": "CAR-0000020",
@@ -16455,6 +16459,10 @@
       "similarity": 0.6417910447761194
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.6417910447761194
+    },
+    {
       "compound": "CAR-0000256",
       "similarity": 0.6363636363636364
     },
@@ -16484,10 +16492,6 @@
     },
     {
       "compound": "CAR-0000262",
-      "similarity": 0.6176470588235294
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.6176470588235294
     },
     {
@@ -16585,10 +16589,6 @@
     {
       "compound": "CAR-0000199",
       "similarity": 0.5633802816901409
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.5571428571428572
     },
     {
       "compound": "CAR-0000046",
@@ -16841,6 +16841,10 @@
       "similarity": 0.640625
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6349206349206349
+    },
+    {
       "compound": "CAR-0000059",
       "similarity": 0.6307692307692307
     },
@@ -16893,10 +16897,6 @@
       "similarity": 0.6060606060606061
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.6029411764705882
-    },
-    {
       "compound": "CAR-0000266",
       "similarity": 0.6
     },
@@ -16935,6 +16935,10 @@
     {
       "compound": "CAR-0000263",
       "similarity": 0.582089552238806
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5797101449275363
     },
     {
       "compound": "CAR-0000023",
@@ -17089,10 +17093,6 @@
       "similarity": 0.5068493150684932
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.5
     },
@@ -17148,6 +17148,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.8032786885245902
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.8032786885245902
     },
     {
@@ -17245,10 +17249,6 @@
     {
       "compound": "CAR-0000100",
       "similarity": 0.5757575757575758
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.5714285714285714
     },
     {
       "compound": "CAR-0000255",
@@ -17411,6 +17411,10 @@
       "similarity": 0.4927536231884058
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.4857142857142857
+    },
+    {
       "compound": "CAR-0000265",
       "similarity": 0.48
     },
@@ -17465,10 +17469,6 @@
     {
       "compound": "CAR-0000252",
       "similarity": 0.4533333333333333
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4520547945205479
     },
     {
       "compound": "CAR-0000046",
@@ -17574,6 +17574,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.7777777777777778
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.7777777777777778
     },
     {
@@ -17685,10 +17689,6 @@
       "similarity": 0.5616438356164384
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5555555555555556
-    },
-    {
       "compound": "CAR-0000187",
       "similarity": 0.5333333333333333
     },
@@ -17777,6 +17777,10 @@
       "similarity": 0.47435897435897434
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.4722222222222222
+    },
+    {
       "compound": "CAR-0000074",
       "similarity": 0.4666666666666667
     },
@@ -17839,10 +17843,6 @@
     {
       "compound": "CAR-0000200",
       "similarity": 0.44155844155844154
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.44
     },
     {
       "compound": "CAR-0000071",
@@ -17995,6 +17995,10 @@
       "similarity": 0.7586206896551724
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.7419354838709677
+    },
+    {
       "compound": "CAR-0000075",
       "similarity": 0.6875
     },
@@ -18027,6 +18031,10 @@
       "similarity": 0.6470588235294118
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6451612903225806
+    },
+    {
       "compound": "CAR-0000020",
       "similarity": 0.6333333333333333
     },
@@ -18037,6 +18045,10 @@
     {
       "compound": "CAR-0000036",
       "similarity": 0.6231884057971014
+    },
+    {
+      "compound": "CAR-0000086",
+      "similarity": 0.6212121212121212
     },
     {
       "compound": "CAR-0000045",
@@ -18053,10 +18065,6 @@
     {
       "compound": "CAR-0000058",
       "similarity": 0.609375
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.6
     },
     {
       "compound": "CAR-0000101",
@@ -18076,10 +18084,6 @@
     },
     {
       "compound": "CAR-0000088",
-      "similarity": 0.5970149253731343
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.5970149253731343
     },
     {
@@ -18133,10 +18137,6 @@
     {
       "compound": "CAR-0000084",
       "similarity": 0.5352112676056338
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.5211267605633803
     },
     {
       "compound": "CAR-0000079",
@@ -18263,6 +18263,10 @@
       "similarity": 0.4647887323943662
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.4583333333333333
+    },
+    {
       "compound": "CAR-0000447",
       "similarity": 0.4533333333333333
     },
@@ -18316,10 +18320,6 @@
     },
     {
       "compound": "CAR-0000262",
-      "similarity": 0.4383561643835616
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.4383561643835616
     },
     {
@@ -18521,10 +18521,6 @@
       "similarity": 0.6615384615384615
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.6567164179104478
-    },
-    {
       "compound": "CAR-0000058",
       "similarity": 0.65625
     },
@@ -18545,6 +18541,10 @@
       "similarity": 0.640625
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.6323529411764706
+    },
+    {
       "compound": "CAR-0000035",
       "similarity": 0.6323529411764706
     },
@@ -18563,6 +18563,10 @@
     {
       "compound": "CAR-0000030",
       "similarity": 0.6212121212121212
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.6153846153846154
     },
     {
       "compound": "CAR-0000040",
@@ -18767,10 +18771,6 @@
     {
       "compound": "CAR-0000265",
       "similarity": 0.49333333333333335
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4861111111111111
     },
     {
       "compound": "CAR-0000009",
@@ -18999,6 +18999,10 @@
       "similarity": 0.5571428571428572
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5507246376811594
+    },
+    {
       "compound": "CAR-0000037",
       "similarity": 0.5507246376811594
     },
@@ -19163,10 +19167,6 @@
       "similarity": 0.4507042253521127
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4342105263157895
-    },
-    {
       "compound": "CAR-0000082",
       "similarity": 0.43243243243243246
     },
@@ -19183,10 +19183,6 @@
       "similarity": 0.3974358974358974
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.3950617283950617
-    },
-    {
       "compound": "CAR-0000081",
       "similarity": 0.3924050632911392
     },
@@ -19200,6 +19196,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.3780487804878049
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.3780487804878049
     },
     {
@@ -19251,6 +19251,10 @@
     {
       "compound": "CAR-0000026",
       "similarity": 0.7166666666666667
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.7049180327868853
     },
     {
       "compound": "CAR-0000098",
@@ -19402,10 +19406,6 @@
     },
     {
       "compound": "CAR-0000073",
-      "similarity": 0.5588235294117647
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.5588235294117647
     },
     {
@@ -19585,10 +19585,6 @@
       "similarity": 0.4868421052631579
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4864864864864865
-    },
-    {
       "compound": "CAR-0000054",
       "similarity": 0.4805194805194805
     },
@@ -19611,6 +19607,10 @@
     {
       "compound": "CAR-0000254",
       "similarity": 0.4675324675324675
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.4666666666666667
     },
     {
       "compound": "CAR-0000075",
@@ -19740,6 +19740,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.6190476190476191
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.6190476190476191
     },
     {
@@ -19999,10 +20003,6 @@
       "similarity": 0.49333333333333335
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4857142857142857
-    },
-    {
       "compound": "CAR-0000082",
       "similarity": 0.4852941176470588
     },
@@ -20023,10 +20023,6 @@
       "similarity": 0.4444444444444444
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.44
-    },
-    {
       "compound": "CAR-0000081",
       "similarity": 0.4383561643835616
     },
@@ -20044,6 +20040,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.42105263157894735
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.42105263157894735
     },
     {
@@ -20085,12 +20085,20 @@
       "similarity": 0.7704918032786885
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.7301587301587301
+    },
+    {
       "compound": "CAR-0000075",
       "similarity": 0.676923076923077
     },
     {
       "compound": "CAR-0000034",
       "similarity": 0.671875
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.6612903225806451
     },
     {
       "compound": "CAR-0000023",
@@ -20121,10 +20129,6 @@
       "similarity": 0.6229508196721312
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.6153846153846154
-    },
-    {
       "compound": "CAR-0000042",
       "similarity": 0.6153846153846154
     },
@@ -20134,6 +20138,10 @@
     },
     {
       "compound": "CAR-0000087",
+      "similarity": 0.6119402985074627
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.6119402985074627
     },
     {
@@ -20162,10 +20170,6 @@
     },
     {
       "compound": "CAR-0000088",
-      "similarity": 0.5882352941176471
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.5882352941176471
     },
     {
@@ -20231,10 +20235,6 @@
     {
       "compound": "CAR-0000078",
       "similarity": 0.5223880597014925
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.5138888888888888
     },
     {
       "compound": "CAR-0000071",
@@ -20341,6 +20341,10 @@
       "similarity": 0.4594594594594595
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.4520547945205479
+    },
+    {
       "compound": "CAR-0000447",
       "similarity": 0.4473684210526316
     },
@@ -20390,10 +20394,6 @@
     },
     {
       "compound": "CAR-0000262",
-      "similarity": 0.43243243243243246
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.43243243243243246
     },
     {
@@ -20495,6 +20495,10 @@
       "similarity": 0.85
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.8064516129032258
+    },
+    {
       "compound": "CAR-0000059",
       "similarity": 0.8032786885245902
     },
@@ -20540,10 +20544,6 @@
     },
     {
       "compound": "CAR-0000066",
-      "similarity": 0.696969696969697
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.696969696969697
     },
     {
@@ -20611,6 +20611,10 @@
       "similarity": 0.6417910447761194
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.6417910447761194
+    },
+    {
       "compound": "CAR-0000058",
       "similarity": 0.6363636363636364
     },
@@ -20639,6 +20643,10 @@
       "similarity": 0.6231884057971014
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6212121212121212
+    },
+    {
       "compound": "CAR-0000037",
       "similarity": 0.6212121212121212
     },
@@ -20648,10 +20656,6 @@
     },
     {
       "compound": "CAR-0000262",
-      "similarity": 0.6176470588235294
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.6176470588235294
     },
     {
@@ -20823,10 +20827,6 @@
       "similarity": 0.5277777777777778
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.527027027027027
-    },
-    {
       "compound": "CAR-0000035",
       "similarity": 0.527027027027027
     },
@@ -20855,8 +20855,8 @@
       "similarity": 0.5066666666666667
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4931506849315068
+      "compound": "CAR-0000015",
+      "similarity": 0.5066666666666667
     },
     {
       "compound": "CAR-0000009",
@@ -20922,6 +20922,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.7857142857142857
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.7857142857142857
     },
     {
@@ -21058,10 +21062,6 @@
     },
     {
       "compound": "CAR-0000073",
-      "similarity": 0.6190476190476191
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.6190476190476191
     },
     {
@@ -21257,10 +21257,6 @@
       "similarity": 0.5352112676056338
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5142857142857142
-    },
-    {
       "compound": "CAR-0000187",
       "similarity": 0.5138888888888888
     },
@@ -21283,6 +21279,10 @@
     {
       "compound": "CAR-0000049",
       "similarity": 0.49333333333333335
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.49295774647887325
     },
     {
       "compound": "CAR-0000075",
@@ -21331,6 +21331,10 @@
       "similarity": 0.8392857142857143
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.8305084745762712
+    },
+    {
       "compound": "CAR-0000057",
       "similarity": 0.8070175438596491
     },
@@ -21345,6 +21349,10 @@
     {
       "compound": "CAR-0000085",
       "similarity": 0.8032786885245902
+    },
+    {
+      "compound": "CAR-0000263",
+      "similarity": 0.7966101694915254
     },
     {
       "compound": "CAR-0000256",
@@ -21364,10 +21372,6 @@
     },
     {
       "compound": "CAR-0000262",
-      "similarity": 0.7666666666666667
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.7666666666666667
     },
     {
@@ -21396,10 +21400,6 @@
     },
     {
       "compound": "CAR-0000066",
-      "similarity": 0.7142857142857143
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.7142857142857143
     },
     {
@@ -21527,6 +21527,10 @@
       "similarity": 0.6363636363636364
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6349206349206349
+    },
+    {
       "compound": "CAR-0000037",
       "similarity": 0.6349206349206349
     },
@@ -21651,10 +21655,6 @@
       "similarity": 0.5416666666666666
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5352112676056338
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.5285714285714286
     },
@@ -21671,6 +21671,10 @@
       "similarity": 0.5138888888888888
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.5138888888888888
+    },
+    {
       "compound": "CAR-0000023",
       "similarity": 0.5138888888888888
     },
@@ -21681,10 +21685,6 @@
     {
       "compound": "CAR-0000018",
       "similarity": 0.5068493150684932
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.5
     },
     {
       "compound": "CAR-0000009",
@@ -21909,6 +21909,10 @@
       "similarity": 0.5652173913043478
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5606060606060606
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.5606060606060606
     },
@@ -22101,16 +22105,8 @@
       "similarity": 0.4444444444444444
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4383561643835616
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.4189189189189189
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.4155844155844156
     },
     {
       "compound": "CAR-0000081",
@@ -22122,6 +22118,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.3974358974358974
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.3974358974358974
     },
     {
@@ -22235,15 +22235,15 @@
       "similarity": 0.6774193548387096
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6721311475409836
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.6721311475409836
     },
     {
       "compound": "CAR-0000066",
-      "similarity": 0.671875
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.671875
     },
     {
@@ -22259,20 +22259,16 @@
       "similarity": 0.6507936507936508
     },
     {
-      "compound": "CAR-0000262",
-      "similarity": 0.640625
+      "compound": "CAR-0000086",
+      "similarity": 0.6461538461538462
     },
     {
-      "compound": "CAR-0000263",
+      "compound": "CAR-0000262",
       "similarity": 0.640625
     },
     {
       "compound": "CAR-0000067",
       "similarity": 0.640625
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.6363636363636364
     },
     {
       "compound": "CAR-0000063",
@@ -22315,6 +22311,10 @@
       "similarity": 0.6153846153846154
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.6153846153846154
+    },
+    {
       "compound": "CAR-0000074",
       "similarity": 0.6060606060606061
     },
@@ -22349,6 +22349,10 @@
     {
       "compound": "CAR-0000068",
       "similarity": 0.5909090909090909
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5882352941176471
     },
     {
       "compound": "CAR-0000039",
@@ -22448,10 +22452,6 @@
     },
     {
       "compound": "CAR-0000073",
-      "similarity": 0.5522388059701493
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.5522388059701493
     },
     {
@@ -22661,10 +22661,6 @@
       "similarity": 0.5774647887323944
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5733333333333334
-    },
-    {
       "compound": "CAR-0000058",
       "similarity": 0.5694444444444444
     },
@@ -22697,6 +22693,10 @@
       "similarity": 0.5540540540540541
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.5526315789473685
+    },
+    {
       "compound": "CAR-0000035",
       "similarity": 0.5526315789473685
     },
@@ -22727,6 +22727,10 @@
     {
       "compound": "CAR-0000062",
       "similarity": 0.5394736842105263
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.5342465753424658
     },
     {
       "compound": "CAR-0000100",
@@ -22945,10 +22949,6 @@
       "similarity": 0.4268292682926829
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.425
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.425
     },
@@ -22992,7 +22992,7 @@
   "CAR-0000263": [
     {
       "compound": "CAR-0000262",
-      "similarity": 1.0
+      "similarity": 0.8596491228070176
     },
     {
       "compound": "CAR-0000266",
@@ -23003,15 +23003,11 @@
       "similarity": 0.8392857142857143
     },
     {
-      "compound": "CAR-0000083",
+      "compound": "CAR-0000070",
       "similarity": 0.7966101694915254
     },
     {
-      "compound": "CAR-0000230",
-      "similarity": 0.7704918032786885
-    },
-    {
-      "compound": "CAR-0000070",
+      "compound": "CAR-0000083",
       "similarity": 0.7666666666666667
     },
     {
@@ -23031,8 +23027,24 @@
       "similarity": 0.7540983606557377
     },
     {
+      "compound": "CAR-0000230",
+      "similarity": 0.7419354838709677
+    },
+    {
       "compound": "CAR-0000039",
       "similarity": 0.7333333333333333
+    },
+    {
+      "compound": "CAR-0000256",
+      "similarity": 0.7333333333333333
+    },
+    {
+      "compound": "CAR-0000078",
+      "similarity": 0.7288135593220338
+    },
+    {
+      "compound": "CAR-0000260",
+      "similarity": 0.7258064516129032
     },
     {
       "compound": "CAR-0000148",
@@ -23045,18 +23057,6 @@
     {
       "compound": "CAR-0000068",
       "similarity": 0.7096774193548387
-    },
-    {
-      "compound": "CAR-0000256",
-      "similarity": 0.7049180327868853
-    },
-    {
-      "compound": "CAR-0000078",
-      "similarity": 0.7
-    },
-    {
-      "compound": "CAR-0000260",
-      "similarity": 0.6984126984126984
     },
     {
       "compound": "CAR-0000199",
@@ -23115,11 +23115,7 @@
       "similarity": 0.6666666666666666
     },
     {
-      "compound": "CAR-0000066",
-      "similarity": 0.6615384615384615
-    },
-    {
-      "compound": "CAR-0000090",
+      "compound": "CAR-0000088",
       "similarity": 0.6615384615384615
     },
     {
@@ -23127,31 +23123,23 @@
       "similarity": 0.6615384615384615
     },
     {
-      "compound": "CAR-0000045",
-      "similarity": 0.6612903225806451
-    },
-    {
       "compound": "CAR-0000109",
       "similarity": 0.65625
     },
     {
-      "compound": "CAR-0000084",
+      "compound": "CAR-0000069",
       "similarity": 0.6417910447761194
     },
     {
-      "compound": "CAR-0000056",
+      "compound": "CAR-0000085",
       "similarity": 0.6417910447761194
     },
     {
-      "compound": "CAR-0000046",
-      "similarity": 0.640625
+      "compound": "CAR-0000066",
+      "similarity": 0.6363636363636364
     },
     {
-      "compound": "CAR-0000071",
-      "similarity": 0.640625
-    },
-    {
-      "compound": "CAR-0000088",
+      "compound": "CAR-0000090",
       "similarity": 0.6363636363636364
     },
     {
@@ -23159,16 +23147,28 @@
       "similarity": 0.6363636363636364
     },
     {
+      "compound": "CAR-0000045",
+      "similarity": 0.6349206349206349
+    },
+    {
       "compound": "CAR-0000037",
       "similarity": 0.6349206349206349
     },
     {
-      "compound": "CAR-0000069",
+      "compound": "CAR-0000084",
       "similarity": 0.6176470588235294
     },
     {
-      "compound": "CAR-0000085",
+      "compound": "CAR-0000056",
       "similarity": 0.6176470588235294
+    },
+    {
+      "compound": "CAR-0000046",
+      "similarity": 0.6153846153846154
+    },
+    {
+      "compound": "CAR-0000071",
+      "similarity": 0.6153846153846154
     },
     {
       "compound": "CAR-0000089",
@@ -23176,6 +23176,10 @@
     },
     {
       "compound": "CAR-0000098",
+      "similarity": 0.609375
+    },
+    {
+      "compound": "CAR-0000080",
       "similarity": 0.609375
     },
     {
@@ -23195,7 +23199,15 @@
       "similarity": 0.5909090909090909
     },
     {
-      "compound": "CAR-0000080",
+      "compound": "CAR-0000030",
+      "similarity": 0.5909090909090909
+    },
+    {
+      "compound": "CAR-0000087",
+      "similarity": 0.5882352941176471
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.5846153846153846
     },
     {
@@ -23209,6 +23221,10 @@
     {
       "compound": "CAR-0000249",
       "similarity": 0.582089552238806
+    },
+    {
+      "compound": "CAR-0000079",
+      "similarity": 0.5757575757575758
     },
     {
       "compound": "CAR-0000027",
@@ -23235,15 +23251,7 @@
       "similarity": 0.5735294117647058
     },
     {
-      "compound": "CAR-0000030",
-      "similarity": 0.5671641791044776
-    },
-    {
       "compound": "CAR-0000177",
-      "similarity": 0.5652173913043478
-    },
-    {
-      "compound": "CAR-0000087",
       "similarity": 0.5652173913043478
     },
     {
@@ -23272,10 +23280,6 @@
     },
     {
       "compound": "CAR-0000058",
-      "similarity": 0.5522388059701493
-    },
-    {
-      "compound": "CAR-0000079",
       "similarity": 0.5522388059701493
     },
     {
@@ -23347,16 +23351,16 @@
       "similarity": 0.47368421052631576
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.47297297297297297
-    },
-    {
-      "compound": "CAR-0000077",
+      "compound": "CAR-0000009",
       "similarity": 0.4583333333333333
     },
     {
       "compound": "CAR-0000082",
       "similarity": 0.45714285714285713
+    },
+    {
+      "compound": "CAR-0000081",
+      "similarity": 0.4520547945205479
     },
     {
       "compound": "CAR-0000008",
@@ -23367,11 +23371,11 @@
       "similarity": 0.4444444444444444
     },
     {
-      "compound": "CAR-0000009",
-      "similarity": 0.4383561643835616
+      "compound": "CAR-0000075",
+      "similarity": 0.4342105263157895
     },
     {
-      "compound": "CAR-0000075",
+      "compound": "CAR-0000015",
       "similarity": 0.4342105263157895
     },
     {
@@ -23379,19 +23383,15 @@
       "similarity": 0.4342105263157895
     },
     {
-      "compound": "CAR-0000081",
-      "similarity": 0.43243243243243246
-    },
-    {
-      "compound": "CAR-0000041",
-      "similarity": 0.43037974683544306
-    },
-    {
       "compound": "CAR-0000018",
       "similarity": 0.42857142857142855
     },
     {
       "compound": "CAR-0000036",
+      "similarity": 0.4125
+    },
+    {
+      "compound": "CAR-0000041",
       "similarity": 0.4125
     },
     {
@@ -23404,10 +23404,14 @@
     },
     {
       "compound": "CAR-0000016",
-      "similarity": 0.3670886075949367
+      "similarity": 0.38461538461538464
     }
   ],
   "CAR-0000080": [
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.8518518518518519
+    },
     {
       "compound": "CAR-0000020",
       "similarity": 0.8461538461538461
@@ -23433,6 +23437,10 @@
       "similarity": 0.8181818181818182
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.8103448275862069
+    },
+    {
       "compound": "CAR-0000058",
       "similarity": 0.8035714285714286
     },
@@ -23454,10 +23462,6 @@
     },
     {
       "compound": "CAR-0000088",
-      "similarity": 0.7796610169491526
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.7796610169491526
     },
     {
@@ -23523,10 +23527,6 @@
     {
       "compound": "CAR-0000078",
       "similarity": 0.6779661016949152
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.6721311475409836
     },
     {
       "compound": "CAR-0000076",
@@ -23657,6 +23657,10 @@
       "similarity": 0.6153846153846154
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.609375
+    },
+    {
       "compound": "CAR-0000047",
       "similarity": 0.6031746031746031
     },
@@ -23701,14 +23705,6 @@
       "similarity": 0.5846153846153846
     },
     {
-      "compound": "CAR-0000263",
-      "similarity": 0.5846153846153846
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.582089552238806
-    },
-    {
       "compound": "CAR-0000050",
       "similarity": 0.582089552238806
     },
@@ -23747,6 +23743,10 @@
     {
       "compound": "CAR-0000068",
       "similarity": 0.5606060606060606
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5588235294117647
     },
     {
       "compound": "CAR-0000215",
@@ -23963,16 +23963,16 @@
       "similarity": 0.5540540540540541
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5492957746478874
+    },
+    {
       "compound": "CAR-0000100",
       "similarity": 0.5492957746478874
     },
     {
       "compound": "CAR-0000249",
       "similarity": 0.547945205479452
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.5466666666666666
     },
     {
       "compound": "CAR-0000063",
@@ -24036,6 +24036,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.5263157894736842
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.5263157894736842
     },
     {
@@ -24199,10 +24203,6 @@
       "similarity": 0.4375
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4358974358974359
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.4358974358974359
     },
@@ -24275,6 +24275,10 @@
     {
       "compound": "CAR-0000088",
       "similarity": 0.6615384615384615
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.6612903225806451
     },
     {
       "compound": "CAR-0000098",
@@ -24418,10 +24422,6 @@
     },
     {
       "compound": "CAR-0000073",
-      "similarity": 0.5217391304347826
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.5217391304347826
     },
     {
@@ -24617,16 +24617,16 @@
       "similarity": 0.45454545454545453
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4533333333333333
-    },
-    {
       "compound": "CAR-0000054",
       "similarity": 0.44871794871794873
     },
     {
       "compound": "CAR-0000049",
       "similarity": 0.4375
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.4342105263157895
     },
     {
       "compound": "CAR-0000075",
@@ -24907,6 +24907,10 @@
       "similarity": 0.5441176470588235
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5441176470588235
+    },
+    {
       "compound": "CAR-0000050",
       "similarity": 0.5416666666666666
     },
@@ -25031,20 +25035,16 @@
       "similarity": 0.43243243243243246
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4266666666666667
-    },
-    {
       "compound": "CAR-0000075",
-      "similarity": 0.4230769230769231
-    },
-    {
-      "compound": "CAR-0000015",
       "similarity": 0.4230769230769231
     },
     {
       "compound": "CAR-0000008",
       "similarity": 0.4155844155844156
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.4050632911392405
     },
     {
       "compound": "CAR-0000023",
@@ -25081,12 +25081,12 @@
   ],
   "CAR-0000086": [
     {
-      "compound": "CAR-0000066",
-      "similarity": 1.0
+      "compound": "CAR-0000069",
+      "similarity": 0.8983050847457628
     },
     {
-      "compound": "CAR-0000084",
-      "similarity": 0.8983050847457628
+      "compound": "CAR-0000066",
+      "similarity": 0.864406779661017
     },
     {
       "compound": "CAR-0000042",
@@ -25097,19 +25097,31 @@
       "similarity": 0.8448275862068966
     },
     {
-      "compound": "CAR-0000083",
+      "compound": "CAR-0000070",
       "similarity": 0.8305084745762712
     },
     {
-      "compound": "CAR-0000056",
+      "compound": "CAR-0000080",
+      "similarity": 0.8103448275862069
+    },
+    {
+      "compound": "CAR-0000085",
       "similarity": 0.8064516129032258
     },
     {
-      "compound": "CAR-0000088",
+      "compound": "CAR-0000090",
       "similarity": 0.8032786885245902
     },
     {
-      "compound": "CAR-0000080",
+      "compound": "CAR-0000058",
+      "similarity": 0.7966101694915254
+    },
+    {
+      "compound": "CAR-0000030",
+      "similarity": 0.7833333333333333
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.7796610169491526
     },
     {
@@ -25117,32 +25129,24 @@
       "similarity": 0.7796610169491526
     },
     {
-      "compound": "CAR-0000069",
+      "compound": "CAR-0000084",
       "similarity": 0.7777777777777778
     },
     {
-      "compound": "CAR-0000090",
+      "compound": "CAR-0000088",
       "similarity": 0.7741935483870968
-    },
-    {
-      "compound": "CAR-0000058",
-      "similarity": 0.7666666666666667
     },
     {
       "compound": "CAR-0000043",
       "similarity": 0.7580645161290323
     },
     {
-      "compound": "CAR-0000030",
-      "similarity": 0.7540983606557377
-    },
-    {
-      "compound": "CAR-0000045",
-      "similarity": 0.75
-    },
-    {
       "compound": "CAR-0000098",
       "similarity": 0.75
+    },
+    {
+      "compound": "CAR-0000249",
+      "similarity": 0.7419354838709677
     },
     {
       "compound": "CAR-0000020",
@@ -25153,15 +25157,23 @@
       "similarity": 0.7333333333333333
     },
     {
+      "compound": "CAR-0000045",
+      "similarity": 0.7213114754098361
+    },
+    {
+      "compound": "CAR-0000087",
+      "similarity": 0.71875
+    },
+    {
+      "compound": "CAR-0000060",
+      "similarity": 0.7142857142857143
+    },
+    {
       "compound": "CAR-0000147",
       "similarity": 0.7142857142857143
     },
     {
-      "compound": "CAR-0000070",
-      "similarity": 0.7142857142857143
-    },
-    {
-      "compound": "CAR-0000249",
+      "compound": "CAR-0000083",
       "similarity": 0.7142857142857143
     },
     {
@@ -25173,7 +25185,7 @@
       "similarity": 0.703125
     },
     {
-      "compound": "CAR-0000085",
+      "compound": "CAR-0000056",
       "similarity": 0.696969696969697
     },
     {
@@ -25185,16 +25197,8 @@
       "similarity": 0.6935483870967742
     },
     {
-      "compound": "CAR-0000087",
-      "similarity": 0.6923076923076923
-    },
-    {
       "compound": "CAR-0000200",
       "similarity": 0.6923076923076923
-    },
-    {
-      "compound": "CAR-0000060",
-      "similarity": 0.6875
     },
     {
       "compound": "CAR-0000109",
@@ -25217,20 +25221,24 @@
       "similarity": 0.676923076923077
     },
     {
-      "compound": "CAR-0000071",
-      "similarity": 0.671875
+      "compound": "CAR-0000447",
+      "similarity": 0.6716417910447762
+    },
+    {
+      "compound": "CAR-0000057",
+      "similarity": 0.6666666666666666
     },
     {
       "compound": "CAR-0000044",
       "similarity": 0.6666666666666666
     },
     {
-      "compound": "CAR-0000262",
+      "compound": "CAR-0000263",
       "similarity": 0.6615384615384615
     },
     {
-      "compound": "CAR-0000263",
-      "similarity": 0.6615384615384615
+      "compound": "CAR-0000256",
+      "similarity": 0.65625
     },
     {
       "compound": "CAR-0000008",
@@ -25241,31 +25249,39 @@
       "similarity": 0.6515151515151515
     },
     {
-      "compound": "CAR-0000447",
-      "similarity": 0.6470588235294118
+      "compound": "CAR-0000260",
+      "similarity": 0.6515151515151515
+    },
+    {
+      "compound": "CAR-0000078",
+      "similarity": 0.6507936507936508
     },
     {
       "compound": "CAR-0000253",
       "similarity": 0.6470588235294118
     },
     {
-      "compound": "CAR-0000230",
-      "similarity": 0.6417910447761194
+      "compound": "CAR-0000073",
+      "similarity": 0.6461538461538462
+    },
+    {
+      "compound": "CAR-0000071",
+      "similarity": 0.6461538461538462
     },
     {
       "compound": "CAR-0000055",
       "similarity": 0.6417910447761194
     },
     {
-      "compound": "CAR-0000057",
-      "similarity": 0.640625
+      "compound": "CAR-0000059",
+      "similarity": 0.6363636363636364
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.6323529411764706
+      "compound": "CAR-0000262",
+      "similarity": 0.6363636363636364
     },
     {
-      "compound": "CAR-0000256",
+      "compound": "CAR-0000079",
       "similarity": 0.6307692307692307
     },
     {
@@ -25273,40 +25289,32 @@
       "similarity": 0.6307692307692307
     },
     {
-      "compound": "CAR-0000260",
-      "similarity": 0.6268656716417911
-    },
-    {
-      "compound": "CAR-0000078",
-      "similarity": 0.625
-    },
-    {
       "compound": "CAR-0000097",
       "similarity": 0.625
     },
     {
-      "compound": "CAR-0000073",
+      "compound": "CAR-0000009",
       "similarity": 0.6212121212121212
     },
     {
-      "compound": "CAR-0000077",
+      "compound": "CAR-0000248",
       "similarity": 0.6212121212121212
+    },
+    {
+      "compound": "CAR-0000230",
+      "similarity": 0.6176470588235294
     },
     {
       "compound": "CAR-0000065",
       "similarity": 0.6142857142857143
     },
     {
-      "compound": "CAR-0000059",
+      "compound": "CAR-0000081",
       "similarity": 0.6119402985074627
     },
     {
       "compound": "CAR-0000067",
       "similarity": 0.6119402985074627
-    },
-    {
-      "compound": "CAR-0000079",
-      "similarity": 0.6060606060606061
     },
     {
       "compound": "CAR-0000266",
@@ -25321,6 +25329,10 @@
       "similarity": 0.6031746031746031
     },
     {
+      "compound": "CAR-0000074",
+      "similarity": 0.6029411764705882
+    },
+    {
       "compound": "CAR-0000051",
       "similarity": 0.6029411764705882
     },
@@ -25333,19 +25345,7 @@
       "similarity": 0.5970149253731343
     },
     {
-      "compound": "CAR-0000046",
-      "similarity": 0.5970149253731343
-    },
-    {
-      "compound": "CAR-0000009",
-      "similarity": 0.5970149253731343
-    },
-    {
       "compound": "CAR-0000099",
-      "similarity": 0.5970149253731343
-    },
-    {
-      "compound": "CAR-0000248",
       "similarity": 0.5970149253731343
     },
     {
@@ -25353,8 +25353,12 @@
       "similarity": 0.5970149253731343
     },
     {
-      "compound": "CAR-0000081",
-      "similarity": 0.5882352941176471
+      "compound": "CAR-0000250",
+      "similarity": 0.5942028985507246
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5857142857142857
     },
     {
       "compound": "CAR-0000258",
@@ -25373,10 +25377,6 @@
       "similarity": 0.5797101449275363
     },
     {
-      "compound": "CAR-0000074",
-      "similarity": 0.5797101449275363
-    },
-    {
       "compound": "CAR-0000264",
       "similarity": 0.5797101449275363
     },
@@ -25387,6 +25387,10 @@
     {
       "compound": "CAR-0000082",
       "similarity": 0.5757575757575758
+    },
+    {
+      "compound": "CAR-0000046",
+      "similarity": 0.5735294117647058
     },
     {
       "compound": "CAR-0000261",
@@ -25402,10 +25406,6 @@
     },
     {
       "compound": "CAR-0000214",
-      "similarity": 0.5714285714285714
-    },
-    {
-      "compound": "CAR-0000250",
       "similarity": 0.5714285714285714
     },
     {
@@ -25437,6 +25437,10 @@
       "similarity": 0.5555555555555556
     },
     {
+      "compound": "CAR-0000016",
+      "similarity": 0.5492957746478874
+    },
+    {
       "compound": "CAR-0000064",
       "similarity": 0.547945205479452
     },
@@ -25455,10 +25459,6 @@
     {
       "compound": "CAR-0000265",
       "similarity": 0.5342465753424658
-    },
-    {
-      "compound": "CAR-0000016",
-      "similarity": 0.5277777777777778
     },
     {
       "compound": "CAR-0000252",
@@ -25535,6 +25535,10 @@
       "similarity": 0.7540983606557377
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.7258064516129032
+    },
+    {
       "compound": "CAR-0000039",
       "similarity": 0.7213114754098361
     },
@@ -25543,15 +25547,15 @@
       "similarity": 0.7096774193548387
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.7049180327868853
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.7049180327868853
     },
     {
       "compound": "CAR-0000262",
-      "similarity": 0.6984126984126984
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.6984126984126984
     },
     {
@@ -25607,6 +25611,10 @@
       "similarity": 0.6515151515151515
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.6515151515151515
+    },
+    {
       "compound": "CAR-0000214",
       "similarity": 0.6515151515151515
     },
@@ -25648,10 +25656,6 @@
     },
     {
       "compound": "CAR-0000066",
-      "similarity": 0.6268656716417911
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.6268656716417911
     },
     {
@@ -25729,10 +25733,6 @@
     {
       "compound": "CAR-0000026",
       "similarity": 0.5606060606060606
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.5588235294117647
     },
     {
       "compound": "CAR-0000090",
@@ -25871,10 +25871,6 @@
       "similarity": 0.4507042253521127
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4473684210526316
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.44
     },
@@ -25884,6 +25880,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.42857142857142855
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.42857142857142855
     },
     {
@@ -26093,6 +26093,10 @@
       "similarity": 0.5797101449275363
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5757575757575758
+    },
+    {
       "compound": "CAR-0000058",
       "similarity": 0.5671641791044776
     },
@@ -26269,10 +26273,6 @@
       "similarity": 0.4675324675324675
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4520547945205479
-    },
-    {
       "compound": "CAR-0000082",
       "similarity": 0.4507042253521127
     },
@@ -26289,10 +26289,6 @@
       "similarity": 0.41333333333333333
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.41025641025641024
-    },
-    {
       "compound": "CAR-0000081",
       "similarity": 0.40789473684210525
     },
@@ -26302,6 +26298,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.3924050632911392
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.3924050632911392
     },
     {
@@ -26351,6 +26351,10 @@
       "similarity": 0.7049180327868853
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.6567164179104478
+    },
+    {
       "compound": "CAR-0000075",
       "similarity": 0.6086956521739131
     },
@@ -26383,6 +26387,10 @@
       "similarity": 0.5753424657534246
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5671641791044776
+    },
+    {
       "compound": "CAR-0000058",
       "similarity": 0.5588235294117647
     },
@@ -26395,6 +26403,10 @@
       "similarity": 0.5507246376811594
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.5492957746478874
+    },
+    {
       "compound": "CAR-0000040",
       "similarity": 0.5466666666666666
     },
@@ -26405,10 +26417,6 @@
     {
       "compound": "CAR-0000026",
       "similarity": 0.5294117647058824
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.5285714285714286
     },
     {
       "compound": "CAR-0000066",
@@ -26424,10 +26432,6 @@
     },
     {
       "compound": "CAR-0000088",
-      "similarity": 0.5277777777777778
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.5277777777777778
     },
     {
@@ -26501,10 +26505,6 @@
     {
       "compound": "CAR-0000048",
       "similarity": 0.463768115942029
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.4605263157894737
     },
     {
       "compound": "CAR-0000063",
@@ -26659,6 +26659,10 @@
       "similarity": 0.3855421686746988
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.38461538461538464
+    },
+    {
       "compound": "CAR-0000201",
       "similarity": 0.38271604938271603
     },
@@ -26704,10 +26708,6 @@
     },
     {
       "compound": "CAR-0000068",
-      "similarity": 0.3670886075949367
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.3670886075949367
     },
     {
@@ -26799,6 +26799,10 @@
     {
       "compound": "CAR-0000030",
       "similarity": 0.7627118644067796
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.7586206896551724
     },
     {
       "compound": "CAR-0000084",
@@ -26942,10 +26946,6 @@
     },
     {
       "compound": "CAR-0000148",
-      "similarity": 0.625
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.625
     },
     {
@@ -27093,10 +27093,6 @@
       "similarity": 0.5671641791044776
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5652173913043478
-    },
-    {
       "compound": "CAR-0000265",
       "similarity": 0.5571428571428572
     },
@@ -27119,6 +27115,10 @@
     {
       "compound": "CAR-0000054",
       "similarity": 0.5342465753424658
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5211267605633803
     },
     {
       "compound": "CAR-0000049",
@@ -27407,6 +27407,10 @@
       "similarity": 0.5441176470588235
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5441176470588235
+    },
+    {
       "compound": "CAR-0000076",
       "similarity": 0.5428571428571428
     },
@@ -27539,14 +27543,6 @@
       "similarity": 0.43243243243243246
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4266666666666667
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.4230769230769231
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.4155844155844156
     },
@@ -27556,6 +27552,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4050632911392405
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4050632911392405
     },
     {
@@ -27761,6 +27761,10 @@
       "similarity": 0.59375
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.59375
+    },
+    {
       "compound": "CAR-0000037",
       "similarity": 0.59375
     },
@@ -27941,10 +27945,6 @@
       "similarity": 0.4805194805194805
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4647887323943662
-    },
-    {
       "compound": "CAR-0000082",
       "similarity": 0.463768115942029
     },
@@ -27961,10 +27961,6 @@
       "similarity": 0.4246575342465753
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.42105263157894735
-    },
-    {
       "compound": "CAR-0000081",
       "similarity": 0.4189189189189189
     },
@@ -27978,6 +27974,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4025974025974026
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4025974025974026
     },
     {
@@ -28007,6 +28007,10 @@
   ],
   "CAR-0000030": [
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.8545454545454545
+    },
+    {
       "compound": "CAR-0000080",
       "similarity": 0.8214285714285714
     },
@@ -28024,6 +28028,10 @@
     },
     {
       "compound": "CAR-0000087",
+      "similarity": 0.7833333333333333
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.7833333333333333
     },
     {
@@ -28048,10 +28056,6 @@
     },
     {
       "compound": "CAR-0000088",
-      "similarity": 0.7540983606557377
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.7540983606557377
     },
     {
@@ -28117,10 +28121,6 @@
     {
       "compound": "CAR-0000053",
       "similarity": 0.6825396825396826
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.6774193548387096
     },
     {
       "compound": "CAR-0000084",
@@ -28243,6 +28243,10 @@
       "similarity": 0.5970149253731343
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.5909090909090909
+    },
+    {
       "compound": "CAR-0000027",
       "similarity": 0.5846153846153846
     },
@@ -28288,10 +28292,6 @@
     },
     {
       "compound": "CAR-0000262",
-      "similarity": 0.5671641791044776
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.5671641791044776
     },
     {
@@ -28625,6 +28625,10 @@
       "similarity": 0.6190476190476191
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6129032258064516
+    },
+    {
       "compound": "CAR-0000147",
       "similarity": 0.609375
     },
@@ -28773,20 +28777,12 @@
       "similarity": 0.5142857142857142
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5
-    },
-    {
       "compound": "CAR-0000048",
       "similarity": 0.5
     },
     {
       "compound": "CAR-0000227",
       "similarity": 0.4931506849315068
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.49295774647887325
     },
     {
       "compound": "CAR-0000009",
@@ -28810,6 +28806,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4520547945205479
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4520547945205479
     },
     {
@@ -29000,6 +29000,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.6229508196721312
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.6229508196721312
     },
     {
@@ -29195,10 +29199,6 @@
       "similarity": 0.5
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4852941176470588
-    },
-    {
       "compound": "CAR-0000082",
       "similarity": 0.48484848484848486
     },
@@ -29215,10 +29215,6 @@
       "similarity": 0.44285714285714284
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4383561643835616
-    },
-    {
       "compound": "CAR-0000081",
       "similarity": 0.43661971830985913
     },
@@ -29228,6 +29224,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4189189189189189
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4189189189189189
     },
     {
@@ -29405,6 +29405,10 @@
       "similarity": 0.625
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.6212121212121212
+    },
+    {
       "compound": "CAR-0000252",
       "similarity": 0.6212121212121212
     },
@@ -29461,10 +29465,6 @@
       "similarity": 0.5970149253731343
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.5970149253731343
-    },
-    {
       "compound": "CAR-0000098",
       "similarity": 0.59375
     },
@@ -29514,6 +29514,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.5692307692307692
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.5692307692307692
     },
     {
@@ -29625,10 +29629,6 @@
       "similarity": 0.4647887323943662
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4594594594594595
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.4520547945205479
     },
@@ -29637,11 +29637,11 @@
       "similarity": 0.4507042253521127
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4444444444444444
+      "compound": "CAR-0000075",
+      "similarity": 0.44
     },
     {
-      "compound": "CAR-0000075",
+      "compound": "CAR-0000015",
       "similarity": 0.44
     },
     {
@@ -29681,6 +29681,10 @@
     {
       "compound": "CAR-0000034",
       "similarity": 0.896551724137931
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.8360655737704918
     },
     {
       "compound": "CAR-0000018",
@@ -29745,10 +29749,6 @@
     {
       "compound": "CAR-0000055",
       "similarity": 0.6086956521739131
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.6
     },
     {
       "compound": "CAR-0000038",
@@ -29931,6 +29931,10 @@
       "similarity": 0.4788732394366197
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.4722222222222222
+    },
+    {
       "compound": "CAR-0000257",
       "similarity": 0.4675324675324675
     },
@@ -30005,10 +30009,6 @@
     {
       "compound": "CAR-0000200",
       "similarity": 0.44155844155844154
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.44
     },
     {
       "compound": "CAR-0000046",
@@ -30117,6 +30117,10 @@
       "similarity": 0.7205882352941176
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.7205882352941176
+    },
+    {
       "compound": "CAR-0000035",
       "similarity": 0.7205882352941176
     },
@@ -30187,10 +30191,6 @@
     {
       "compound": "CAR-0000055",
       "similarity": 0.5263157894736842
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.5194805194805194
     },
     {
       "compound": "CAR-0000027",
@@ -30313,6 +30313,10 @@
       "similarity": 0.44594594594594594
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.44155844155844154
+    },
+    {
       "compound": "CAR-0000074",
       "similarity": 0.4375
     },
@@ -30386,10 +30390,6 @@
     },
     {
       "compound": "CAR-0000148",
-      "similarity": 0.4125
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.4125
     },
     {
@@ -30527,6 +30527,10 @@
       "similarity": 0.7538461538461538
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.7313432835820896
+    },
+    {
       "compound": "CAR-0000023",
       "similarity": 0.7313432835820896
     },
@@ -30593,10 +30597,6 @@
     {
       "compound": "CAR-0000109",
       "similarity": 0.547945205479452
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.5263157894736842
     },
     {
       "compound": "CAR-0000073",
@@ -30691,6 +30691,10 @@
       "similarity": 0.4666666666666667
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.4666666666666667
+    },
+    {
       "compound": "CAR-0000447",
       "similarity": 0.4625
     },
@@ -30751,10 +30755,6 @@
       "similarity": 0.4375
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4358974358974359
-    },
-    {
       "compound": "CAR-0000078",
       "similarity": 0.4342105263157895
     },
@@ -30768,10 +30768,6 @@
     },
     {
       "compound": "CAR-0000262",
-      "similarity": 0.43037974683544306
-    },
-    {
-      "compound": "CAR-0000263",
       "similarity": 0.43037974683544306
     },
     {
@@ -30817,6 +30813,10 @@
     {
       "compound": "CAR-0000248",
       "similarity": 0.4177215189873418
+    },
+    {
+      "compound": "CAR-0000263",
+      "similarity": 0.4125
     },
     {
       "compound": "CAR-0000201",
@@ -31081,6 +31081,10 @@
       "similarity": 0.4931506849315068
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.4931506849315068
+    },
+    {
       "compound": "CAR-0000045",
       "similarity": 0.4931506849315068
     },
@@ -31305,16 +31309,8 @@
       "similarity": 0.4025974025974026
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.3875
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.37037037037037035
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.36904761904761907
     },
     {
       "compound": "CAR-0000081",
@@ -31334,6 +31330,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.35294117647058826
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.35294117647058826
     },
     {
@@ -31571,6 +31571,10 @@
       "similarity": 0.5522388059701493
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5522388059701493
+    },
+    {
       "compound": "CAR-0000045",
       "similarity": 0.5522388059701493
     },
@@ -31723,10 +31727,6 @@
       "similarity": 0.4383561643835616
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.43243243243243246
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.43243243243243246
     },
@@ -31813,6 +31813,10 @@
       "similarity": 0.7457627118644068
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.7419354838709677
+    },
+    {
       "compound": "CAR-0000058",
       "similarity": 0.7333333333333333
     },
@@ -31821,15 +31825,15 @@
       "similarity": 0.7166666666666667
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.7166666666666667
+    },
+    {
       "compound": "CAR-0000066",
       "similarity": 0.7142857142857143
     },
     {
       "compound": "CAR-0000090",
-      "similarity": 0.7142857142857143
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.7142857142857143
     },
     {
@@ -32041,10 +32045,6 @@
       "similarity": 0.5692307692307692
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5671641791044776
-    },
-    {
       "compound": "CAR-0000261",
       "similarity": 0.5671641791044776
     },
@@ -32113,10 +32113,6 @@
       "similarity": 0.5362318840579711
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5352112676056338
-    },
-    {
       "compound": "CAR-0000187",
       "similarity": 0.5342465753424658
     },
@@ -32131,6 +32127,10 @@
     {
       "compound": "CAR-0000257",
       "similarity": 0.5277777777777778
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5138888888888888
     },
     {
       "compound": "CAR-0000227",
@@ -32303,6 +32303,10 @@
       "similarity": 0.5970149253731343
     },
     {
+      "compound": "CAR-0000086",
+      "similarity": 0.5942028985507246
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.5909090909090909
     },
@@ -32351,10 +32355,6 @@
       "similarity": 0.5714285714285714
     },
     {
-      "compound": "CAR-0000086",
-      "similarity": 0.5714285714285714
-    },
-    {
       "compound": "CAR-0000214",
       "similarity": 0.5714285714285714
     },
@@ -32364,6 +32364,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.5671641791044776
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.5671641791044776
     },
     {
@@ -32555,10 +32559,6 @@
       "similarity": 0.4657534246575342
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4605263157894737
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.4533333333333333
     },
@@ -32571,11 +32571,11 @@
       "similarity": 0.4520547945205479
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.44594594594594594
+      "compound": "CAR-0000075",
+      "similarity": 0.44155844155844154
     },
     {
-      "compound": "CAR-0000075",
+      "compound": "CAR-0000015",
       "similarity": 0.44155844155844154
     },
     {
@@ -32654,6 +32654,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.6935483870967742
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.6935483870967742
     },
     {
@@ -32886,10 +32890,6 @@
     },
     {
       "compound": "CAR-0000073",
-      "similarity": 0.5507246376811594
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.5507246376811594
     },
     {
@@ -33263,6 +33263,10 @@
       "similarity": 0.5362318840579711
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5362318840579711
+    },
+    {
       "compound": "CAR-0000076",
       "similarity": 0.5352112676056338
     },
@@ -33387,16 +33391,8 @@
       "similarity": 0.4266666666666667
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.42105263157894735
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.42105263157894735
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.4177215189873418
     },
     {
       "compound": "CAR-0000008",
@@ -33404,6 +33400,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4
     },
     {
@@ -33485,6 +33485,10 @@
       "similarity": 0.75
     },
     {
+      "compound": "CAR-0000263",
+      "similarity": 0.7333333333333333
+    },
+    {
       "compound": "CAR-0000266",
       "similarity": 0.7288135593220338
     },
@@ -33509,10 +33513,6 @@
       "similarity": 0.7049180327868853
     },
     {
-      "compound": "CAR-0000263",
-      "similarity": 0.7049180327868853
-    },
-    {
       "compound": "CAR-0000051",
       "similarity": 0.6935483870967742
     },
@@ -33531,6 +33531,10 @@
     {
       "compound": "CAR-0000259",
       "similarity": 0.6885245901639344
+    },
+    {
+      "compound": "CAR-0000077",
+      "similarity": 0.6833333333333333
     },
     {
       "compound": "CAR-0000230",
@@ -33554,6 +33558,10 @@
     },
     {
       "compound": "CAR-0000218",
+      "similarity": 0.65625
+    },
+    {
+      "compound": "CAR-0000086",
       "similarity": 0.65625
     },
     {
@@ -33598,10 +33606,6 @@
     },
     {
       "compound": "CAR-0000087",
-      "similarity": 0.6307692307692307
-    },
-    {
-      "compound": "CAR-0000086",
       "similarity": 0.6307692307692307
     },
     {
@@ -33765,10 +33769,6 @@
       "similarity": 0.5441176470588235
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5373134328358209
-    },
-    {
       "compound": "CAR-0000177",
       "similarity": 0.5362318840579711
     },
@@ -33924,6 +33924,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.6212121212121212
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.6212121212121212
     },
     {
@@ -34159,10 +34163,6 @@
       "similarity": 0.4931506849315068
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4931506849315068
-    },
-    {
       "compound": "CAR-0000046",
       "similarity": 0.4931506849315068
     },
@@ -34231,16 +34231,16 @@
       "similarity": 0.43209876543209874
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.43037974683544306
-    },
-    {
       "compound": "CAR-0000054",
       "similarity": 0.4268292682926829
     },
     {
       "compound": "CAR-0000049",
       "similarity": 0.4166666666666667
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.4125
     },
     {
       "compound": "CAR-0000034",
@@ -34457,6 +34457,10 @@
       "similarity": 0.5507246376811594
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5507246376811594
+    },
+    {
       "compound": "CAR-0000045",
       "similarity": 0.5507246376811594
     },
@@ -34655,10 +34659,6 @@
     {
       "compound": "CAR-0000047",
       "similarity": 0.44
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4342105263157895
     },
     {
       "compound": "CAR-0000009",
@@ -34891,6 +34891,10 @@
       "similarity": 0.578125
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.578125
+    },
+    {
       "compound": "CAR-0000045",
       "similarity": 0.578125
     },
@@ -35065,10 +35069,6 @@
     {
       "compound": "CAR-0000047",
       "similarity": 0.45714285714285713
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4507042253521127
     },
     {
       "compound": "CAR-0000009",
@@ -35309,6 +35309,10 @@
       "similarity": 0.582089552238806
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.578125
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.578125
     },
@@ -35483,10 +35487,6 @@
     {
       "compound": "CAR-0000047",
       "similarity": 0.45714285714285713
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4507042253521127
     },
     {
       "compound": "CAR-0000009",
@@ -35735,6 +35735,10 @@
       "similarity": 0.59375
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.59375
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.59375
     },
@@ -35899,14 +35903,6 @@
       "similarity": 0.4714285714285714
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4647887323943662
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.4594594594594595
-    },
-    {
       "compound": "CAR-0000041",
       "similarity": 0.45454545454545453
     },
@@ -35916,6 +35912,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.44
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.44
     },
     {
@@ -36161,6 +36161,10 @@
       "similarity": 0.5285714285714286
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5285714285714286
+    },
+    {
       "compound": "CAR-0000045",
       "similarity": 0.5285714285714286
     },
@@ -36319,10 +36323,6 @@
     {
       "compound": "CAR-0000047",
       "similarity": 0.42105263157894735
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4155844155844156
     },
     {
       "compound": "CAR-0000009",
@@ -36595,6 +36595,10 @@
       "similarity": 0.5757575757575758
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5757575757575758
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.5757575757575758
     },
@@ -36727,10 +36731,6 @@
       "similarity": 0.4675324675324675
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4666666666666667
-    },
-    {
       "compound": "CAR-0000041",
       "similarity": 0.46153846153846156
     },
@@ -36743,15 +36743,15 @@
       "similarity": 0.4583333333333333
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4520547945205479
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.4520547945205479
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4473684210526316
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4473684210526316
     },
     {
@@ -36997,6 +36997,10 @@
       "similarity": 0.5
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5
+    },
+    {
       "compound": "CAR-0000045",
       "similarity": 0.5
     },
@@ -37157,16 +37161,8 @@
       "similarity": 0.39285714285714285
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.38961038961038963
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.3717948717948718
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.37037037037037035
     },
     {
       "compound": "CAR-0000081",
@@ -37178,6 +37174,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.35365853658536583
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.35365853658536583
     },
     {
@@ -37244,6 +37244,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.7049180327868853
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.7049180327868853
     },
     {
@@ -37447,10 +37451,6 @@
       "similarity": 0.5588235294117647
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5588235294117647
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.5588235294117647
     },
@@ -37531,10 +37531,6 @@
       "similarity": 0.5285714285714286
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5277777777777778
-    },
-    {
       "compound": "CAR-0000215",
       "similarity": 0.5277777777777778
     },
@@ -37557,6 +37553,10 @@
     {
       "compound": "CAR-0000054",
       "similarity": 0.52
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5068493150684932
     },
     {
       "compound": "CAR-0000049",
@@ -37833,6 +37833,10 @@
       "similarity": 0.4931506849315068
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.4931506849315068
+    },
+    {
       "compound": "CAR-0000045",
       "similarity": 0.4931506849315068
     },
@@ -37997,20 +38001,12 @@
       "similarity": 0.4025974025974026
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.3875
-    },
-    {
       "compound": "CAR-0000034",
       "similarity": 0.3780487804878049
     },
     {
       "compound": "CAR-0000009",
       "similarity": 0.37037037037037035
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.36904761904761907
     },
     {
       "compound": "CAR-0000035",
@@ -38026,6 +38022,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.35294117647058826
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.35294117647058826
     },
     {
@@ -38076,6 +38076,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.7678571428571429
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.7678571428571429
     },
     {
@@ -38137,10 +38141,6 @@
     {
       "compound": "CAR-0000043",
       "similarity": 0.6885245901639344
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.6833333333333333
     },
     {
       "compound": "CAR-0000060",
@@ -38209,10 +38209,6 @@
     {
       "compound": "CAR-0000076",
       "similarity": 0.6190476190476191
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.6153846153846154
     },
     {
       "compound": "CAR-0000079",
@@ -38381,6 +38377,10 @@
     {
       "compound": "CAR-0000201",
       "similarity": 0.5588235294117647
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5441176470588235
     },
     {
       "compound": "CAR-0000187",
@@ -38574,6 +38574,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.6031746031746031
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.6031746031746031
     },
     {
@@ -38781,16 +38785,8 @@
       "similarity": 0.5384615384615384
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5373134328358209
-    },
-    {
       "compound": "CAR-0000067",
       "similarity": 0.5294117647058824
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.5285714285714286
     },
     {
       "compound": "CAR-0000187",
@@ -38846,6 +38842,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4657534246575342
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4657534246575342
     },
     {
@@ -39020,6 +39020,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.5588235294117647
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.5588235294117647
     },
     {
@@ -39239,10 +39243,6 @@
       "similarity": 0.4583333333333333
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.45454545454545453
-    },
-    {
       "compound": "CAR-0000041",
       "similarity": 0.45
     },
@@ -39259,15 +39259,15 @@
       "similarity": 0.44594594594594594
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.44
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.44
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4358974358974359
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4358974358974359
     },
     {
@@ -39310,6 +39310,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.5135135135135135
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.5135135135135135
     },
     {
@@ -39501,10 +39505,6 @@
       "similarity": 0.4074074074074074
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4074074074074074
-    },
-    {
       "compound": "CAR-0000261",
       "similarity": 0.4074074074074074
     },
@@ -39674,7 +39674,7 @@
     },
     {
       "compound": "CAR-0000015",
-      "similarity": 0.3563218390804598
+      "similarity": 0.3409090909090909
     },
     {
       "compound": "CAR-0000036",
@@ -39728,6 +39728,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.6031746031746031
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.6031746031746031
     },
     {
@@ -39852,10 +39856,6 @@
     },
     {
       "compound": "CAR-0000073",
-      "similarity": 0.4714285714285714
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.4714285714285714
     },
     {
@@ -40092,7 +40092,7 @@
     },
     {
       "compound": "CAR-0000015",
-      "similarity": 0.40789473684210525
+      "similarity": 0.38961038961038963
     },
     {
       "compound": "CAR-0000075",
@@ -40150,6 +40150,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.8113207547169812
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.8113207547169812
     },
     {
@@ -40302,10 +40306,6 @@
     },
     {
       "compound": "CAR-0000148",
-      "similarity": 0.6333333333333333
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.6333333333333333
     },
     {
@@ -40477,10 +40477,6 @@
       "similarity": 0.5606060606060606
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5454545454545454
-    },
-    {
       "compound": "CAR-0000187",
       "similarity": 0.5441176470588235
     },
@@ -40499,6 +40495,10 @@
     {
       "compound": "CAR-0000252",
       "similarity": 0.5303030303030303
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5223880597014925
     },
     {
       "compound": "CAR-0000227",
@@ -40592,6 +40592,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.7543859649122807
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.7543859649122807
     },
     {
@@ -40807,10 +40811,6 @@
       "similarity": 0.59375
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.59375
-    },
-    {
       "compound": "CAR-0000261",
       "similarity": 0.59375
     },
@@ -40899,10 +40899,6 @@
       "similarity": 0.5441176470588235
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5362318840579711
-    },
-    {
       "compound": "CAR-0000187",
       "similarity": 0.5352112676056338
     },
@@ -40913,6 +40909,10 @@
     {
       "compound": "CAR-0000054",
       "similarity": 0.5277777777777778
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5142857142857142
     },
     {
       "compound": "CAR-0000227",
@@ -40985,6 +40985,10 @@
       "similarity": 0.7049180327868853
     },
     {
+      "compound": "CAR-0000015",
+      "similarity": 0.6935483870967742
+    },
+    {
       "compound": "CAR-0000026",
       "similarity": 0.6896551724137931
     },
@@ -41018,6 +41022,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.6229508196721312
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.6229508196721312
     },
     {
@@ -41103,10 +41111,6 @@
     {
       "compound": "CAR-0000063",
       "similarity": 0.5671641791044776
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.5538461538461539
     },
     {
       "compound": "CAR-0000060",
@@ -41215,10 +41219,6 @@
     {
       "compound": "CAR-0000097",
       "similarity": 0.48484848484848486
-    },
-    {
-      "compound": "CAR-0000015",
-      "similarity": 0.4788732394366197
     },
     {
       "compound": "CAR-0000059",
@@ -41395,6 +41395,10 @@
       "similarity": 0.6551724137931034
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6551724137931034
+    },
+    {
       "compound": "CAR-0000045",
       "similarity": 0.6551724137931034
     },
@@ -41532,10 +41536,6 @@
     },
     {
       "compound": "CAR-0000073",
-      "similarity": 0.5076923076923077
-    },
-    {
-      "compound": "CAR-0000077",
       "similarity": 0.5076923076923077
     },
     {
@@ -41755,16 +41755,16 @@
       "similarity": 0.4383561643835616
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.43661971830985913
-    },
-    {
       "compound": "CAR-0000054",
       "similarity": 0.43243243243243246
     },
     {
       "compound": "CAR-0000049",
       "similarity": 0.42105263157894735
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.4166666666666667
     },
     {
       "compound": "CAR-0000075",
@@ -42041,6 +42041,10 @@
       "similarity": 0.582089552238806
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.578125
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.578125
     },
@@ -42161,10 +42165,6 @@
       "similarity": 0.4666666666666667
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4657534246575342
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.4583333333333333
     },
@@ -42173,15 +42173,15 @@
       "similarity": 0.45714285714285713
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.4507042253521127
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.4507042253521127
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.44594594594594594
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.44594594594594594
     },
     {
@@ -42467,6 +42467,10 @@
       "similarity": 0.5441176470588235
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5441176470588235
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.5441176470588235
     },
@@ -42583,16 +42587,8 @@
       "similarity": 0.4430379746835443
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.44155844155844154
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.4342105263157895
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4266666666666667
     },
     {
       "compound": "CAR-0000009",
@@ -42600,6 +42596,10 @@
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.4230769230769231
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.4230769230769231
     },
     {
@@ -42686,6 +42686,10 @@
     },
     {
       "compound": "CAR-0000089",
+      "similarity": 0.6825396825396826
+    },
+    {
+      "compound": "CAR-0000077",
       "similarity": 0.6825396825396826
     },
     {
@@ -42893,10 +42897,6 @@
       "similarity": 0.5428571428571428
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.5428571428571428
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.5428571428571428
     },
@@ -42973,10 +42973,6 @@
       "similarity": 0.5138888888888888
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5135135135135135
-    },
-    {
       "compound": "CAR-0000215",
       "similarity": 0.5135135135135135
     },
@@ -42999,6 +42995,10 @@
     {
       "compound": "CAR-0000120",
       "similarity": 0.4936708860759494
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.49333333333333335
     },
     {
       "compound": "CAR-0000265",
@@ -43215,6 +43215,10 @@
       "similarity": 0.5428571428571428
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.5428571428571428
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.5428571428571428
     },
@@ -43423,10 +43427,6 @@
       "similarity": 0.44594594594594594
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.4430379746835443
-    },
-    {
       "compound": "CAR-0000008",
       "similarity": 0.4358974358974359
     },
@@ -43435,15 +43435,15 @@
       "similarity": 0.4358974358974359
     },
     {
-      "compound": "CAR-0000077",
-      "similarity": 0.42857142857142855
-    },
-    {
       "compound": "CAR-0000009",
       "similarity": 0.42857142857142855
     },
     {
       "compound": "CAR-0000075",
+      "similarity": 0.425
+    },
+    {
+      "compound": "CAR-0000015",
       "similarity": 0.425
     },
     {
@@ -43561,6 +43561,10 @@
       "similarity": 0.6119402985074627
     },
     {
+      "compound": "CAR-0000077",
+      "similarity": 0.6119402985074627
+    },
+    {
       "compound": "CAR-0000098",
       "similarity": 0.6119402985074627
     },
@@ -43593,10 +43597,6 @@
       "similarity": 0.5857142857142857
     },
     {
-      "compound": "CAR-0000015",
-      "similarity": 0.5833333333333334
-    },
-    {
       "compound": "CAR-0000053",
       "similarity": 0.5774647887323944
     },
@@ -43607,6 +43607,10 @@
     {
       "compound": "CAR-0000100",
       "similarity": 0.5652173913043478
+    },
+    {
+      "compound": "CAR-0000015",
+      "similarity": 0.5616438356164384
     },
     {
       "compound": "CAR-0000049",
@@ -43819,10 +43823,6 @@
     {
       "compound": "CAR-0000264",
       "similarity": 0.49333333333333335
-    },
-    {
-      "compound": "CAR-0000077",
-      "similarity": 0.4864864864864865
     },
     {
       "compound": "CAR-0000009",

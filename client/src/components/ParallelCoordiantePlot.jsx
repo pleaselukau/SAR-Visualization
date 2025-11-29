@@ -1,5 +1,28 @@
-import { useRef, useEffect, useState } from "react";
+// ParallelCoordinatePlot component to visualize compounds across multiple dimensions
+
+import { useRef, useEffect, useState, act } from "react";
 import * as d3 from "d3";
+
+// Fisheye scaling function for interactive distortion effect
+function fisheyeScale(scale, focusX, distortion = 2) {
+  const domain = scale.domain();
+  const range = scale.range();
+
+  const [r0, r1] = range;
+  const axisLength = r1 - r0;
+
+  const newPos = domain.map((d) => {
+    const x = scale(d);
+    const left = x < focusX;
+    const dist = Math.abs(x - focusX);
+    const factor = (distortion + 1) / (distortion + dist / axisLength);
+    return left ? focusX - dist * factor : focusX + dist * factor;
+  });
+
+  const newScale = {};
+  domain.forEach((d, i) => (newScale[d] = newPos[i]));
+  return newScale;
+}
 
 export default function ParallelCoordiantePlot({
   compounds,
@@ -8,6 +31,10 @@ export default function ParallelCoordiantePlot({
   setTooltip,
 }) {
   const ref = useRef();
+
+  // Active filters state for brushing
+  const [activeFilters, setActiveFilters] = useState({});
+
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -27,6 +54,8 @@ export default function ParallelCoordiantePlot({
 
   useEffect(() => {
     if (!compounds || compounds.length === 0) return;
+
+    console.log("active filters:", JSON.stringify(activeFilters));
 
     const svg = d3.select(ref.current);
     svg.selectAll("*").remove();
@@ -54,34 +83,28 @@ export default function ParallelCoordiantePlot({
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
     //Y scales for each dimension
-    const y = {};
-    dimensions.forEach((dim) => {
-      y[dim] = d3
-        .scaleLinear()
-        .domain(d3.extent(compounds, (d) => +d[dim]))
-        .nice()
-        .range([innerHeight, 0]);
-    });
+    const y = Object.fromEntries(
+      dimensions.map((dim) => [
+        dim,
+        d3
+          .scaleLinear()
+          .domain(d3.extent(compounds, (d) => +d[dim]))
+          .nice()
+          .range([innerHeight, 0]),
+      ])
+    );
 
     //X scale for dimensions
     const x = d3.scalePoint().domain(dimensions).range([0, innerWidth]);
 
-    // Brush state: active filters per dimension (data-space ranges)
-    const activeFilters = {};
-
     // check if a compound passes all active filters
-    const passesFilters = (d) => {
-      return Object.entries(activeFilters).every(([dim, [min, max]]) => {
-        const value = +d[dim];
-        return value >= min && value <= max;
-      });
-    };
+    const passesFilters = (d) =>
+      Object.entries(activeFilters).every(
+        ([dim, [min, max]]) => +d[dim] >= min && +d[dim] <= max
+      );
 
     // Line generator for a compound across all dimensions
-    const line = (d) =>
-      d3.line()(
-        dimensions.map((p) => [x(p), y[p](+d[p])])
-      );
+    const line = (d) => d3.line()(dimensions.map((p) => [x(p), y[p](+d[p])]));
 
     // Draw all polylines
     const paths = g
@@ -95,10 +118,9 @@ export default function ParallelCoordiantePlot({
       .attr("stroke", (d) =>
         selectedIds.includes(d.ID) ? "orange" : "steelblue"
       )
-      .attr("stroke-opacity", (d) =>
-        selectedIds.includes(d.ID) ? 1 : 0.4
-      )
       .attr("stroke-width", 1.5)
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
       .on("click", (event, d) => {
         event.stopPropagation();
         if (selectedIds.includes(d.ID)) {
@@ -122,26 +144,26 @@ export default function ParallelCoordiantePlot({
         setTooltip({ visible: false, x: 0, y: 0, compound: null });
       });
 
-    // Function to update visual opacity based on filters + selection ---
-    function updatePathStyles() {
+    // Function to update path styles based on selection and filtering
+    const updatePathStyles = () => {
       paths
-        .attr("stroke-opacity", (d) => {
-          const inFilter = passesFilters(d);
-          const isSelected = selectedIds.includes(d.ID);
-          if (!Object.keys(activeFilters).length) {
-            // No filters: original behavior
-            return isSelected ? 1 : 0.4;
-          }
-          // With filters: fade out non-matching
-          if (!inFilter) return 0.05;
-          return isSelected ? 1 : 0.8;
+        .attr("display", (d) => {
+          // Selected compounds always visible
+          if (selectedIds.includes(d.ID)) return "inline";
+
+          // Non-selected compounds: only show if pass filters
+          if (Object.keys(activeFilters).length === 0) return "inline";
+          return passesFilters(d) ? "inline" : "none";
         })
         .attr("stroke", (d) =>
           selectedIds.includes(d.ID) ? "orange" : "steelblue"
-        );
-    }
+        )
+        .attr("stroke-width", 1.5)
+        .attr("stroke-linejoin", "round")
+        .attr("stroke-linecap", "round");
+    };
 
-    // --- Axes container ---
+    // Axes container
     const axis = d3.axisLeft();
     const axesG = g
       .selectAll(".dimension")
@@ -150,14 +172,35 @@ export default function ParallelCoordiantePlot({
       .attr("class", "dimension")
       .attr("transform", (d) => `translate(${x(d)},0)`);
 
-    //Add axes, labels, and brushes ---
+    // Add axes, labels, and brushes
     axesG.each(function (dim) {
       const axisG = d3.select(this);
 
       // Axis
       axisG.call(axis.scale(y[dim]));
 
-      // Label
+      // Filter highlight container
+      const filterG = axisG.append("g").attr("class", "filter-highlight");
+
+      // Add white semi-transparent background for ticks
+      axisG.selectAll(".tick").each(function () {
+        const tick = d3.select(this);
+        const text = tick.select("text");
+        const bbox = text.node().getBBox();
+
+        // Insert rect as a sibling before the text
+        tick
+          .insert("rect", "text")
+          .attr("x", bbox.x - 1)
+          .attr("y", bbox.y - 1)
+          .attr("width", bbox.width + 2)
+          .attr("height", bbox.height + 2)
+          .attr("fill", "white")
+          .attr("rx", 4)
+          .attr("ry", 4);
+      });
+
+      // Axes Labels
       axisG
         .append("text")
         .attr("y", -10)
@@ -167,37 +210,105 @@ export default function ParallelCoordiantePlot({
         .style("font-size", "12px")
         .text(displayNames[dim] || dim);
 
-      // --- Brush for this dimension (range filter) ---
-      const brush = d3
-        .brushY()
-        .extent([
-          [-10, 0], // a little left/right padding
-          [10, innerHeight],
-        ])
-        .on("brush end", (event) => {
-          const sel = event.selection;
-          if (!sel) {
-            // Brush cleared → remove filter for this dim
-            delete activeFilters[dim];
-          } else {
-            const [y0, y1] = sel;
-            // Convert back from pixel space to data space
-            const min = y[dim].invert(y1); // note: y is inverted
-            const max = y[dim].invert(y0);
-            activeFilters[dim] = [min, max];
-          }
-          updatePathStyles();
-        });
-
+      // Brush
       axisG
         .append("g")
         .attr("class", "brush")
-        .call(brush);
+        .call(
+          d3
+            .brushY()
+            .extent([
+              [-10, 0],
+              [10, innerHeight],
+            ])
+            .on("brush end", (event) => {
+              const sel = event.selection;
+              setActiveFilters((prev) => {
+                const updated = { ...prev };
+                if (!sel) delete updated[dim];
+                else
+                  updated[dim] = [y[dim].invert(sel[1]), y[dim].invert(sel[0])];
+                return updated;
+              });
+            })
+        );
     });
 
-    // When selectedIds change, refresh styles (so filter + selection both apply)
-    updatePathStyles();
-  }, [compounds, selectedIds, windowSize]);
+    const updateFilterBoxes = () => {
+      axesG.each(function (dim) {
+        const axisG = d3.select(this);
+        const filter = activeFilters[dim];
 
-  return <svg ref={ref} className="w-full h-full"></svg>;
+        const rect = axisG
+          .select(".filter-highlight")
+          .selectAll("rect")
+          .data(filter ? [filter] : []);
+
+        rect.join(
+          (enter) =>
+            enter
+              .append("rect")
+              .attr("x", -10)
+              .attr("width", 20)
+              .attr("fill", "orange")
+              .attr("opacity", 0.3)
+              .attr("rx", 4)
+              .attr("ry", 4)
+              .attr("y", ([min, max]) => y[dim](max))
+              .attr("height", ([min, max]) => y[dim](min) - y[dim](max)),
+          (update) =>
+            update
+              .transition()
+              .duration(100)
+              .attr("y", ([min, max]) => y[dim](max))
+              .attr("height", ([min, max]) => y[dim](min) - y[dim](max)),
+          (exit) => exit.remove()
+        );
+      });
+    };
+
+    // svg.on("mousemove", (event) => {
+    //   const [mouseX] = d3.pointer(event, svg.node());
+
+    //   const xFisheye = fisheyeScale(x, mouseX, 2); // distortion factor 2
+
+    //   // Update positions of axes
+    //   axesG.attr("transform", (d) => `translate(${xFisheye[d]},0)`);
+
+    //   // Update lines
+    //   paths.attr("d", (d) =>
+    //     d3.line()(dimensions.map((p) => [xFisheye[p], y[p](+d[p])]))
+    //   );
+    // });
+
+    updatePathStyles();
+    updateFilterBoxes();
+  }, [compounds, selectedIds, activeFilters, windowSize]);
+
+  return (
+    <div className="relative w-full h-full">
+      <svg ref={ref} className="w-full h-full"></svg>
+      {activeFilters && Object.keys(activeFilters).length > 0 && (
+        <button
+          className="absolute flex items-center justify-center bottom-0 right-0 px-1 py-0.5 bg-orange-400 bg-opacity-30 text-white text-sm rounded z-10 gap-1"
+          onClick={() => setActiveFilters({})}
+        >
+          <span>Reset Filters</span>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+              fill="#FFFFFF"
+            />
+          </svg>
+        </button>
+      )}
+    </div>
+  );
 }

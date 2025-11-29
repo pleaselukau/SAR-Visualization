@@ -1,20 +1,22 @@
 import { useState, useEffect } from "react";
 
+import ComparisonPanel from "./components/ComparisonPanel.jsx";
+
 import ScatterPlot from "./components/ScatterPlot.jsx";
 import ParallelCoordiantePlot from "./components/ParallelCoordiantePlot.jsx";
 import RadarChart from "./components/RadarChart.jsx";
 import Heatmap from "./components/Heatmap.jsx";
 import SelectionPanel from "./components/SelectionPanel.jsx";
-import ComparisonPanel from "./components/ComparisonPanel.jsx";
+
 import Tooltip from "./components/Tooltip.jsx";
 import NetworkGraph from "./components/NetworkGraph.jsx";
+import ExpandableHeatmap from "./components/ExpandableHeatmap.jsx";
 
 export default function App() {
   const [compounds, setCompounds] = useState([]);
   const [selectedIds, setSelectedIds] = useState([]);
   const [scatterPlotDimensions, setScatterPlotDimensions] = useState(0);
-  const [heatmapAndComparisonCompunds, setHeatmapAndComparisonCompunds] =
-    useState([]);
+  const [comparisonCompounds, setComparisonCompounds] = useState([]);
 
   // New: structural similarity matrix (NxN, aligned with compounds order)
   const [similarityMatrix, setSimilarityMatrix] = useState([]);
@@ -36,7 +38,7 @@ export default function App() {
 
   // Helper: build NxN matrix from similarities.json + compounds list
   function buildSimilarityMatrix(compoundsData, similaritiesData) {
-    const ids = compoundsData.map((c) => c.name); 
+    const ids = compoundsData.map((c) => c.name);
     const n = ids.length;
 
     // Precompute neighbor maps for quick lookup
@@ -101,6 +103,7 @@ export default function App() {
   return (
     <>
       <div className="h-screen w-screen grid grid-cols-3 grid-rows-2 gap-1.5 bg-gray-100 p-1.5 overflow-hidden">
+        {/* <div className="h-screen w-screen grid bg-gray-100 p-1.5 overflow-hidden"> */}
         <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
           <ParallelCoordiantePlot
             compounds={compounds}
@@ -125,8 +128,8 @@ export default function App() {
             setSelectedIds={setSelectedIds}
             scatterPlotDimensions={scatterPlotDimensions}
             setScatterPlotDimensions={setScatterPlotDimensions}
-            heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
-            setHeatmapAndComparisonCompunds={setHeatmapAndComparisonCompunds}
+            comparisonCompounds={comparisonCompounds}
+            setComparisonCompounds={setComparisonCompounds}
           />
         </div>
         <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
@@ -134,15 +137,15 @@ export default function App() {
             compounds={compounds}
             selectedIds={selectedIds}
             setSelectedIds={setSelectedIds}
+            setTooltip={setTooltip}
           />
         </div>
         <div className="bg-white rounded-xl shadow p-2 flex flex-col items-center justify-center relative">
           <Heatmap
             compounds={compounds}
-            heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
             similarityMatrix={similarityMatrix} //  for structural similarity
-            onExpand={() => setIsHeatmapExpanded(true)}   //for the bigger heatmap
-            showAxes={false}    // HIDE axes in thumbnail
+            onExpand={() => setIsHeatmapExpanded(true)} //for the bigger heatmap
+            showAxes={false} // HIDE axes in thumbnail
           />
           <button
             onClick={() => setIsNetworkGraphVisible(true)}
@@ -154,7 +157,7 @@ export default function App() {
         <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
           <ComparisonPanel
             compounds={compounds}
-            heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
+            comparisonCompounds={comparisonCompounds}
           />
         </div>
 
@@ -164,126 +167,20 @@ export default function App() {
           y={tooltip.y}
           compound={tooltip.compound}
         />
-      </div> 
-      
+      </div>
+
       {isHeatmapExpanded && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-          <div className="bg-white rounded-xl shadow-lg w-[90vw] h-[90vh] p-4 flex flex-col">
-            <div className="flex justify-between items-center mb-2">
-              <h2 className="text-lg font-semibold">
-                Structural Similarity Heatmap
-              </h2>
-              <button
-                onClick={() => {
-                  setIsHeatmapExpanded(false);
-                  setSelectedSimilarityPair(null); // clear selection when closing
-                }}
-                className="px-3 py-1 text-sm rounded bg-gray-200 hover:bg-gray-300"
-              >
-                Close
-              </button>
-            </div>
-
-            {/* Main content: big heatmap + side panel */}
-            <div className="flex-1 flex gap-4 min-h-0">
-              {/* Big heatmap */}
-              <div className="flex-1 border rounded overflow-hidden">
-                <Heatmap
-                  compounds={compounds}
-                  heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
-                  similarityMatrix={similarityMatrix}
-                  onCellClick={(info) => setSelectedSimilarityPair(info)}
-                />
-              </div>
-
-              {/* Side panel */}
-              <div className="w-80 h-full border rounded p-3 text-xs bg-gray-50 flex flex-col overflow-y-auto">
-                <h3 className="font-semibold mb-2">Selected Pair</h3>
-
-                {!selectedSimilarityPair && (
-                  <p className="text-gray-500">
-                    Click a cell in the heatmap to see details here.
-                  </p>
-                )}
-
-                {selectedSimilarityPair && (() => {
-                  const a = selectedSimilarityPair.compRow || {};
-                  const b = selectedSimilarityPair.compCol || {};
-
-                  const getPotency = (c) =>
-                    c.potency ?? c.pEC50 ?? c.pIC50 ?? "N/A";
-
-                  const formatVal = (v) =>
-                    v === undefined || v === null || v === ""
-                      ? "N/A"
-                      : typeof v === "number"
-                      ? v.toFixed(3)
-                      : v;
-
-                  const getSvgFor = (c) =>
-                    c?.name ? `/svgs/${c.name}.svg` : null;
-
-                  return (
-                    <>
-                      {/* Similarity score */}
-                      <p className="mb-3 text-sm">
-                        <span className="font-medium">Similarity:</span>{" "}
-                        {formatVal(selectedSimilarityPair.similarity)}
-                      </p>
-                      {/* Compound A */}
-                      <div className="mb-4">
-                        <h4 className="font-medium mb-1">
-                          Compound A (Y-Axis): {a.name || "N/A"}
-                        </h4>
-
-                        {getSvgFor(a) && (
-                          <img
-                            src={getSvgFor(a)}
-                            alt={a.name}
-                            className="w-full h-auto mb-2 border rounded bg-white object-contain"
-                          />
-                        )}
-
-                        <div className="space-y-0.5">
-                          <p>Weight: {formatVal(a.weight)}</p>
-                          <p>Log P: {formatVal(a.log_p)}</p>
-                          <p>Log D: {formatVal(a.log_d)}</p>
-                          <p>pKa: {formatVal(a.pka)}</p>
-                          <p>TPSA: {formatVal(a.tpsa)}</p>
-                          <p>Potency: {formatVal(getPotency(a))}</p>
-                        </div>
-                      </div>
-
-                      {/* Compound B */}
-                      <div>
-                        <h4 className="font-medium mb-1">
-                          Compound B ((X-Axis)): {b.name || "N/A"}
-                        </h4>
-
-                        {getSvgFor(b) && (
-                          <img
-                            src={getSvgFor(b)}
-                            alt={b.name}
-                            className="w-full h-auto mb-2 border rounded bg-white object-contain"
-                          />
-                        )}
-
-                        <div className="space-y-0.5">
-                          <p>Weight: {formatVal(b.weight)}</p>
-                          <p>Log P: {formatVal(b.log_p)}</p>
-                          <p>Log D: {formatVal(b.log_d)}</p>
-                          <p>pKa: {formatVal(b.pka)}</p>
-                          <p>TPSA: {formatVal(b.tpsa)}</p>
-                          <p>Potency: {formatVal(getPotency(b))}</p>
-                        </div>
-                      </div>
-                    </>
-                  );
-                })()}
-              </div>
-            </div>
-          </div>
-        </div>
+        <ExpandableHeatmap
+          compounds={compounds}
+          comparisonCompounds={comparisonCompounds}
+          similarityMatrix={similarityMatrix}
+          onClose={() => {
+            setIsHeatmapExpanded(false);
+            setSelectedSimilarityPair(null);
+          }}
+          selectedSimilarityPair={selectedSimilarityPair}
+          setSelectedSimilarityPair={setSelectedSimilarityPair}
+        />
       )}
 
       {isNetworkGraphVisible && (
