@@ -1,38 +1,30 @@
 // ParallelCoordinatePlot component to visualize compounds across multiple dimensions
-import { useRef, useEffect, useState, act } from "react";
+import { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 
+// Fisheye distortion functions for Y axis
 function yFisheye(yPosition, yFocus, scale, distortion = 1) {
-  const x = scale.invert ? scale(yPosition) : yPosition;
-  const a = yFocus;
-  const d = distortion;
-
-  const range = d3.extent(scale.range());
-  const min = range[0];
-  const max = range[1];
-  const left = yPosition < a;
-  let m = left ? a - min : max - a;
+  const [min, max] = d3.extent(scale.range());
+  const left = yPosition < yFocus;
+  let m = left ? yFocus - min : max - yFocus;
   if (m === 0) m = max - min;
-
   const result =
-    ((left ? -1 : 1) * (m * (d + 1))) / (d + m / Math.abs(yPosition - a)) + a;
-
+    ((left ? -1 : 1) * (m * (distortion + 1))) /
+      (distortion + m / Math.abs(yPosition - yFocus)) +
+    yFocus;
   return Math.max(min, Math.min(max, result));
 }
 
+// Fisheye distortion functions for X axis
 function xFisheye(xPosition, xFocus, scale, distortion = 1) {
-  const range = d3.extent(scale.range());
-  const min = range[0];
-  const max = range[1];
+  const [min, max] = d3.extent(scale.range());
   const left = xPosition < xFocus;
   let m = left ? xFocus - min : max - xFocus;
   if (m === 0) m = max - min;
-
   const result =
     ((left ? -1 : 1) * (m * (distortion + 1))) /
       (distortion + m / Math.abs(xPosition - xFocus)) +
     xFocus;
-
   return Math.max(min, Math.min(max, result));
 }
 
@@ -47,32 +39,27 @@ export default function ParallelCoordiantePlot({
   // Active filters state for brushing
   const [activeFilters, setActiveFilters] = useState({});
 
-  // Store Positions befroe fisheye distortion
-  const originalTickYs = new Map();
-  const originalAxisXs = [];
-  const originalPathYs = [];
-  const originalPathXs = [];
+  // Store Positions before fisheye distortion
+  let originalTickYs = new Map();
+  let originalAxisXs = [];
+  let originalPathYs = [];
+  let originalPathXs = [];
 
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
 
+  // Handle window resize
   useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-
+    const handleResize = () =>
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
     if (!compounds || compounds.length === 0) return;
-
     console.log("active filters:", JSON.stringify(activeFilters));
 
     const svg = d3.select(ref.current);
@@ -80,13 +67,11 @@ export default function ParallelCoordiantePlot({
 
     const width = ref.current.clientWidth || 400;
     const height = ref.current.clientHeight || 300;
-
     const margin = { top: 30, right: 30, bottom: 30, left: 30 };
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
 
     const dimensions = ["weight", "log_p", "log_d", "pka", "tpsa", "potency"];
-
     const displayNames = {
       weight: "Weight",
       log_p: "Log P",
@@ -115,19 +100,14 @@ export default function ParallelCoordiantePlot({
     // X scale for dimensions
     const x = d3.scalePoint().domain(dimensions).range([0, innerWidth]);
 
-    const originalPathYs = compounds.map((d) =>
+    // Store original positions before fisheye distortion
+    originalPathYs = compounds.map((d) =>
       dimensions.map((dim) => y[dim](+d[dim]))
     );
+    originalPathXs = compounds.map((d) => dimensions.map((dim) => x(dim)));
+    originalAxisXs = dimensions.map((dim) => x(dim));
 
-    // original X positions for axes
-    const originalAxisXs = dimensions.map((dim) => x(dim));
-
-    // original X positions for line points
-    const originalPathXs = compounds.map((d) =>
-      dimensions.map((dim) => x(dim))
-    );
-
-    // check if a compound passes all active filters
+    // Check if a compound passes all active filters
     const passesFilters = (d) =>
       Object.entries(activeFilters).every(
         ([dim, [min, max]]) => +d[dim] >= min && +d[dim] <= max
@@ -153,44 +133,38 @@ export default function ParallelCoordiantePlot({
       .attr("stroke-linecap", "round")
       .on("click", (event, d) => {
         event.stopPropagation();
-        if (selectedIds.includes(d.ID)) {
-          setSelectedIds(selectedIds.filter((id) => id !== d.ID));
-        } else {
-          setSelectedIds([...selectedIds, d.ID]);
-        }
+        setSelectedIds(
+          selectedIds.includes(d.ID)
+            ? selectedIds.filter((id) => id !== d.ID)
+            : [...selectedIds, d.ID]
+        );
       })
-      .on("mouseover", (event, d) => {
+      .on("mouseover", (event, d) =>
         setTooltip({
           visible: true,
           x: event.pageX,
           y: event.pageY,
           compound: d,
-        });
-      })
-      .on("mousemove", (event) => {
-        setTooltip((prev) => ({ ...prev, x: event.pageX, y: event.pageY }));
-      })
-      .on("mouseout", () => {
-        setTooltip({ visible: false, x: 0, y: 0, compound: null });
-      });
+        })
+      )
+      .on("mousemove", (event) =>
+        setTooltip((prev) => ({ ...prev, x: event.pageX, y: event.pageY }))
+      )
+      .on("mouseout", () =>
+        setTooltip({ visible: false, x: 0, y: 0, compound: null })
+      );
 
     // Function to update path styles based on selection and filtering
     const updatePathStyles = () => {
       paths
         .attr("display", (d) => {
-          // Selected compounds always visible
           if (selectedIds.includes(d.ID)) return "inline";
-
-          // Non-selected compounds: only show if pass filters
           if (Object.keys(activeFilters).length === 0) return "inline";
           return passesFilters(d) ? "inline" : "none";
         })
         .attr("stroke", (d) =>
           selectedIds.includes(d.ID) ? "orange" : "steelblue"
-        )
-        .attr("stroke-width", 1)
-        .attr("stroke-linejoin", "round")
-        .attr("stroke-linecap", "round");
+        );
     };
 
     // Axes container
@@ -210,15 +184,13 @@ export default function ParallelCoordiantePlot({
       axisG.call(axis.scale(y[dim]));
 
       // Filter highlight container
-      const filterG = axisG.append("g").attr("class", "filter-highlight");
+      axisG.append("g").attr("class", "filter-highlight");
 
       // Add white semi-transparent background for ticks
       axisG.selectAll(".tick").each(function () {
         const tick = d3.select(this);
         const text = tick.select("text");
         const bbox = text.node().getBBox();
-
-        // Insert rect as a sibling before the text
         tick
           .insert("rect", "text")
           .attr("x", bbox.x - 1)
@@ -230,18 +202,15 @@ export default function ParallelCoordiantePlot({
           .attr("ry", 4);
       });
 
-      axesG.each(function (dim) {
-        const axisG = d3.select(this);
-
-        axisG.selectAll(".tick").each(function (d, i) {
-          const tick = d3.select(this);
-          const origY = +tick
+      // Store original tick positions
+      axisG.selectAll(".tick").each(function () {
+        originalTickYs.set(
+          this,
+          +d3
+            .select(this)
             .attr("transform")
-            .match(/translate\(0,([^)]+)\)/)[1];
-
-          // store in Map with unique key
-          originalTickYs.set(tick.node(), origY);
-        });
+            .match(/translate\(0,([^)]+)\)/)[1]
+        );
       });
 
       // Axes Labels
@@ -278,16 +247,15 @@ export default function ParallelCoordiantePlot({
         );
     });
 
+    // Update filter boxes
     const updateFilterBoxes = () => {
       axesG.each(function (dim) {
         const axisG = d3.select(this);
         const filter = activeFilters[dim];
-
         const rect = axisG
           .select(".filter-highlight")
           .selectAll("rect")
           .data(filter ? [filter] : []);
-
         rect.join(
           (enter) =>
             enter
@@ -311,78 +279,94 @@ export default function ParallelCoordiantePlot({
       });
     };
 
+    // Fisheye distortion
     svg.on("mousemove", (event) => {
       const [mx, my] = d3.pointer(event);
 
-      // Distort axes X (except first/last axis)
       axesG.attr("transform", (dim, i) => {
-        const origX = originalAxisXs[i];
-        let newX = origX;
-        if (i !== 0 && i !== dimensions.length - 1) {
-          newX = xFisheye(origX, mx, x, 1);
-        }
+        const newX =
+          i !== 0 && i !== dimensions.length - 1
+            ? xFisheye(originalAxisXs[i], mx, x, 1)
+            : originalAxisXs[i];
         return `translate(${newX},0)`;
       });
 
-      // Distort ticks Y
       axesG.each(function (dim) {
         const axisG = d3.select(this);
-        const ticks = axisG.selectAll(".tick").nodes();
 
-        axisG.selectAll(".tick").attr("transform", function (d, i) {
-          if (i === 0 || i === ticks.length - 1)
+        axisG.selectAll(".tick").attr("transform", function (d, j) {
+          const ticks = axisG.selectAll(".tick").nodes();
+          if (j === 0 || j === ticks.length - 1)
             return d3.select(this).attr("transform");
-
-          const origY = originalTickYs.get(this);
-          const newY = yFisheye(origY, my, y[dim], 1);
-          return `translate(0,${newY})`;
+          return `translate(0,${yFisheye(
+            originalTickYs.get(this),
+            my,
+            y[dim],
+            1
+          )})`;
         });
+
+        const filter = activeFilters[dim];
+        axisG
+          .select(".filter-highlight")
+          .selectAll("rect")
+          .data(filter ? [filter] : [])
+          .attr("y", ([min, max]) => yFisheye(y[dim](max), my, y[dim], 1))
+          .attr(
+            "height",
+            ([min, max]) =>
+              yFisheye(y[dim](min), my, y[dim], 1) -
+              yFisheye(y[dim](max), my, y[dim], 1)
+          );
       });
 
-      // Distort line points X & Y
-      paths.attr("d", (d, i) => {
-        return d3.line()(
+      paths.attr("d", (d, i) =>
+        d3.line()(
           dimensions.map((dim, j) => {
-            let newY = originalPathYs[i][j];
-            let newX = originalPathXs[i][j];
+            const origY = originalPathYs[i][j];
+            const origX = originalPathXs[i][j];
 
-            // skip first/last points for X
-            if (j !== 0 && j !== dimensions.length - 1) {
-              newX = xFisheye(originalPathXs[i][j], mx, x, 1);
-            }
-            // skip first/last points for Y
-            if (j !== 0 && j !== dimensions.length - 1) {
-              newY = yFisheye(originalPathYs[i][j], my, y[dim], 1);
-            }
+            const axisMin = y[dim].range()[1]; // bottom
+            const axisMax = y[dim].range()[0]; // top
+
+            // Fix points on min/max of axis
+            const isAtYLimit = origY <= axisMin || origY >= axisMax;
+            const isFirstOrLastAxis = j === 0 || j === dimensions.length - 1;
+
+            // X distortion: only distort if not first/last axis
+            const newX = isFirstOrLastAxis ? origX : xFisheye(origX, mx, x, 1);
+
+            // Y distortion: only if not at axis limits
+            const newY = isAtYLimit ? origY : yFisheye(origY, my, y[dim], 1);
 
             return [newX, newY];
           })
-        );
-      });
+        )
+      );
     });
 
     svg.on("mouseleave", () => {
-      // Reset axes X
       axesG.attr("transform", (dim, i) => `translate(${originalAxisXs[i]},0)`);
-
-      // Reset ticks Y
       axesG.each(function (dim) {
-        d3.select(this)
-          .selectAll(".tick")
-          .attr("transform", function () {
-            return `translate(0,${originalTickYs.get(this)})`;
-          });
+        const axisG = d3.select(this);
+        axisG.selectAll(".tick").attr("transform", function () {
+          return `translate(0,${originalTickYs.get(this)})`;
+        });
+        const filter = activeFilters[dim];
+        axisG
+          .select(".filter-highlight")
+          .selectAll("rect")
+          .attr("y", ([min, max]) => y[dim](max))
+          .attr("height", ([min, max]) => y[dim](min) - y[dim](max));
       });
-
-      // Reset lines
-      paths.attr("d", (d, i) => {
-        return d3.line()(
+      paths.attr("d", (d, i) =>
+        d3.line()(
           dimensions.map((dim, j) => [
             originalPathXs[i][j],
             originalPathYs[i][j],
           ])
-        );
-      });
+        )
+      );
     });
 
     updatePathStyles();
