@@ -5,11 +5,10 @@ import ComparisonPanel from "./components/ComparisonPanel.jsx";
 import ScatterPlot from "./components/ScatterPlot.jsx";
 import ParallelCoordiantePlot from "./components/ParallelCoordiantePlot.jsx";
 import RadarChart from "./components/RadarChart.jsx";
-import Heatmap from "./components/Heatmap.jsx";
+import HeatmapWithPanel from "./components/HeatmapWithPanel.jsx";
 import SelectionPanel from "./components/SelectionPanel.jsx";
 
 import Tooltip from "./components/Tooltip.jsx";
-import ExpandableHeatmap from "./components/ExpandableHeatmap.jsx";
 
 export default function App() {
   const [compounds, setCompounds] = useState([]);
@@ -19,10 +18,6 @@ export default function App() {
 
   // New: structural similarity matrix (NxN, aligned with compounds order)
   const [similarityMatrix, setSimilarityMatrix] = useState([]);
-  //New : bigger version of heatmap
-  const [isHeatmapExpanded, setIsHeatmapExpanded] = useState(false);
-  //for pair selection in heatmap to display info in side panel
-  const [selectedSimilarityPair, setSelectedSimilarityPair] = useState(null);
 
   const [tooltip, setTooltip] = useState({
     visible: false,
@@ -135,11 +130,9 @@ export default function App() {
           />
         </div>
         <div className="bg-white rounded-xl shadow p-2 flex flex-col items-center justify-center">
-          <Heatmap
+          <HeatmapWithPanel
             compounds={compounds}
-            similarityMatrix={similarityMatrix} //  for structural similarity
-            onExpand={() => setIsHeatmapExpanded(true)} //for the bigger heatmap
-            showAxes={false} // HIDE axes in thumbnail
+            similarityMatrix={similarityMatrix}
           />
         </div>
         <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
@@ -156,20 +149,6 @@ export default function App() {
           compound={tooltip.compound}
         />
       </div>
-
-      {isHeatmapExpanded && (
-        <ExpandableHeatmap
-          compounds={compounds}
-          comparisonCompounds={comparisonCompounds}
-          similarityMatrix={similarityMatrix}
-          onClose={() => {
-            setIsHeatmapExpanded(false);
-            setSelectedSimilarityPair(null);
-          }}
-          selectedSimilarityPair={selectedSimilarityPair}
-          setSelectedSimilarityPair={setSelectedSimilarityPair}
-        />
-      )}
     </>
   );
 }

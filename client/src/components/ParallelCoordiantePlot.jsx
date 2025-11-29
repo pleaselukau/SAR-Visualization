@@ -128,7 +128,7 @@ export default function ParallelCoordiantePlot({
       .attr("stroke", (d) =>
         selectedIds.includes(d.ID) ? "orange" : "steelblue"
       )
-      .attr("stroke-width", 1)
+      .attr("stroke-width", 1.5)
       .attr("stroke-linejoin", "round")
       .attr("stroke-linecap", "round")
       .on("click", (event, d) => {
