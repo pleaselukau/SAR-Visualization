@@ -7,6 +7,7 @@ import Heatmap from "./components/Heatmap.jsx";
 import SelectionPanel from "./components/SelectionPanel.jsx";
 import ComparisonPanel from "./components/ComparisonPanel.jsx";
 import Tooltip from "./components/Tooltip.jsx";
+import NetworkGraph from "./components/NetworkGraph.jsx";
 
 export default function App() {
   const [compounds, setCompounds] = useState([]);
@@ -17,8 +18,12 @@ export default function App() {
 
   // New: structural similarity matrix (NxN, aligned with compounds order)
   const [similarityMatrix, setSimilarityMatrix] = useState([]);
+  // Raw similarities data for network graph
+  const [similaritiesData, setSimilaritiesData] = useState(null);
   //New : bigger version of heatmap
   const [isHeatmapExpanded, setIsHeatmapExpanded] = useState(false);
+  // Network graph view
+  const [isNetworkGraphVisible, setIsNetworkGraphVisible] = useState(false);
   //for pair selection in heatmap to display info in side panel
   const [selectedSimilarityPair, setSelectedSimilarityPair] = useState(null);
 
@@ -80,6 +85,7 @@ export default function App() {
         const similaritiesData = await simRes.json();
 
         setCompounds(compoundsData);
+        setSimilaritiesData(similaritiesData); // Store raw similarities for network graph
 
         // Build and store similarity matrix for the heatmap
         const matrix = buildSimilarityMatrix(compoundsData, similaritiesData);
@@ -130,7 +136,7 @@ export default function App() {
             setSelectedIds={setSelectedIds}
           />
         </div>
-        <div className="bg-white rounded-xl shadow p-2 flex flex-col items-center justify-center">
+        <div className="bg-white rounded-xl shadow p-2 flex flex-col items-center justify-center relative">
           <Heatmap
             compounds={compounds}
             heatmapAndComparisonCompunds={heatmapAndComparisonCompunds}
@@ -138,6 +144,12 @@ export default function App() {
             onExpand={() => setIsHeatmapExpanded(true)}   //for the bigger heatmap
             showAxes={false}    // HIDE axes in thumbnail
           />
+          <button
+            onClick={() => setIsNetworkGraphVisible(true)}
+            className="absolute bottom-2 right-2 z-10 px-2 py-1 text-xs rounded bg-blue-500 text-white hover:bg-blue-600"
+          >
+            Network View
+          </button>
         </div>
         <div className="bg-white rounded-xl shadow p-2 flex items-center justify-center">
           <ComparisonPanel
@@ -269,6 +281,31 @@ export default function App() {
                   );
                 })()}
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {isNetworkGraphVisible && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+          <div className="bg-white rounded-xl shadow-lg w-[95vw] h-[95vh] p-4 flex flex-col">
+            <div className="flex justify-between items-center mb-2">
+              <h2 className="text-lg font-semibold">
+                Compound Similarity Network
+              </h2>
+              <button
+                onClick={() => setIsNetworkGraphVisible(false)}
+                className="px-3 py-1 text-sm rounded bg-gray-200 hover:bg-gray-300"
+              >
+                Close
+              </button>
+            </div>
+
+            <div className="flex-1 min-h-0">
+              <NetworkGraph
+                compounds={compounds}
+                similarities={similaritiesData}
+              />
             </div>
           </div>
         </div>
