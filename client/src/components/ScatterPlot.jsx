@@ -1,9 +1,7 @@
-
 // Imported React hooks for managing component state and lifecycle
 import { useEffect, useRef, useState } from "react";
 // Imported D3.js for data-driven document manipulation
 import * as d3 from "d3";
-
 
 // ScatterPlot component visualizes compound data as a scatter plot using D3.js
 // Props:
@@ -27,7 +25,6 @@ export default function ScatterPlot({
     height: window.innerHeight,
   });
 
-
   // Updated window size state on resize for responsive chart
   useEffect(() => {
     const handleResize = () => {
@@ -40,7 +37,6 @@ export default function ScatterPlot({
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
 
   //  Renders the scatter plot whenever data, selection, dimensions, or window size changes
   useEffect(() => {

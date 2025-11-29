@@ -1,14 +1,19 @@
 import fs from "fs";
 import path from "path";
 import XLSX from "xlsx";
-import { execSync } from "child_process";
 
 const __dirname = path.resolve();
 
 function generateData() {
   // Set input and output file paths
-  const inputPath = path.join(__dirname, "data.xlsx");
-  const outputPath = path.join(__dirname, "../client/public/data.json");
+  const inputPath = path.join(
+    __dirname,
+    "extract_compounds_data_from_excel/compounds.xlsx"
+  );
+  const outputPath = path.join(
+    __dirname,
+    "extract_compounds_data_from_excel/data.json"
+  );
 
   // Load Excel file
   const workbook = XLSX.readFile(inputPath);
@@ -25,7 +30,7 @@ function generateData() {
     TPSA: "tpsa",
     Synonyms: "synonyms",
     pec50: "potency",
-    SMILES: "smiles",
+    "SMILES For SVG Generation": "smiles",
   };
 
   const selectedColumns = Object.keys(columnMap);
