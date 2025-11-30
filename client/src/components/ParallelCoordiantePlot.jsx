@@ -60,7 +60,6 @@ export default function ParallelCoordiantePlot({
 
   useEffect(() => {
     if (!compounds || compounds.length === 0) return;
-    console.log("active filters:", JSON.stringify(activeFilters));
 
     const svg = d3.select(ref.current);
     svg.selectAll("*").remove();

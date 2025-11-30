@@ -271,7 +271,7 @@ export default function HeatmapWithPanel({ compounds, similarityMatrix }) {
             {selectedSimilarityPair && (
               <div className="flex flex-col gap-10 h-full">
                 <p className="text-center text-lg">
-                  <span className="font-bold">Similarity:</span>{" "}
+                  <span className="font-bold">Structural Similarity:</span>{" "}
                   <span>{formatVal(selectedSimilarityPair.similarity)}</span>
                 </p>
 

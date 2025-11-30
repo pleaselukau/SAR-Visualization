@@ -3,9 +3,9 @@ import { test } from "@playwright/test";
 import fs from "fs";
 
 const data = JSON.parse(
-  fs.readFileSync("get_all_compound_svgs/data.json", "utf8")
+  fs.readFileSync("get_all_compound_svgs/data_part_a.json", "utf8")
 );
-const smilesList = data.map((item) => item.smiles);
+const smilesList = data.map((item) => item.part_a_smiles);
 const smilesText = smilesList.join("\n");
 
 test("get_all_compound_svgs", async () => {
@@ -47,6 +47,8 @@ test("get_all_compound_svgs", async () => {
 
   await page.waitForTimeout(1000);
 
+  // await page.pause();
+
   await page.click('//a[normalize-space(text())="Export"]');
 
   await page.waitForTimeout(1000);
@@ -58,13 +60,13 @@ test("get_all_compound_svgs", async () => {
   const outputText = await exportTextarea.inputValue();
 
   fs.writeFileSync(
-    "get_all_compound_svgs/all_compound_svgs.txt",
+    "get_all_compound_svgs/all_compound_part_a_svgs.txt",
     outputText,
     "utf8"
   );
 
   console.log(
-    "Extracted output saved to get_all_compound_svgs/all_compound_svgs.txt"
+    "Extracted output saved to get_all_compound_svgs/all_compound_part_a_svgs.txt"
   );
 
   await browser.close();

@@ -7,8 +7,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Paths
-const inputFile = path.join(__dirname, "all_compound_svgs.txt");
-const outputFolder = path.join(__dirname, "extracted_svgs");
+const inputFile = path.join(__dirname, "all_compound_part_a_svgs.txt");
+const outputFolder = path.join(__dirname, "part_a_extracted_svgs");
 const jsonFile = path.join(__dirname, "data.json");
 
 // Create folder if it doesn't exist
