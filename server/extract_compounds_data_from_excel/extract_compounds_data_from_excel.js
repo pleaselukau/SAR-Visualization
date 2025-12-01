@@ -8,11 +8,11 @@ function generateData() {
   // Set input and output file paths
   const inputPath = path.join(
     __dirname,
-    "extract_compounds_data_from_excel/compounds.xlsx"
+    "extract_compounds_data_from_excel/compounds_part_a.xlsx"
   );
   const outputPath = path.join(
     __dirname,
-    "extract_compounds_data_from_excel/data.json"
+    "extract_compounds_data_from_excel/data_part_a.json"
   );
 
   // Load Excel file
@@ -23,19 +23,23 @@ function generateData() {
   // Map Excel columns to JSON fields
   const columnMap = {
     name: "name",
-    MW: "weight",
-    "log P": "log_p",
-    "log D": "log_d",
-    pKa: "pka",
-    TPSA: "tpsa",
-    Synonyms: "synonyms",
-    pec50: "potency",
-    "SMILES For SVG Generation": "smiles",
+    // MW: "weight",
+    // "log P": "log_p",
+    // "log D": "log_d",
+    // pKa: "pka",
+    // TPSA: "tpsa",
+    // Synonyms: "synonyms",
+    // pec50: "potency",
+    // "SMILES For SVG Generation": "smiles",
+    // "Part B": "part_b_smiles",
+    // "Part C": "part_c_smiles",
+    "Part A": "part_a_smiles",
   };
 
   const selectedColumns = Object.keys(columnMap);
 
   // Transform each row of Excel into JSON format
+  // const filteredData = sheet.slice(0, 10).map((row, index) => {
   const filteredData = sheet.map((row, index) => {
     const newRow = {};
 
@@ -46,6 +50,16 @@ function generateData() {
     selectedColumns.forEach((col) => {
       newRow[columnMap[col]] = row[col];
     });
+
+    // if (
+    //   newRow.part_c_smiles === undefined ||
+    //   newRow.part_c_smiles === null ||
+    //   newRow.part_c_smiles.trim() === ""
+    // ) {
+    //   return null;
+    // }
+
+    // newRow.name = newRow.name + "-PART-C";
 
     // Clean potency values
     if (typeof newRow.potency === "string") {
@@ -62,6 +76,7 @@ function generateData() {
 
     return newRow;
   });
+  // .filter(Boolean);
 
   // Save JSON output
   fs.writeFileSync(outputPath, JSON.stringify(filteredData, null, 2));

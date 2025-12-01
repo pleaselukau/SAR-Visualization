@@ -47,7 +47,6 @@ export default function SelectionPanel({
   };
 
   const toggleCompare = (id) => {
-    console.log("Toggling compare for ID:", id);
     setComparisonCompounds((prev) => {
       if (prev.includes(id)) return prev.filter((x) => x !== id);
       if (prev.length < 2) return [...prev, id];
@@ -61,6 +60,10 @@ export default function SelectionPanel({
       return prev;
     });
   };
+
+  // const toggleCompare = (id) => {
+  //   setComparisonCompounds([id]);
+  // };
 
   const isSelected = (id) =>
     mode === "highlight"
