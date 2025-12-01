@@ -1,9 +1,44 @@
 // Panel to compare selected compounds side by side
 import { useState } from "react";
 import * as d3 from "d3";
+import BarChart from "./BarChart.jsx";
 
 export default function ComparisonPanel({ compounds, comparisonCompounds }) {
   if (!compounds || compounds.length === 0 || !comparisonCompounds) return null;
+
+  const dimensions = ["weight", "log_p", "log_d", "pka", "tpsa", "potency"];
+
+  const displayNames = {
+    weight: "Weight",
+    log_p: "Log P",
+    log_d: "Log D",
+    pka: "pKa",
+    tpsa: "TPSA",
+    potency: "Potency",
+  };
+
+  const extentByDimension = Object.fromEntries(
+    dimensions.map((dim) => {
+      const values = compounds.map((c) => +c[dim]);
+      return [dim, d3.extent(values)];
+    })
+  );
+
+  const Compounds = compounds.filter((c) => comparisonCompounds.includes(c.ID));
+
+  const normalizedSelected = Compounds.map((c) => {
+    const normalized = {};
+    dimensions.forEach((dim) => {
+      const [min, max] = extentByDimension[dim];
+      normalized[dim] = (c[dim] - min) / (max - min);
+    });
+    return {
+      ...c,
+      normalized,
+    };
+  });
+
+  console.log(JSON.stringify(normalizedSelected));
 
   const [expanded, setExpanded] = useState(false);
   const partCCompounds = [
@@ -173,43 +208,98 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
         </div>
 
         {selectedCompounds.length === 2 && (
-          <div className="flex-1 flex flex-col items-center h-full w-full border-l border-gray-300 justify-between">
-            <div className="flex w-full h-1/3 justify-between items-start">
+          <div className="flex-1 flex flex-col items-center h-full w-full border-l border-gray-300 justify-center">
+            <div className="flex w-full justify-between items-start">
               <img
                 src={`/svgs_part_b/${selectedCompounds[0].name}.svg`}
-                className="image-cover object-center border rounded-full scale-70"
+                className="w-1/3 image-contain"
               />
 
               {partCCompounds.includes(selectedCompounds[0].name) && (
                 <img
                   src={`/svgs_part_c/CAR-0000075.svg`}
-                  className="image-cover border rounded-full w-[100px] h-[100px]"
+                  className="w-1/3 image-contain"
                 />
               )}
 
               <img
                 src={`/svgs_part_a/${selectedCompounds[0].name}.svg`}
-                className="image-cover border rounded-full w-[100px] h-[100px]"
+                className="w-1/3 image-contain"
               />
             </div>
 
-            <div className="flex items-center justify-end w-full h-1/3 p-4">
-              <img src={`/substructures/COMMON.svg`} className="" />
+            <div className="w-full flex items-center justify-start">
+              <BarChart
+                data={[
+                  normalizedSelected[0].normalized.weight,
+                  normalizedSelected[0].normalized.log_p,
+                  normalizedSelected[0].normalized.log_d,
+                  normalizedSelected[0].normalized.pka,
+                  normalizedSelected[0].normalized.tpsa,
+                  normalizedSelected[0].normalized.potency,
+                ]}
+                direction="up"
+                width={300}
+                height={120}
+              />
             </div>
 
-            <div className="flex w-full h-1/3 justify-between items-end">
+            <div className=" w-full py-2 h-[200px] flex items-center justify-between border-t border-b border-gray-300">
+              <div className="flex w-[300px]">
+                {Object.values(displayNames).map((name, index) => (
+                  <div
+                    key={index}
+                    className="flex-1 flex items-center justify-center text-sm font-semibold"
+                    style={{
+                      writingMode: "vertical-rl",
+                      textOrientation: "upright",
+                    }}
+                  >
+                    {name}
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex-1 flex flex-col items-center justify-center border-l border-gray-300">
+                <img src={`/substructures/COMMON.svg`} className="mb-2" />
+                <div className="text-sm font-semibold text-center">
+                  Common Substructure
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full flex items-center justify-start">
+              <BarChart
+                data={[
+                  normalizedSelected[1].normalized.weight,
+                  normalizedSelected[1].normalized.log_p,
+                  normalizedSelected[1].normalized.log_d,
+                  normalizedSelected[1].normalized.pka,
+                  normalizedSelected[1].normalized.tpsa,
+                  normalizedSelected[1].normalized.potency,
+                ]}
+                direction="down"
+                width={300}
+                height={120}
+              />
+            </div>
+
+            <div className="flex w-full justify-between items-end">
               <img
                 src={`/svgs_part_b/${selectedCompounds[1].name}.svg`}
-                className=""
+                className="w-1/3 image-contain"
               />
 
               {partCCompounds.includes(selectedCompounds[1].name) && (
-                <img src={`/svgs_part_c/CAR-0000075.svg`} className="" />
+                <img
+                  src={`/svgs_part_c/CAR-0000075.svg`}
+                  className="w-1/3 image-contain"
+                />
               )}
 
               <img
                 src={`/svgs_part_a/${selectedCompounds[1].name}.svg`}
-                className=""
+                className="w-1/3 image-contain"
               />
             </div>
           </div>
