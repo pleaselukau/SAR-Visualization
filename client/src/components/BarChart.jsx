@@ -3,6 +3,7 @@ import * as d3 from "d3";
 
 export default function BarChart({
   data,
+  real_data,
   width = 200,
   height = 120,
   direction = "up",
@@ -30,7 +31,22 @@ export default function BarChart({
       .attr("height", (d) => scale(d))
       .attr("fill", "#3b82f6")
       .attr("y", (d) => (direction === "up" ? height - scale(d) : 0));
-  }, [data, width, height, direction]);
+
+    group
+      .selectAll("text")
+      .data(real_data)
+      .enter()
+      .append("text")
+      .text((d) => d.toFixed(3))
+      .attr("x", (d, i) => i * barWidth + barWidth / 2)
+      .attr("y", (d, i) =>
+        direction === "up" ? height - scale(data[i]) - 4 : scale(data[i]) + 12
+      )
+      .attr("text-anchor", "middle")
+      .attr("fill", "#000")
+      .attr("font-size", "10px")
+      .attr("font-weight", "bold");
+  }, [data, real_data, width, height, direction]);
 
   return (
     <svg

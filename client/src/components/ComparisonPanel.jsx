@@ -209,26 +209,7 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
 
         {selectedCompounds.length === 2 && (
           <div className="flex-1 flex flex-col items-center h-full w-full border-l border-gray-300 justify-center">
-            <div className="flex w-full justify-between items-start">
-              <img
-                src={`/svgs_part_b/${selectedCompounds[0].name}.svg`}
-                className="w-1/3 image-contain"
-              />
-
-              {partCCompounds.includes(selectedCompounds[0].name) && (
-                <img
-                  src={`/svgs_part_c/CAR-0000075.svg`}
-                  className="w-1/3 image-contain"
-                />
-              )}
-
-              <img
-                src={`/svgs_part_a/${selectedCompounds[0].name}.svg`}
-                className="w-1/3 image-contain"
-              />
-            </div>
-
-            <div className="w-full flex items-center justify-start">
+            <div className="w-full flex-1 flex items-end">
               <BarChart
                 data={[
                   normalizedSelected[0].normalized.weight,
@@ -238,10 +219,56 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
                   normalizedSelected[0].normalized.tpsa,
                   normalizedSelected[0].normalized.potency,
                 ]}
+                real_data={[
+                  selectedCompounds[0].weight,
+                  selectedCompounds[0].log_p,
+                  selectedCompounds[0].log_d,
+                  selectedCompounds[0].pka,
+                  selectedCompounds[0].tpsa,
+                  selectedCompounds[0].potency,
+                ]}
                 direction="up"
                 width={300}
                 height={120}
               />
+
+              <div className="flex-1 flex flex-col h-full text-center justify-end items-center overflow-visible">
+                <span> Part B </span>
+                <img
+                  src={`/svgs_part_b/${selectedCompounds[0].name}.svg`}
+                  className="image-contain max-h-none scale-150"
+                  style={{ height: "100px" }}
+                />
+                <div className="w-[30px] h-[60px] max-h-[120px] bg-blue-500"></div>
+              </div>
+
+              <div className="flex-1 flex flex-col h-full text-center justify-end items-center">
+                <span> Part C </span>
+                {partCCompounds.includes(selectedCompounds[0].name) && (
+                  <img
+                    src={`/svgs_part_c/CAR-0000075.svg`}
+                    className="image-contain max-h-none scale-150"
+                    style={{ height: "100px" }}
+                  />
+                )}
+                <div
+                  className={`w-[30px] h-[${
+                    partCCompounds.includes(selectedCompounds[0].name)
+                      ? "100"
+                      : "0"
+                  }px] max-h-[120px] bg-blue-500`}
+                ></div>
+              </div>
+
+              <div className="flex-1 flex flex-col h-full text-center justify-end items-center">
+                <span> Part A </span>
+                <img
+                  src={`/svgs_part_a/${selectedCompounds[0].name}.svg`}
+                  className="image-contain max-h-none scale-150"
+                  style={{ height: "100px" }}
+                />
+                <div className="w-[30px] h-[150px] max-h-[120px] bg-blue-500"></div>
+              </div>
             </div>
 
             <div className=" w-full py-2 h-[200px] flex items-center justify-between border-t border-b border-gray-300">
@@ -268,7 +295,7 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
               </div>
             </div>
 
-            <div className="w-full flex items-center justify-start">
+            <div className="w-full flex-1 flex items-start">
               <BarChart
                 data={[
                   normalizedSelected[1].normalized.weight,
@@ -278,29 +305,56 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
                   normalizedSelected[1].normalized.tpsa,
                   normalizedSelected[1].normalized.potency,
                 ]}
+                real_data={[
+                  selectedCompounds[1].weight,
+                  selectedCompounds[1].log_p,
+                  selectedCompounds[1].log_d,
+                  selectedCompounds[1].pka,
+                  selectedCompounds[1].tpsa,
+                  selectedCompounds[1].potency,
+                ]}
                 direction="down"
                 width={300}
                 height={120}
               />
-            </div>
 
-            <div className="flex w-full justify-between items-end">
-              <img
-                src={`/svgs_part_b/${selectedCompounds[1].name}.svg`}
-                className="w-1/3 image-contain"
-              />
-
-              {partCCompounds.includes(selectedCompounds[1].name) && (
+              <div className="flex-1 flex flex-col h-full text-center justify-start items-center">
+                <div className="w-[30px] h-[60px] max-h-[120px] bg-blue-500"></div>
                 <img
-                  src={`/svgs_part_c/CAR-0000075.svg`}
-                  className="w-1/3 image-contain"
+                  src={`/svgs_part_b/${selectedCompounds[1].name}.svg`}
+                  className="image-contain max-h-none scale-150"
+                  style={{ height: "100px" }}
                 />
-              )}
+                <span> Part B </span>
+              </div>
 
-              <img
-                src={`/svgs_part_a/${selectedCompounds[1].name}.svg`}
-                className="w-1/3 image-contain"
-              />
+              <div className="flex-1 flex flex-col h-full text-center justify-start items-center">
+                <div
+                  className={`w-[30px] h-[${
+                    partCCompounds.includes(selectedCompounds[1].name)
+                      ? "100"
+                      : "0"
+                  }px] max-h-[120px] bg-blue-500`}
+                ></div>
+                {partCCompounds.includes(selectedCompounds[1].name) && (
+                  <img
+                    src={`/svgs_part_c/CAR-0000075.svg`}
+                    className="image-contain max-h-none scale-150"
+                    style={{ height: "100px" }}
+                  />
+                )}
+                <span> Part C </span>
+              </div>
+
+              <div className="flex-1 flex flex-col h-full text-center justify-start items-center">
+                <div className="w-[30px] h-[150px] max-h-[120px] bg-blue-500"></div>
+                <img
+                  src={`/svgs_part_a/${selectedCompounds[1].name}.svg`}
+                  className="image-contain max-h-none scale-150"
+                  style={{ height: "100px" }}
+                />
+                <span> Part A </span>
+              </div>
             </div>
           </div>
         )}
