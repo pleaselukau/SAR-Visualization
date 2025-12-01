@@ -252,11 +252,12 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
                   />
                 )}
                 <div
-                  className={`w-[30px] h-[${
-                    partCCompounds.includes(selectedCompounds[0].name)
-                      ? "100"
-                      : "0"
-                  }px] max-h-[120px] bg-blue-500`}
+                  className="w-[30px] max-h-[120px] bg-blue-500"
+                  style={{
+                    height: partCCompounds.includes(selectedCompounds[0].name)
+                      ? "100px"
+                      : "0px",
+                  }}
                 ></div>
               </div>
 
@@ -330,11 +331,12 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
 
               <div className="flex-1 flex flex-col h-full text-center justify-start items-center">
                 <div
-                  className={`w-[30px] h-[${
-                    partCCompounds.includes(selectedCompounds[1].name)
-                      ? "100"
-                      : "0"
-                  }px] max-h-[120px] bg-blue-500`}
+                  className="w-[30px] max-h-[120px] bg-blue-500"
+                  style={{
+                    height: partCCompounds.includes(selectedCompounds[0].name)
+                      ? "100px"
+                      : "0px",
+                  }}
                 ></div>
                 {partCCompounds.includes(selectedCompounds[1].name) && (
                   <img
