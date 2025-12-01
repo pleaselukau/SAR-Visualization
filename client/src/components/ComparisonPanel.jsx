@@ -172,43 +172,48 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
           ))}
         </div>
 
-        <div className="flex-1 flex flex-col items-center h-full w-full border-l border-gray-300 justify-between">
-          <div className="flex w-full h-1/3 justify-between items-start">
-            <img
-              src={`/svgs_part_b/${selectedCompounds[0].name}.svg`}
-              className=""
-            />
+        {selectedCompounds.length === 2 && (
+          <div className="flex-1 flex flex-col items-center h-full w-full border-l border-gray-300 justify-between">
+            <div className="flex w-full h-1/3 justify-between items-start">
+              <img
+                src={`/svgs_part_b/${selectedCompounds[0].name}.svg`}
+                className="image-cover object-center border rounded-full scale-70"
+              />
 
-            {partCCompounds.includes(selectedCompounds[0].name) && (
-              <img src={`/svgs_part_c/CAR-0000075.svg`} className="" />
-            )}
+              {partCCompounds.includes(selectedCompounds[0].name) && (
+                <img
+                  src={`/svgs_part_c/CAR-0000075.svg`}
+                  className="image-cover border rounded-full w-[100px] h-[100px]"
+                />
+              )}
 
-            <img
-              src={`/svgs_part_a/${selectedCompounds[0].name}.svg`}
-              className=""
-            />
+              <img
+                src={`/svgs_part_a/${selectedCompounds[0].name}.svg`}
+                className="image-cover border rounded-full w-[100px] h-[100px]"
+              />
+            </div>
+
+            <div className="flex items-center justify-end w-full h-1/3 p-4">
+              <img src={`/substructures/COMMON.svg`} className="" />
+            </div>
+
+            <div className="flex w-full h-1/3 justify-between items-end">
+              <img
+                src={`/svgs_part_b/${selectedCompounds[1].name}.svg`}
+                className=""
+              />
+
+              {partCCompounds.includes(selectedCompounds[1].name) && (
+                <img src={`/svgs_part_c/CAR-0000075.svg`} className="" />
+              )}
+
+              <img
+                src={`/svgs_part_a/${selectedCompounds[1].name}.svg`}
+                className=""
+              />
+            </div>
           </div>
-
-          <div className="flex items-center justify-end w-full h-1/3 p-4">
-            <img src={`/substructures/COMMON.svg`} className="" />
-          </div>
-
-          <div className="flex w-full h-1/3 justify-between items-end">
-            <img
-              src={`/svgs_part_b/${selectedCompounds[1].name}.svg`}
-              className=""
-            />
-
-            {partCCompounds.includes(selectedCompounds[1].name) && (
-              <img src={`/svgs_part_c/CAR-0000075.svg`} className="" />
-            )}
-
-            <img
-              src={`/svgs_part_a/${selectedCompounds[1].name}.svg`}
-              className=""
-            />
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
