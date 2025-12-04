@@ -157,5 +157,12 @@ export default function RadarChart({
   }, [compounds, selectedIds, windowSize]);
 
   // Rendered SVG element for D3 to use
-  return <svg ref={ref} className="w-full h-full"></svg>;
+  return (
+    <div className="flex flex-col w-full h-full">
+      <div className="text-sm font-bold m-0 p-0 text-center border-b border-gray-200 text-gray-400">
+        Radar Chart
+      </div>
+      <svg ref={ref} className="w-full h-full"></svg>
+    </div>
+  );
 }

@@ -34,7 +34,16 @@ export default function Tooltip({ visible, x, y, compound }) {
                 key === "name" ||
                 key === "smiles" ||
                 key === "potency_string" ||
-                key === "synonyms"
+                key === "synonyms" ||
+                key === "part_a_smiles" ||
+                key === "part_b_smiles" ||
+                key === "part_c_smiles" ||
+                key === "mean_potency_part_a" ||
+                key === "mean_potency_part_b" ||
+                key === "mean_potency_part_c" ||
+                key === "frequency_part_a" ||
+                key === "frequency_part_b" ||
+                key === "frequency_part_c"
               )
                 return null;
 
