@@ -214,18 +214,16 @@ export default function HeatmapWithPanel({ compounds, similarityMatrix }) {
   if (!expanded) {
     return (
       <div className="relative flex flex-col w-full h-full">
-        <div className="flex justify-between items-center m-6 mt-2 mb-0">
-          <span className="font-semibold text-[16px]">
-            Structural Similarity Heatmap
-          </span>
-
-          <button
-            onClick={() => setExpanded(true)}
-            className="px-2 py-1 text-xs rounded bg-white/80 border hover:bg-white"
-          >
-            Expand
-          </button>
+        <div className="text-sm font-bold m-0 p-0 text-center border-b border-gray-200 text-gray-400">
+          Structural Similarity Heatmap
         </div>
+
+        <button
+          onClick={() => setExpanded(true)}
+          className="absolute top-0 right-2 px-2 py-1 text-xs rounded bg-white/80 border hover:bg-white"
+        >
+          Expand
+        </button>
 
         <svg ref={ref} className="w-full h-full"></svg>
       </div>
@@ -234,7 +232,7 @@ export default function HeatmapWithPanel({ compounds, similarityMatrix }) {
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-      <div className="relative bg-white rounded-xl shadow-lg w-[95vw] h-[95vh] p-2 flex flex-col">
+      <div className="relative bg-white rounded-xl shadow-lg w-[95vw] h-[95vh] p-2 flex flex-col overflow-y-auto overflow-x-hidden">
         <button
           onClick={() => {
             setExpanded(false);

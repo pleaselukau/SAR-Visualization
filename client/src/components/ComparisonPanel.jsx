@@ -38,8 +38,6 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
     };
   });
 
-  console.log(JSON.stringify(normalizedSelected));
-
   const [expanded, setExpanded] = useState(false);
   const partCCompounds = [
     "CAR-0000075",
@@ -65,13 +63,17 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
 
   if (!expanded) {
     return (
-      <div className="relative w-full h-full">
+      <div className="relative flex flex-col w-full h-full">
         <button
           onClick={() => setExpanded(true)}
-          className="absolute top-2 right-2 px-2 py-1 text-xs rounded bg-white/80 border hover:bg-white z-10"
+          className="absolute top-0 right-2 px-2 py-1 text-xs rounded bg-white/80 border hover:bg-white z-10"
         >
           Expand
         </button>
+
+        <div className="text-sm font-bold m-0 p-0 text-center border-b border-gray-200 text-gray-400">
+          Comparison Panel
+        </div>
 
         <div className="flex flex-col w-full h-full divide-y divide-gray-300">
           {/* Show message if no compounds selected */}
@@ -147,7 +149,7 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-      <div className="relative bg-white rounded-xl shadow-lg w-[95vw] h-[95vh] p-2 flex">
+      <div className="relative bg-white rounded-xl shadow-lg w-[95vw] h-[95vh] p-2 flex overflow-y-auto overflow-x-hidden">
         <button
           onClick={() => {
             setExpanded(false);
@@ -233,42 +235,92 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
               />
 
               <div className="flex-1 flex flex-col h-full text-center justify-end items-center overflow-visible">
-                <span> Part B </span>
+                <span> Part A </span>
+                {/* <span> Part B </span> */}
                 <img
                   src={`/svgs_part_b/${selectedCompounds[0].name}.svg`}
                   className="image-contain max-h-none scale-150"
                   style={{ height: "100px" }}
                 />
-                <div className="w-[30px] h-[60px] max-h-[120px] bg-blue-500"></div>
-              </div>
-
-              <div className="flex-1 flex flex-col h-full text-center justify-end items-center">
-                <span> Part C </span>
-                {partCCompounds.includes(selectedCompounds[0].name) && (
-                  <img
-                    src={`/svgs_part_c/CAR-0000075.svg`}
-                    className="image-contain max-h-none scale-150"
-                    style={{ height: "100px" }}
-                  />
-                )}
+                <span className="text-xs font-semibold mb-1">
+                  {(
+                    (selectedCompounds[0].frequency_part_b / compounds.length) *
+                    100
+                  ).toFixed(2)}
+                  %
+                </span>
                 <div
                   className="w-[30px] max-h-[120px] bg-blue-500"
                   style={{
-                    height: partCCompounds.includes(selectedCompounds[0].name)
-                      ? "100px"
-                      : "0px",
+                    height: Math.min(
+                      (selectedCompounds[0].frequency_part_b /
+                        compounds.length) *
+                        120,
+                      120
+                    ),
                   }}
                 ></div>
               </div>
 
               <div className="flex-1 flex flex-col h-full text-center justify-end items-center">
-                <span> Part A </span>
+                {partCCompounds.includes(selectedCompounds[0].name) && (
+                  <>
+                    <span> Part B </span>
+                    {/* <span> Part C </span> */}
+                    <img
+                      src={`/svgs_part_c/CAR-0000075.svg`}
+                      className="image-contain max-h-none scale-150"
+                      style={{ height: "100px" }}
+                    />
+                    <span className="text-xs font-semibold mb-1">
+                      {(
+                        (selectedCompounds[0].frequency_part_c /
+                          compounds.length) *
+                        100
+                      ).toFixed(2)}
+                      %
+                    </span>
+                    <div
+                      className="w-[30px] max-h-[120px] bg-blue-500"
+                      style={{
+                        height: Math.min(
+                          (selectedCompounds[0].frequency_part_c /
+                            compounds.length) *
+                            120,
+                          120
+                        ),
+                      }}
+                    ></div>
+                  </>
+                )}
+              </div>
+
+              <div className="flex-1 flex flex-col h-full text-center justify-end items-center">
+                <span> Part C </span>
+                {/* <span> Part A </span> */}
                 <img
                   src={`/svgs_part_a/${selectedCompounds[0].name}.svg`}
                   className="image-contain max-h-none scale-150"
                   style={{ height: "100px" }}
                 />
-                <div className="w-[30px] h-[150px] max-h-[120px] bg-blue-500"></div>
+                <span className="text-xs font-semibold mb-1">
+                  {(
+                    (selectedCompounds[0].frequency_part_a / compounds.length) *
+                    100
+                  ).toFixed(2)}
+                  %
+                </span>
+                <div
+                  className="w-[30px] max-h-[120px] bg-blue-500"
+                  style={{
+                    height: Math.min(
+                      (selectedCompounds[0].frequency_part_a /
+                        compounds.length) *
+                        120,
+                      120
+                    ),
+                  }}
+                ></div>
               </div>
             </div>
 
@@ -320,42 +372,92 @@ export default function ComparisonPanel({ compounds, comparisonCompounds }) {
               />
 
               <div className="flex-1 flex flex-col h-full text-center justify-start items-center">
-                <div className="w-[30px] h-[60px] max-h-[120px] bg-blue-500"></div>
+                <div
+                  className="w-[30px] max-h-[120px] bg-blue-500"
+                  style={{
+                    height: Math.min(
+                      (selectedCompounds[1].frequency_part_b /
+                        compounds.length) *
+                        120,
+                      120
+                    ),
+                  }}
+                ></div>
+                <span className="text-xs font-semibold mb-1">
+                  {(
+                    (selectedCompounds[1].frequency_part_b / compounds.length) *
+                    100
+                  ).toFixed(2)}
+                  %
+                </span>
                 <img
                   src={`/svgs_part_b/${selectedCompounds[1].name}.svg`}
                   className="image-contain max-h-none scale-150"
                   style={{ height: "100px" }}
                 />
-                <span> Part B </span>
+                <span> Part A </span>
+                {/* <span> Part B </span> */}
+              </div>
+
+              <div className="flex-1 flex flex-col h-full text-center justify-start items-center">
+                {partCCompounds.includes(selectedCompounds[1].name) && (
+                  <>
+                    <div
+                      className="w-[30px] max-h-[120px] bg-blue-500"
+                      style={{
+                        height: Math.min(
+                          (selectedCompounds[1].frequency_part_c /
+                            compounds.length) *
+                            120,
+                          120
+                        ),
+                      }}
+                    ></div>
+                    <span className="text-xs font-semibold mb-1">
+                      {(
+                        (selectedCompounds[1].frequency_part_c /
+                          compounds.length) *
+                        100
+                      ).toFixed(2)}
+                      %
+                    </span>
+                    <img
+                      src={`/svgs_part_c/CAR-0000075.svg`}
+                      className="image-contain max-h-none scale-150"
+                      style={{ height: "100px" }}
+                    />
+                    <span> Part B </span>
+                    {/* <span> Part C </span> */}
+                  </>
+                )}
               </div>
 
               <div className="flex-1 flex flex-col h-full text-center justify-start items-center">
                 <div
                   className="w-[30px] max-h-[120px] bg-blue-500"
                   style={{
-                    height: partCCompounds.includes(selectedCompounds[0].name)
-                      ? "100px"
-                      : "0px",
+                    height: Math.min(
+                      (selectedCompounds[1].frequency_part_a /
+                        compounds.length) *
+                        120,
+                      120
+                    ),
                   }}
                 ></div>
-                {partCCompounds.includes(selectedCompounds[1].name) && (
-                  <img
-                    src={`/svgs_part_c/CAR-0000075.svg`}
-                    className="image-contain max-h-none scale-150"
-                    style={{ height: "100px" }}
-                  />
-                )}
-                <span> Part C </span>
-              </div>
-
-              <div className="flex-1 flex flex-col h-full text-center justify-start items-center">
-                <div className="w-[30px] h-[150px] max-h-[120px] bg-blue-500"></div>
+                <span className="text-xs font-semibold mb-1">
+                  {(
+                    (selectedCompounds[1].frequency_part_a / compounds.length) *
+                    100
+                  ).toFixed(2)}
+                  %
+                </span>
                 <img
                   src={`/svgs_part_a/${selectedCompounds[1].name}.svg`}
                   className="image-contain max-h-none scale-150"
                   style={{ height: "100px" }}
                 />
-                <span> Part A </span>
+                <span> Part C </span>
+                {/* <span> Part A </span> */}
               </div>
             </div>
           </div>

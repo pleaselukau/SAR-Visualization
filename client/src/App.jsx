@@ -69,7 +69,7 @@ export default function App() {
       try {
         // Load compounds and structural similarities in parallel
         const [dataRes, simRes] = await Promise.all([
-          fetch("/data.json"),
+          fetch("/frequencies.json"),
           fetch("/similarities.json"),
         ]);
 

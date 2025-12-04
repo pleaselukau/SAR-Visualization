@@ -66,7 +66,7 @@ export default function ParallelCoordiantePlot({
 
     const width = ref.current.clientWidth || 400;
     const height = ref.current.clientHeight || 300;
-    const margin = { top: 30, right: 30, bottom: 30, left: 30 };
+    const margin = { top: 30, right: 30, bottom: 10, left: 30 };
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
 
@@ -373,7 +373,10 @@ export default function ParallelCoordiantePlot({
   }, [compounds, selectedIds, activeFilters, windowSize]);
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative flex flex-col w-full h-full">
+      <div className="text-sm font-bold m-0 p-0 text-center border-b border-gray-200 text-gray-400">
+        Parallel Coordinate Plot
+      </div>
       <svg ref={ref} className="w-full h-full"></svg>
       {activeFilters && Object.keys(activeFilters).length > 0 && (
         <button
