@@ -1,10 +1,3 @@
-s// Panel to compare selected compounds side by side
-import { useState } from "react";
-import * as d3 from "d3";
-import BarChart from "./BarChart.jsx";
-
-export default function ComparisonPanel({ compounds, comparisonCompounds }) {
-  if (!compounds || compounds.length === 0 || !comparisonCompounds) return null;
 // Panel to compare selected compounds side by side
 import { useState } from "react";
 import * as d3 from "d3";
